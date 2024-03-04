@@ -4,6 +4,12 @@ local lga_actions = require("telescope-live-grep-args.actions")
 local fb_actions = require("telescope").extensions.file_browser.actions
 
 telescope.setup {
+  defaults = {
+    layout_config = {
+      height = 0.95,
+      width = 0.95,
+    }
+  },
   extensions = {
     live_grep_args = {
       auto_quoting = true, -- enable/disable auto-quoting
