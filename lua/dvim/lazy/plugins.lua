@@ -80,6 +80,8 @@ return {
   { "tamago324/lir-bookmark.nvim" },
   { "tamago324/lir-mmv.nvim" },
 
+  { "nvim-tree/nvim-tree.lua" },
+
   { "rcarriga/nvim-notify" },
   { "folke/noice.nvim",                             dependencies = { "MunifTanjim/nui.nvim", "rcarriga/nvim-notify" } },
   { "stevearc/dressing.nvim" },

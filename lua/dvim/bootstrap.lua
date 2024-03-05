@@ -25,6 +25,7 @@ require("dvim.modules.comment")
 
 -- require("dvim.modules.netrw")
 require("dvim.modules.lir")
+require("dvim.modules.tree")
 
 require("dvim.modules.telescope")
 require("dvim.modules.whichkey")
