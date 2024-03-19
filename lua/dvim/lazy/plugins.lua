@@ -23,11 +23,11 @@ return {
   { "SmiteshP/nvim-navic" },
   { "SmiteshP/nvim-navbuddy" },
 
-  { "mfussenegger/nvim-dap" },
-  { "rcarriga/nvim-dap-ui",                       dependencies = { "mfussenegger/nvim-dap" } },
-  { "theHamsta/nvim-dap-virtual-text",            dependencies = { "mfussenegger/nvim-dap" } },
-
   { "nvim-neotest/neotest",                       dependencies = { "olimorris/neotest-phpunit", "nvim-neotest/neotest-python", "haydenmeade/neotest-jest", "marilari88/neotest-vitest" } },
+
+  { "mfussenegger/nvim-dap" },
+  { "rcarriga/nvim-dap-ui",                       dependencies = { "mfussenegger/nvim-dap", "nvim-neotest/nvim-nio" } },
+  { "theHamsta/nvim-dap-virtual-text",            dependencies = { "mfussenegger/nvim-dap" } },
 
   { "tpope/vim-fugitive" },
   { "lewis6991/gitsigns.nvim" },
@@ -73,6 +73,12 @@ return {
   { "nvim-telescope/telescope-live-grep-args.nvim", version = "^1.0.0" },
   { "nvim-telescope/telescope-file-browser.nvim" },
 
+  {
+    "luckasRanarison/nvim-devdocs",
+    dependencies = {
+      "nvim-lua/plenary.nvim", "nvim-telescope/telescope.nvim", "nvim-treesitter/nvim-treesitter" }
+  },
+
   { 'smoka7/hop.nvim' },
 
   { "tamago324/lir.nvim" },
@@ -83,20 +89,20 @@ return {
   { "nvim-tree/nvim-tree.lua" },
 
   { "rcarriga/nvim-notify" },
-  { "folke/noice.nvim",                             dependencies = { "MunifTanjim/nui.nvim", "rcarriga/nvim-notify" } },
+  { "folke/noice.nvim",                   dependencies = { "MunifTanjim/nui.nvim", "rcarriga/nvim-notify" } },
   { "stevearc/dressing.nvim" },
   { "lukas-reineke/indent-blankline.nvim" },
   { "RRethy/vim-illuminate" },
   { "wfxr/minimap.vim" },
 
-  -- { "folke/trouble.nvim",                       dependencies = { "nvim-tree/nvim-web-devicons" } },
+  { "folke/trouble.nvim",                 dependencies = { "nvim-tree/nvim-web-devicons" } },
   { "folke/which-key.nvim" },
 
   { "LunarVim/bigfile.nvim" },
 
-  { "nvim-lualine/lualine.nvim",                    dependencies = { "nvim-tree/nvim-web-devicons" } },
+  { "nvim-lualine/lualine.nvim",          dependencies = { "nvim-tree/nvim-web-devicons" } },
   { "kdheepak/tabline.nvim" },
-  { "folke/tokyonight.nvim",                        opts = { transparent = false } },
+  { "folke/tokyonight.nvim",              opts = { transparent = false } },
   { "nanotech/jellybeans.vim" },
   { "craftzdog/solarized-osaka.nvim" },
 

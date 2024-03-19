@@ -3,7 +3,7 @@ require("nvim-tree").setup {
     sorter = "case_sensitive",
   },
   view = {
-    width = 48,
+    -- width = 40,
     side = "right",
   },
   renderer = {
@@ -15,7 +15,7 @@ require("nvim-tree").setup {
 }
 
 vim.keymap.set(
-  { "n", "v" }, "_", "<cmd>NvimTreeToggle<CR>", {
+  { "n", "v" }, "<Space>-", "<cmd>NvimTreeToggle<CR>", {
     noremap = true,
     desc = "Toggle file tree"
   }

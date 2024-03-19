@@ -29,3 +29,5 @@ require("dvim.modules.tree")
 
 require("dvim.modules.telescope")
 require("dvim.modules.whichkey")
+
+require("dvim.modules.devdocs")

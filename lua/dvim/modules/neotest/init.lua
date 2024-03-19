@@ -13,9 +13,9 @@ neotest.setup {
   adapters = adapters,
   quickfix = {
     enable = true,
-    -- open = function()
-    --   vim.cmd("Trouble quickfix")
-    -- end,
+    open = function()
+      vim.cmd("Trouble quickfix")
+    end,
   },
   icons = {
     expanded = "",
