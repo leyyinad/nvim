@@ -24,11 +24,11 @@ require("nvim-devdocs").setup {
   ensure_installed = {
     "ansible",
     "apache_http_server",
-    "awk",
     "bash",
     "css",
     "docker",
     "eslint",
+    "gnu_make",
     "homebrew",
     "html",
     "http",
@@ -52,7 +52,6 @@ require("nvim-devdocs").setup {
     "terraform",
     "typescript",
     "vite",
-    "zsh",
   }, -- get automatically installed
   -- after_open = function(bufnr) end, -- callback that runs after the Devdocs window is opened. Devdocs buffer ID will be passed in
   after_open = function(bufnr)
