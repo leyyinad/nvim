@@ -43,7 +43,7 @@ noice.setup {
           { error = true },
           { warning = true },
           { event = "msg_show", kind = { "" } },
-          { event = "lsp", kind = "message" },
+          { event = "lsp",      kind = "message" },
         },
       },
     },
@@ -56,7 +56,7 @@ noice.setup {
           { error = true },
           { warning = true },
           { event = "msg_show", kind = { "" } },
-          { event = "lsp", kind = "message" },
+          { event = "lsp",      kind = "message" },
         },
       },
       filter_opts = { count = 1 },
@@ -69,7 +69,7 @@ noice.setup {
     },
   },
   notify = {
-    enabled = false,
+    enabled = true,
     view = "notify",
   },
   lsp = {
@@ -148,7 +148,7 @@ noice.setup {
     long_message_to_split = false, -- long messages will be sent to a split
     -- inc_rename = true,            -- enables an input dialog for inc-rename.nvim
     inc_rename = false,            -- enables an input dialog for inc-rename.nvim
-    lsp_doc_border = true,        -- add a border to hover docs and signature help
+    lsp_doc_border = true,         -- add a border to hover docs and signature help
   },
   -- throttle
   views = {
@@ -406,12 +406,19 @@ noice.setup {
       },
     },
     {
-      view = "mini",
-      filter = { event = "notify" },
-      opts = {
-        title = "LVIM IDE",
+      filter = {
+        event = "notify",
+        min_height = 15
       },
+      view = 'split'
     },
+    -- {
+    --   view = "mini",
+    --   filter = { event = "notify" },
+    --   opts = {
+    --     title = "LVIM IDE",
+    --   },
+    -- },
     {
       view = "notify",
       filter = {
