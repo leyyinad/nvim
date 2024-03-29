@@ -12,7 +12,10 @@ return {
   { "williamboman/mason.nvim" },
   { "williamboman/mason-lspconfig.nvim" },
   { "neovim/nvim-lspconfig" },
+
   { "b0o/schemastore.nvim" },
+  { "someone-stole-my-name/yaml-companion.nvim",  dependencies = { { "neovim/nvim-lspconfig", "nvim-lua/plenary.nvim", "nvim-telescope/telescope.nvim" } } },
+
   { "hrsh7th/cmp-nvim-lsp" },
   { "hrsh7th/cmp-buffer" },
   { "hrsh7th/cmp-path" },
