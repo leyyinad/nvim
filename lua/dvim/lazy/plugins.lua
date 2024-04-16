@@ -108,6 +108,7 @@ return {
   { "folke/tokyonight.nvim",              opts = { transparent = false } },
   { "nanotech/jellybeans.vim" },
   { "craftzdog/solarized-osaka.nvim" },
+  { "catppuccin/nvim",                    name = "catppuccin",                                              priority = 1000 },
 
   { "ap/vim-css-color" },
 }
