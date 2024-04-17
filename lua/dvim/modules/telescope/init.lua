@@ -51,7 +51,7 @@ telescope.load_extension("undo")
 telescope.load_extension("live_grep_args")
 telescope.load_extension("file_browser")
 telescope.load_extension("yaml_schema")
-
+telescope.load_extension("jsonfly")
 
 vim.keymap.set(
   "", "-",
@@ -140,5 +140,14 @@ vim.keymap.set("n", "<leader>fu",
   {
     noremap = true,
     desc = "Search undo tree",
+  }
+)
+
+vim.keymap.set("n", "<leader>j",
+  -- telescope.extensions.jsonfly.jsonfly,
+  ":Telescope jsonfly<CR>",
+  {
+    noremap = true,
+    desc = "jsonfly",
   }
 )
