@@ -6,7 +6,7 @@ vim.opt.expandtab = true
 vim.opt.foldmethod = "indent"
 vim.opt.foldlevel = 100
 vim.opt.foldclose = "all"
-vim.opt.number = true
+vim.opt.number = false
 vim.opt.cursorline = true
 vim.opt.termguicolors = true
 vim.opt.clipboard:append { "unnamed", "unnamedplus" }
