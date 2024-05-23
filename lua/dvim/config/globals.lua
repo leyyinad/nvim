@@ -6,3 +6,5 @@ vim.g.minimap_auto_win_enter = 1
 
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
+
+vim.g.godot_executable = '/Applications/Godot.app'
