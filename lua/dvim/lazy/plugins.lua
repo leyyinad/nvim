@@ -9,9 +9,13 @@ return {
 
   { "sheerun/vim-polyglot" },
 
+  { "habamax/vim-godot" },
+
   { "williamboman/mason.nvim" },
   { "williamboman/mason-lspconfig.nvim" },
   { "neovim/nvim-lspconfig" },
+
+  { "echasnovski/mini.nvim",                      version = false },
 
   { "b0o/schemastore.nvim" },
   { "someone-stole-my-name/yaml-companion.nvim",  dependencies = { { "neovim/nvim-lspconfig", "nvim-lua/plenary.nvim", "nvim-telescope/telescope.nvim" } } },
@@ -46,8 +50,10 @@ return {
 
   { "nvim-tree/nvim-web-devicons" },
 
-  { "windwp/nvim-autopairs" },
+  -- { "windwp/nvim-autopairs" }, -- see mini.nvim
   { "windwp/nvim-ts-autotag" },
+
+  { "pfeiferj/nvim-hurl" },
 
   {
     "christoomey/vim-tmux-navigator",
@@ -105,7 +111,7 @@ return {
   { "LunarVim/bigfile.nvim" },
 
   { "nvim-lualine/lualine.nvim",          dependencies = { "nvim-tree/nvim-web-devicons" } },
-  { "kdheepak/tabline.nvim" },
+  -- { "kdheepak/tabline.nvim" }, -- see mini.nvim
   { "folke/tokyonight.nvim",              opts = { transparent = false } },
   { "nanotech/jellybeans.vim" },
   { "craftzdog/solarized-osaka.nvim" },
