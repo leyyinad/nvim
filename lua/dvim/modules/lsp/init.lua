@@ -1,3 +1,6 @@
+vim.lsp.set_log_level("off")
+-- vim.lsp.set_log_level("debug")
+
 require("dvim.modules.lsp.mappings")
 
 require("dvim.modules.lsp.lang.ansible")
