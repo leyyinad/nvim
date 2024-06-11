@@ -15,6 +15,7 @@ require('nvim-treesitter.configs').setup {
 
   highlight = {
     enable = true,
+    disable = { "css", "scss" } -- see https://github.com/ap/vim-css-color/issues/173
   }
 }
 
