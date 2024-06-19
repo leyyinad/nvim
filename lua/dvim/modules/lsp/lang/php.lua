@@ -35,6 +35,7 @@ lspconfig.intelephense.setup {
         "password",
         "pcntl",
         "pcre",
+        "posix",
         "PDO",
         "pdo_mysql",
         "Phar",
