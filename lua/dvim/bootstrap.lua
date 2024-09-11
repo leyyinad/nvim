@@ -1,5 +1,7 @@
-require("dvim.lazy")
+vim.loader.enable()
+
 require("dvim.config")
+require("dvim.lazy")
 
 require("dvim.modules.treesitter")
 
@@ -33,3 +35,7 @@ require("dvim.modules.whichkey")
 require("dvim.modules.devdocs")
 
 require("dvim.modules.themes")
+
+require("dvim.modules.linenumbers")
+
+require("dvim.modules.intro")
