@@ -9,8 +9,6 @@ return {
 
   { "sheerun/vim-polyglot" },
 
-  { "habamax/vim-godot" },
-
   { "williamboman/mason.nvim" },
   { "williamboman/mason-lspconfig.nvim" },
   { "neovim/nvim-lspconfig" },
@@ -83,6 +81,9 @@ return {
   { "nvim-telescope/telescope-file-browser.nvim" },
   { "Myzel394/jsonfly.nvim" },
 
+  { "habamax/vim-godot" },
+  { "Teatek/gdscript-extended-lsp.nvim" },
+
   {
     "luckasRanarison/nvim-devdocs",
     dependencies = {
@@ -90,6 +91,8 @@ return {
   },
 
   { 'smoka7/hop.nvim' },
+
+  { 'johmsalas/text-case.nvim' },
 
   { "tamago324/lir.nvim" },
   { "tamago324/lir-git-status.nvim" },
@@ -103,19 +106,38 @@ return {
   { "stevearc/dressing.nvim" },
   { "lukas-reineke/indent-blankline.nvim" },
   { "RRethy/vim-illuminate" },
-  { "wfxr/minimap.vim" },
+  {
+    "wfxr/minimap.vim",
+    build = "cargo install --locked code-minimap",
+    lazy = false,
+    cmd = { "Minimap", "MinimapClose", "MinimapToggle", "MinimapRefresh", "MinimapUpdateHighlight" },
+    init = function()
+      vim.g.minimap_width = 10
+      vim.g.minimap_auto_start = 0
+      vim.g.minimap_auto_start_win_enter = 1
+    end,
+  },
 
-  { "folke/trouble.nvim",                 dependencies = { "nvim-tree/nvim-web-devicons" } },
+  { "folke/trouble.nvim",              dependencies = { "nvim-tree/nvim-web-devicons" } },
   { "folke/which-key.nvim" },
+
+  { "goolord/alpha-nvim" },
+
+  -- { "ap/vim-css-color" },
+  { "norcalli/nvim-colorizer.lua" },
 
   { "LunarVim/bigfile.nvim" },
 
-  { "nvim-lualine/lualine.nvim",          dependencies = { "nvim-tree/nvim-web-devicons" } },
+  -- { "github/copilot.vim" },
+  --
+  { "IMOKURI/line-number-interval.nvim" },
+
+  { "nvim-lualine/lualine.nvim",       dependencies = { "nvim-tree/nvim-web-devicons" } },
   -- { "kdheepak/tabline.nvim" }, -- see mini.nvim
-  { "folke/tokyonight.nvim",              opts = { transparent = false } },
+  { "folke/tokyonight.nvim",           opts = { transparent = false } },
   { "nanotech/jellybeans.vim" },
   { "craftzdog/solarized-osaka.nvim" },
-  { "catppuccin/nvim",                    name = "catppuccin",                                              priority = 1000 },
-
-  { "ap/vim-css-color" },
+  { "catppuccin/nvim",                 name = "catppuccin",                             priority = 1000 },
+  { 'arzg/vim-colors-xcode' },
+  { 'kaicataldo/material.vim' },
 }
