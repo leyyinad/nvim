@@ -1,14 +1,15 @@
 local builtin = require("telescope.builtin")
 local telescope = require("telescope")
 local lga_actions = require("telescope-live-grep-args.actions")
-local fb_actions = require("telescope").extensions.file_browser.actions
+-- local fb_actions = require("telescope").extensions.file_browser.actions
 
 telescope.setup {
   defaults = {
     layout_config = {
       height = 0.95,
-      width = 0.95,
-    }
+      -- width = 0.95,
+      width = 0.75,
+    },
   },
   extensions = {
     live_grep_args = {
@@ -25,22 +26,22 @@ telescope.setup {
       -- theme = { }, -- use own theme spec
       -- layout_config = { mirror=true }, -- mirror preview pane
     },
-    file_browser = {
-      theme = "ivy",
-      -- disables netrw and use telescope-file-browser in its place
-      hijack_netrw = true,
-      initial_mode = "normal",
-      mappings = {
-        ["i"] = {
-          -- your custom insert mode mappings
-        },
-        ["n"] = {
-          -- your custom normal mode mappings
-          ["-"] = fb_actions.goto_parent_dir,
-          ["%"] = fb_actions.create,
-        },
-      },
-    },
+    -- file_browser = {
+    --   theme = "ivy",
+    --   -- disables netrw and use telescope-file-browser in its place
+    --   hijack_netrw = true,
+    --   initial_mode = "normal",
+    --   mappings = {
+    --     ["i"] = {
+    --       -- your custom insert mode mappings
+    --     },
+    --     ["n"] = {
+    --       -- your custom normal mode mappings
+    --       ["-"] = fb_actions.goto_parent_dir,
+    --       ["%"] = fb_actions.create,
+    --     },
+    --   },
+    -- },
   }
 }
 require("telescope-lsp-handlers").setup()
@@ -49,19 +50,19 @@ telescope.load_extension("ui-select")
 telescope.load_extension("dap")
 telescope.load_extension("undo")
 telescope.load_extension("live_grep_args")
-telescope.load_extension("file_browser")
+-- telescope.load_extension("file_browser")
 telescope.load_extension("yaml_schema")
 telescope.load_extension("jsonfly")
 
-vim.keymap.set(
-  "", "-",
-  -- telescope.extensions.file_browser.actions.goto_parent_dir,
-  ":Telescope file_browser path=%:p:h select_buffer=true<CR>",
-  {
-    noremap = true,
-    desc = "File browser",
-  }
-)
+-- vim.keymap.set(
+--   "", "-",
+--   -- telescope.extensions.file_browser.actions.goto_parent_dir,
+--   ":Telescope file_browser path=%:p:h select_buffer=true<CR>",
+--   {
+--     noremap = true,
+--     desc = "File browser",
+--   }
+-- )
 
 vim.keymap.set(
   "n", "<C-p>",
@@ -124,6 +125,20 @@ vim.keymap.set(
   {
     noremap = true,
     desc = "List LSP for all workspace symbols",
+  }
+)
+
+vim.keymap.set(
+  "n", "<leader>ft",
+  function()
+    require('telescope.builtin').colorscheme({
+      enable_preview  = true,
+      ignore_builtin = true,
+    })
+  end,
+  {
+    noremap = true,
+    desc = "Find, preview and select vim colorscheme",
   }
 )
 

@@ -4,7 +4,7 @@ lspconfig.ts_ls.setup {}
 
 -- auto-remove unused imports when saving
 vim.api.nvim_create_autocmd("BufWritePre", {
-  pattern = { "*.tsx", "*.ts" },
+  pattern = { "*.tsx", "*.ts", "*.svelte", "*.js" },
   callback = function()
     vim.lsp.buf.code_action({
       apply = true,

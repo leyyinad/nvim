@@ -40,15 +40,10 @@ return {
   { "saadparwaiz1/cmp_luasnip" },
   { "L3MON4D3/LuaSnip",                           build = "make install_jsregexp" },
 
-  { "kylechui/nvim-surround" },
-  { "tummetott/unimpaired.nvim" },
-
-  { "numToStr/Comment.nvim" },
-  { "JoosepAlviste/nvim-ts-context-commentstring" },
+  -- { "JoosepAlviste/nvim-ts-context-commentstring" },
 
   { "nvim-tree/nvim-web-devicons" },
 
-  -- { "windwp/nvim-autopairs" }, -- see mini.nvim
   { "windwp/nvim-ts-autotag" },
 
   { "pfeiferj/nvim-hurl" },
@@ -90,54 +85,57 @@ return {
       "nvim-lua/plenary.nvim", "nvim-telescope/telescope.nvim", "nvim-treesitter/nvim-treesitter" }
   },
 
-  { 'smoka7/hop.nvim' },
-
   { 'johmsalas/text-case.nvim' },
 
-  { "tamago324/lir.nvim" },
-  { "tamago324/lir-git-status.nvim" },
-  { "tamago324/lir-bookmark.nvim" },
-  { "tamago324/lir-mmv.nvim" },
+  -- { "tamago324/lir.nvim" },
+  -- { "tamago324/lir-git-status.nvim" },
+  -- { "tamago324/lir-bookmark.nvim" },
+  -- { "tamago324/lir-mmv.nvim" },
 
   { "nvim-tree/nvim-tree.lua" },
 
   { "rcarriga/nvim-notify" },
-  { "folke/noice.nvim",                   dependencies = { "MunifTanjim/nui.nvim", "rcarriga/nvim-notify" } },
+  { "folke/noice.nvim",             dependencies = { "MunifTanjim/nui.nvim", "rcarriga/nvim-notify" } },
   { "stevearc/dressing.nvim" },
-  { "lukas-reineke/indent-blankline.nvim" },
-  { "RRethy/vim-illuminate" },
-  {
-    "wfxr/minimap.vim",
-    build = "cargo install --locked code-minimap",
-    lazy = false,
-    cmd = { "Minimap", "MinimapClose", "MinimapToggle", "MinimapRefresh", "MinimapUpdateHighlight" },
-    init = function()
-      vim.g.minimap_width = 10
-      vim.g.minimap_auto_start = 0
-      vim.g.minimap_auto_start_win_enter = 1
-    end,
-  },
+  -- {
+  --   "wfxr/minimap.vim",
+  --   build = "cargo install --locked code-minimap",
+  --   lazy = false,
+  --   cmd = { "Minimap", "MinimapClose", "MinimapToggle", "MinimapRefresh", "MinimapUpdateHighlight" },
+  --   init = function()
+  --     vim.g.minimap_width = 10
+  --     vim.g.minimap_auto_start = 0
+  --     vim.g.minimap_auto_start_win_enter = 1
+  --   end,
+  -- },
 
-  { "folke/trouble.nvim",              dependencies = { "nvim-tree/nvim-web-devicons" } },
+  { "folke/trouble.nvim",               dependencies = { "nvim-tree/nvim-web-devicons" } },
   { "folke/which-key.nvim" },
 
   { "goolord/alpha-nvim" },
 
-  -- { "ap/vim-css-color" },
-  { "norcalli/nvim-colorizer.lua" },
+  -- { "norcalli/nvim-colorizer.lua" },
 
   { "LunarVim/bigfile.nvim" },
 
-  -- { "github/copilot.vim" },
-  --
   { "IMOKURI/line-number-interval.nvim" },
 
-  { "nvim-lualine/lualine.nvim",       dependencies = { "nvim-tree/nvim-web-devicons" } },
-  -- { "kdheepak/tabline.nvim" }, -- see mini.nvim
-  { "folke/tokyonight.nvim",           opts = { transparent = false } },
+  { "nvim-lualine/lualine.nvim",        dependencies = { "nvim-tree/nvim-web-devicons" } },
+  { "kdheepak/tabline.nvim" },
+  -- { "nanozuki/tabby.nvim",              dependencies = { "nvim-tree/nvim-web-devicons" } },
+
+
+  -----------------------------
+  --- Themes
+  --
+
+  { "folke/tokyonight.nvim",            opts = { transparent = false } },
   { "nanotech/jellybeans.vim" },
   { "craftzdog/solarized-osaka.nvim" },
-  { "catppuccin/nvim",                 name = "catppuccin",                             priority = 1000 },
+  { "catppuccin/nvim",                  name = "catppuccin",                             priority = 1000 },
   { 'arzg/vim-colors-xcode' },
   { 'kaicataldo/material.vim' },
+  { 'bettervim/yugen.nvim' },
+  { 'Zeioth/neon.nvim' },
+  { 'EdenEast/nightfox.nvim' },
 }

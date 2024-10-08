@@ -1,4 +1,4 @@
-vim.keymap.set("", "-", ":Explore<cr>", {})
+-- vim.keymap.set("", "-", ":Explore<cr>", {})
 
 local ghregex = [[\(^\|\s\s\)\zs\.\S\+]]
 

@@ -1,8 +1,24 @@
-require("dvim.modules.themes.catppuccin")
+---------------------
+--- neon
+--
 
--- vim.cmd.colorscheme("xcodedarkhc")
+-- vim.cmd.colorscheme("neon-netrunner-night")
+-- vim.cmd.colorscheme("neon-punkpeach-night")
+-- vim.cmd.colorscheme("neon-cherrykiss-night")
+vim.cmd.colorscheme("neon-cyberpunk-night")
 
--- material
+
+---------------------
+--- tokyonight
+--
+
+-- vim.cmd.colorscheme("tokyonight-night")
+
+
+---------------------
+--- material
+--
+
 -- vim.g.material_terminal_italics = 1
 
 -- vim.g.material_theme_style = "darker"
@@ -19,5 +35,34 @@ require("dvim.modules.themes.catppuccin")
 -- vim.g.material_theme_style = "darker-community"
 -- vim.cmd.colorscheme("material")
 
-vim.cmd.colorscheme("catppuccin")
--- vim.cmd.colorscheme("tokyonight-night")
+
+---------------------
+--- catppuccin
+--
+
+-- require("dvim.modules.themes.catppuccin")
+-- vim.cmd.colorscheme("catppuccin")
+
+
+---------------------
+--- yugen
+--
+
+-- vim.cmd.colorscheme("yugen")
+
+
+---------------------
+--- nightfox
+--
+
+-- vim.cmd.colorscheme("nightfox")
+-- vim.cmd.colorscheme("duskfox")
+
+
+
+---------------------
+--- Xcode
+--
+
+-- vim.cmd.colorscheme("xcodedarkhc")
+

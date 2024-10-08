@@ -7,8 +7,6 @@ require("dvim.modules.treesitter")
 
 require("dvim.modules.neodev")
 
-require("dvim.modules.unimpaired")
-
 require("dvim.modules.lualine")
 
 require("dvim.modules.navbuddy")
@@ -22,11 +20,7 @@ require("dvim.modules.neotest")
 require("dvim.modules.cmp")
 require("dvim.modules.gitsigns")
 
-require("dvim.modules.hop")
-require("dvim.modules.comment")
-
--- require("dvim.modules.netrw")
-require("dvim.modules.lir")
+require("dvim.modules.netrw")
 require("dvim.modules.tree")
 
 require("dvim.modules.telescope")
