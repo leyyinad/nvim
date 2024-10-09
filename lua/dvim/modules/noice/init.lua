@@ -6,7 +6,6 @@ end
 noice.setup {
   cmdline = {
     enabled = true,
-    -- view = "cmdline",
     view = "cmdline_popup",
     format = {
       cmdline = { pattern = "^:", icon = "" },
@@ -16,20 +15,20 @@ noice.setup {
       lua = { pattern = "^:%s*lua%s+", icon = "", lang = "lua" },
       help = { pattern = "^:%s*h%s+", icon = "󰋖" },
       calculator = { pattern = "^:=", icon = "󰃬", lang = "vimnormal" },
-      input = {},
+      input = { view = "cmdline_input", icon = "󰥻 " },
     },
   },
   messages = {
     enabled = true,
-    view = "mini",
-    view_error = "mini",
-    view_warn = "mini",
-    view_history = "split",
-    view_search = false,
+    view = "notify", -- "mini"
+    view_error = "notify", -- "mini"
+    view_warn = "notify", -- "mini"
+    view_history = "messages", -- "split"
+    view_search = "virtualtext", -- false
   },
   popupmenu = {
     enabled = true,
-    backend = "mini",
+    backend = "nui",
     kind_icons = {},
   },
   -- redirect = {},

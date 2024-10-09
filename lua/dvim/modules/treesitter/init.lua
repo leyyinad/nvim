@@ -13,10 +13,17 @@ require('nvim-treesitter.configs').setup {
     "yaml",
   },
 
+  sync_install = false,
+
+  auto_install = true,
+
+  ignore_install = {},
+
+  modules = {},
+
   highlight = {
     enable = true,
-    disable = { "css", "scss" } -- see https://github.com/ap/vim-css-color/issues/173
-  }
+  },
 }
 
 vim.opt.foldmethod = "expr"

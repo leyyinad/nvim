@@ -1,6 +1,8 @@
 require("overseer").setup()
 require("lazydev").setup()
 
+require("notify").setup()
+
 require("mason").setup()
 require("mason-lspconfig").setup()
 require("mason-nvim-dap").setup()
@@ -21,12 +23,6 @@ require("mini.basics").setup {
 
 require("mini.bufremove").setup()
 require("mini.bracketed").setup()
--- require("mini.clue").setup {
---   triggers = {
---     { mode = 'n', keys = '<Leader>' },
---   }
--- }
--- require("mini.diff").setup()
 require("mini.icons").setup()
 require("mini.completion").setup()
 require("mini.cursorword").setup()
@@ -83,20 +79,13 @@ vim.keymap.set('n', '<Leader>mt', MiniMap.toggle)
 
 require("mini.misc").setup()
 require("mini.move").setup()
--- require("mini.notify").setup()
 require("mini.operators").setup()
 require("mini.pairs").setup()
--- require("mini.pick").setup()
 require("mini.sessions").setup()
 require("mini.splitjoin").setup()
 require("mini.surround").setup()
 require("mini.trailspace").setup()
 require("mini.visits").setup()
-
-------------------------
-
-
--- require("blink.cmp").setup()
 
 require("nvim-ts-autotag").setup()
 require("dressing").setup()
@@ -105,3 +94,23 @@ require("hurl").setup()
 
 require("gdscript_extended").setup()
 require("textcase").setup()
+
+require("blink.cmp").setup {
+  keymap = {
+  },
+
+  highlight = {
+    -- sets the fallback highlight groups to nvim-cmp's highlight groups
+    -- useful for when your theme doesn't support blink.cmp
+    -- will be removed in a future release, assuming themes add support
+    use_nvim_cmp_as_default = true,
+  },
+
+  nerd_font_variant = "normal",
+
+  -- experimental auto-brackets support
+  accept = { auto_brackets = { enabled = true } },
+
+  -- experimental signature help support
+  trigger = { signature_help = { enabled = true } },
+}

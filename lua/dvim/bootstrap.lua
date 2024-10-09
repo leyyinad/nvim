@@ -15,7 +15,6 @@ require("dvim.modules.noice")
 require("dvim.modules.lsp")
 require("dvim.modules.dap")
 require("dvim.modules.neotest")
--- require("dvim.modules.cmp")
 require("dvim.modules.gitsigns")
 
 require("dvim.modules.netrw")
