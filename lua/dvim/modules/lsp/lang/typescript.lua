@@ -9,7 +9,6 @@ vim.api.nvim_create_autocmd("BufWritePre", {
     vim.lsp.buf.code_action({
       apply = true,
       context = {
-        -- only = { "source.removeUnusedImports.ts" },
         only = { "source.removeUnusedImports" },
         diagnostics = {},
       },
@@ -18,7 +17,6 @@ vim.api.nvim_create_autocmd("BufWritePre", {
     vim.lsp.buf.code_action({
       apply = true,
       context = {
-        -- only = { "source.organizeImports.ts" },
         only = { "source.organizeImports" },
         diagnostics = {},
       },
