@@ -96,8 +96,7 @@ require("gdscript_extended").setup()
 require("textcase").setup()
 
 require("blink.cmp").setup {
-  keymap = {
-  },
+  keymap = {},
 
   highlight = {
     -- sets the fallback highlight groups to nvim-cmp's highlight groups
