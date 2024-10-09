@@ -24,7 +24,7 @@ require("mini.basics").setup {
 require("mini.bufremove").setup()
 require("mini.bracketed").setup()
 require("mini.icons").setup()
-require("mini.completion").setup()
+-- require("mini.completion").setup()
 require("mini.cursorword").setup()
 require("mini.extra").setup()
 require("mini.files").setup()
