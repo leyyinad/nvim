@@ -1,6 +1,10 @@
 require("overseer").setup()
+require("lazydev").setup()
+
 require("mason").setup()
 require("mason-lspconfig").setup()
+require("mason-nvim-dap").setup()
+require("mason-tool-installer").setup {}
 
 ------------------------
 --- mini
@@ -24,7 +28,7 @@ require("mini.bracketed").setup()
 -- }
 -- require("mini.diff").setup()
 require("mini.icons").setup()
--- require("mini.completion").setup()
+require("mini.completion").setup()
 require("mini.cursorword").setup()
 require("mini.extra").setup()
 require("mini.files").setup()
@@ -92,23 +96,12 @@ require("mini.visits").setup()
 ------------------------
 
 
+-- require("blink.cmp").setup()
+
 require("nvim-ts-autotag").setup()
 require("dressing").setup()
 require("trouble").setup()
-require("bigfile").setup {
-  filesize = 2,      -- size of the file in MiB, the plugin round file sizes to the closest MiB
-  pattern = { "*" }, -- autocmd pattern or function see <### Overriding the detection of big files>
-  features = {       -- features to disable
-    "indent_blankline",
-    "illuminate",
-    "lsp",
-    "treesitter",
-    "syntax",
-    "matchparen",
-    "vimopts",
-    "filetype",
-  },
-}
 require("hurl").setup()
+
 require("gdscript_extended").setup()
 require("textcase").setup()
