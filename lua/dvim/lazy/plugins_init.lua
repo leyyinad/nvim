@@ -24,10 +24,19 @@ require("mini.basics").setup {
 require("mini.bufremove").setup()
 require("mini.bracketed").setup()
 require("mini.icons").setup()
--- require("mini.completion").setup()
 require("mini.cursorword").setup()
 require("mini.extra").setup()
-require("mini.files").setup()
+
+require("mini.files").setup {
+  windows = {
+    max_number = math.huge,
+    preview = true,
+    width_focus = 32,
+    width_nofocus = 16,
+    width_preview = 80,
+  }
+}
+
 require("mini.fuzzy").setup()
 
 local hipatterns = require('mini.hipatterns')
@@ -90,14 +99,21 @@ require("mini.visits").setup()
 require("nvim-ts-autotag").setup()
 require("dressing").setup()
 require("trouble").setup()
+
+---@diagnostic disable-next-line: missing-parameter
 require("hurl").setup()
 
 require("gdscript_extended").setup()
 require("textcase").setup()
 
+---@diagnostic disable-next-line: missing-fields
 require("blink.cmp").setup {
-  keymap = {},
+  ---@diagnostic disable-next-line: missing-fields
+  keymap = {
+    accept = { '<Tab>', '<CR>' },
+  },
 
+  ---@diagnostic disable-next-line: missing-fields
   highlight = {
     -- sets the fallback highlight groups to nvim-cmp's highlight groups
     -- useful for when your theme doesn't support blink.cmp
@@ -108,8 +124,10 @@ require("blink.cmp").setup {
   nerd_font_variant = "normal",
 
   -- experimental auto-brackets support
+  ---@diagnostic disable-next-line: missing-fields
   accept = { auto_brackets = { enabled = true } },
 
   -- experimental signature help support
+  ---@diagnostic disable-next-line: missing-fields
   trigger = { signature_help = { enabled = true } },
 }
