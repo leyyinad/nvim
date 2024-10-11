@@ -1,8 +1,8 @@
-vim.filetype.add({
-  extension = {
-    tscn = 'dosini',
-    tres = 'dosini',
-    godot = 'dosini',
-    gd = 'gdscript',
-  }
-})
+-- vim.filetype.add({
+--   extension = {
+--     tscn = 'gdresource',
+--     tres = 'gdresource',
+--     godot = 'gdresource',
+--     gd = 'gdscript',
+--   }
+-- })
