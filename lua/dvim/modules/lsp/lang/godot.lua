@@ -1,5 +1,7 @@
 local lspconfig = require("lspconfig")
 
+vim.g.godot_executable = '/Applications/Godot.app/Contents/MacOS/Godot';
+
 lspconfig.gdscript.setup {}
 lspconfig.gdshader_lsp.setup {}
 
