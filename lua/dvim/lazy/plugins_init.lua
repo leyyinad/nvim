@@ -109,11 +109,6 @@ require("textcase").setup()
 ---@diagnostic disable-next-line: missing-fields
 require("blink.cmp").setup {
   ---@diagnostic disable-next-line: missing-fields
-  keymap = {
-    accept = { '<Tab>', '<CR>' },
-  },
-
-  ---@diagnostic disable-next-line: missing-fields
   highlight = {
     -- sets the fallback highlight groups to nvim-cmp's highlight groups
     -- useful for when your theme doesn't support blink.cmp
