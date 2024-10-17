@@ -48,6 +48,7 @@ return {
 
   { "sheerun/vim-polyglot" },
   { "neovim/nvim-lspconfig" },
+  { "nvimtools/none-ls.nvim" },   -- used for gdformat
 
   { "b0o/schemastore.nvim" },
 
