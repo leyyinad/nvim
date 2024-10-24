@@ -9,3 +9,9 @@ dap.adapters.php = {
   args = { adapter_path }
 }
 
+dap.adapters.godot = {
+  type = "server",
+  host = '127.0.0.1',
+  port = 6006,
+}
+

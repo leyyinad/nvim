@@ -17,3 +17,12 @@ dap.configurations.php = {
     },
   },
 }
+
+dap.configurations.gdscript = {
+  {
+    type = "godot",
+    request = "launch",
+    name = "Launch scene",
+    project = "${workspaceFolder}",
+  },
+}
