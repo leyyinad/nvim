@@ -27,7 +27,7 @@ local header = {
   },
   opts = {
     position = "center",
-    hl = "Type",
+    hl = "Whitespace",
   },
 }
 

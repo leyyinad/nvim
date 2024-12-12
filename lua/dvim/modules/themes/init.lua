@@ -1,11 +1,17 @@
 ---------------------
+--- jellybeans
+--
+
+-- vim.cmd.colorscheme("jellybeans")
+
+---------------------
 --- neon
 --
 
 -- vim.cmd.colorscheme("neon-netrunner-night")
 -- vim.cmd.colorscheme("neon-punkpeach-night")
 -- vim.cmd.colorscheme("neon-cherrykiss-night")
-vim.cmd.colorscheme("neon-cyberpunk-night")
+-- vim.cmd.colorscheme("neon-cyberpunk-night")
 
 
 ---------------------
@@ -57,7 +63,7 @@ vim.cmd.colorscheme("neon-cyberpunk-night")
 
 -- vim.cmd.colorscheme("nightfox")
 -- vim.cmd.colorscheme("duskfox")
-
+vim.cmd.colorscheme("carbonfox")
 
 
 ---------------------

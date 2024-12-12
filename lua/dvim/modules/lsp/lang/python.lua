@@ -6,6 +6,7 @@ lspconfig.pylsp.setup {
       plugins = {
         rope_autoimport = {
           enabled = true,
+          memory = true,
         },
         rope_completion = {
           enabled = true,
@@ -17,7 +18,10 @@ lspconfig.pylsp.setup {
         pylint = {
           enabled = true,
         },
-      }
+      },
+      rope = {
+        ropeFolder = nil,
+      },
     }
   }
 }

@@ -1,8 +1,5 @@
--- vim.filetype.add({
---   extension = {
---     tscn = 'gdresource',
---     tres = 'gdresource',
---     godot = 'gdresource',
---     gd = 'gdscript',
---   }
--- })
+vim.filetype.add({
+  filename = {
+    ['.prettierrc'] = 'json',
+  },
+})
