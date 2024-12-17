@@ -148,21 +148,23 @@ return {
   { "sheerun/vim-polyglot" },
   {
     "neovim/nvim-lspconfig",
-    dependencies = { "saghen/blink.cmp", "hrsh7th/cmp-nvim-lsp" },
+    dependencies = { "hrsh7th/cmp-nvim-lsp" },
 
     -- example using `opts` for defining servers
-    opts = {
-      servers = {
-        lua_ls = {},
-      },
-    },
+    -- opts = {
+    --   servers = {
+    --     lua_ls = {},
+    --   },
+    -- },
     config = function(_, opts)
       local lspconfig = require("lspconfig")
+      local lsp_capabilities = require("cmp-vim-lsp").default_capabilities()
+
       for server, config in pairs(opts.servers) do
         -- passing config.capabilities to blink.cmp merges with the capabilities in your
         -- `opts[server].capabilities, if you've defined it
         -- config.capabilities = require("blink.cmp").get_lsp_capabilities(config.capabilities)
-        config.capabilities = require("cmp_vim_lsp").default_capabilities()
+        config.capabilities = lsp_capabilities
         lspconfig[server].setup(config)
       end
     end,
@@ -181,7 +183,7 @@ return {
   { "JoosepAlviste/nvim-ts-context-commentstring" },
 
   { "habamax/vim-godot" },
-  { "Teatek/gdscript-extended-lsp.nvim" },
+  -- { "Teatek/gdscript-extended-lsp.nvim" },
 
   ------------------------
   --- Completion
@@ -194,6 +196,10 @@ return {
   { "hrsh7th/cmp-cmdline" },
   { "hrsh7th/nvim-cmp" },
   { "onsails/lspkind.nvim" },
+  { "petertriho/cmp-git" },
+
+  { "hrsh7th/cmp-vsnip" },
+  { "hrsh7th/vim-vsnip" },
 
   ------------------------
   --- Navigation
