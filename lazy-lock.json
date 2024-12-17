@@ -11,6 +11,7 @@
   "cmp-vsnip": { "branch": "main", "commit": "989a8a73c44e926199bfd05fa7a516d51f2d2752" },
   "completion-treesitter": { "branch": "master", "commit": "45c9b2faff4785539a0d0c655440c2465fed985a" },
   "dressing.nvim": { "branch": "master", "commit": "fc78a3ca96f4db9f8893bb7e2fd9823e0780451b" },
+  "gdscript-extended-lsp.nvim": { "branch": "master", "commit": "818a948e1e84a850534802d813859c91cfaed9de" },
   "gitsigns.nvim": { "branch": "main", "commit": "5f808b5e4fef30bd8aca1b803b4e555da07fc412" },
   "jellybeans.vim": { "branch": "master", "commit": "ef83bf4dc8b3eacffc97bf5c96ab2581b415c9fa" },
   "jsonfly.nvim": { "branch": "main", "commit": "d713d9ef38115ab09b4a2828dac67b2b3f7d35c4" },

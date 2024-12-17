@@ -183,7 +183,7 @@ return {
   { "JoosepAlviste/nvim-ts-context-commentstring" },
 
   { "habamax/vim-godot" },
-  -- { "Teatek/gdscript-extended-lsp.nvim" },
+  { "Teatek/gdscript-extended-lsp.nvim" },
 
   ------------------------
   --- Completion
