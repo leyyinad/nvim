@@ -320,4 +320,9 @@ return {
   { "bettervim/yugen.nvim" },
   { "Zeioth/neon.nvim" },
   { "EdenEast/nightfox.nvim" },
+  { "nyoom-engineering/oxocarbon.nvim" },
+  { "Shatur/neovim-ayu" },
+  { "embark-theme/vim" },
+  { "sainnhe/gruvbox-material" },
+  { "navarasu/onedark.nvim" },
 }

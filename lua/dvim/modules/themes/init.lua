@@ -63,7 +63,7 @@
 
 -- vim.cmd.colorscheme("nightfox")
 -- vim.cmd.colorscheme("duskfox")
-vim.cmd.colorscheme("carbonfox")
+-- vim.cmd.colorscheme("carbonfox")
 
 
 ---------------------
@@ -71,4 +71,61 @@ vim.cmd.colorscheme("carbonfox")
 --
 
 -- vim.cmd.colorscheme("xcodedarkhc")
+
+
+---------------------
+--- Oxocarbon
+--
+
+vim.cmd.colorscheme("oxocarbon")
+
+
+---------------------
+--- Ayu
+--
+
+-- vim.g.embark_terminal_italics = 1
+-- vim.cmd.colorscheme("ayu")
+
+
+---------------------
+--- Embark
+--
+
+-- vim.g.embark_terminal_italics = 1
+-- vim.cmd.colorscheme("embark")
+
+
+---------------------
+--- Gruvbox Material
+--
+
+-- vim.g.gruvbox_material_background = 'hard'
+-- -- vim.g.gruvbox_material_eackground = 'mix'
+-- -- vim.g.gruvbox_material_eackground = 'original'
+-- vim.g.gruvbox_material_enable_italic = true
+-- vim.cmd.colorscheme("gruvbox-material")
+
+
+---------------------
+--- Gruvbox Material
+--
+
+-- vim.g.gruvbox_material_background = 'hard'
+-- -- vim.g.gruvbox_material_eackground = 'mix'
+-- -- vim.g.gruvbox_material_eackground = 'original'
+-- vim.g.gruvbox_material_enable_italic = true
+-- vim.cmd.colorscheme("gruvbox-material")
+
+
+---------------------
+--- OneDark
+--
+
+-- vim.g.onedark_config = {
+--     -- style = 'darker'
+--     style = 'deep'
+--     -- style = 'warmer'
+-- }
+-- vim.cmd.colorscheme("onedark")
 
