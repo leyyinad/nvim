@@ -16,6 +16,7 @@ lspconfig.intelephense.setup {
         "dba",
         "dom",
         "enchant",
+        "exif",
         "fileinfo",
         "filter",
         "ftp",
