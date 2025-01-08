@@ -77,15 +77,14 @@
 --- Oxocarbon
 --
 
-vim.cmd.colorscheme("oxocarbon")
+-- vim.cmd.colorscheme("oxocarbon")
 
 
 ---------------------
 --- Ayu
 --
 
--- vim.g.embark_terminal_italics = 1
--- vim.cmd.colorscheme("ayu")
+vim.cmd.colorscheme("ayu")
 
 
 ---------------------
@@ -94,17 +93,6 @@ vim.cmd.colorscheme("oxocarbon")
 
 -- vim.g.embark_terminal_italics = 1
 -- vim.cmd.colorscheme("embark")
-
-
----------------------
---- Gruvbox Material
---
-
--- vim.g.gruvbox_material_background = 'hard'
--- -- vim.g.gruvbox_material_eackground = 'mix'
--- -- vim.g.gruvbox_material_eackground = 'original'
--- vim.g.gruvbox_material_enable_italic = true
--- vim.cmd.colorscheme("gruvbox-material")
 
 
 ---------------------
