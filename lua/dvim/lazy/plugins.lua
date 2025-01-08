@@ -145,7 +145,6 @@ return {
   { "nvim-treesitter/nvim-treesitter",      build = ":TSUpdate" },
   { "nvim-treesitter/completion-treesitter" },
 
-  -- { "sheerun/vim-polyglot" },
   {
     "neovim/nvim-lspconfig",
     dependencies = { "hrsh7th/cmp-nvim-lsp" },
