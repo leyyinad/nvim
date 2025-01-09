@@ -183,6 +183,7 @@ return {
 
   { "habamax/vim-godot" },
   { "Teatek/gdscript-extended-lsp.nvim" },
+  { "mfussenegger/nvim-ansible" },
 
   ------------------------
   --- Completion
