@@ -13,4 +13,6 @@ return {
     },
     dap = dap.configurations.php[1],
   },
+  require('neotest-vitest') {
+  }
 }

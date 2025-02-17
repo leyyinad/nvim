@@ -17,7 +17,8 @@ require("dvim.modules.dap")
 require("dvim.modules.neotest")
 require("dvim.modules.gitsigns")
 
-require("dvim.modules.netrw")
+require("dvim.modules.fern")
+-- require("dvim.modules.netrw")
 
 require("dvim.modules.telescope")
 require("dvim.modules.whichkey")

@@ -20,7 +20,9 @@ noice.setup {
   },
   messages = {
     enabled = true,
-    view = "notify", -- "mini"
+    -- enabled = false,
+    -- view = "notify", -- "mini"
+    view = "mini",
     view_error = "notify", -- "mini"
     view_warn = "notify", -- "mini"
     view_history = "messages", -- "split"

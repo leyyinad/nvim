@@ -3,7 +3,7 @@ if not alpha_status_ok then
   return
 end
 
-local dashboard = require("alpha.themes.dashboard")
+-- local dashboard = require("alpha.themes.dashboard")
 local theta = require("alpha.themes.theta")
 
 local header = {

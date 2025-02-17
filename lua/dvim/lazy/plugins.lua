@@ -221,6 +221,16 @@ return {
   { "nvim-telescope/telescope-frecency.nvim" },
   { "smartpde/telescope-recent-files" },
 
+  { "lambdalisue/vim-fern" },
+  { "lambdalisue/vim-glyph-palette" },
+  { "lambdalisue/vim-fern-renderer-nerdfont",       dependencies = { "ryanoasis/vim-devicons", "lambdalisue/vim-nerdfont" } },
+  { "lambdalisue/vim-fern-hijack" },
+  { "lambdalisue/vim-fern-git-status" },
+  { "yuki-yano/fern-preview.vim" },
+  -- lambdalisue/vim-fern-ssh
+  -- lambdalisue/vim-fern-bookmark
+  -- lambdalisue/vim-fern-mapping-git
+
   { "Myzel394/jsonfly.nvim" },
 
   { "folke/trouble.nvim",                           dependencies = { "nvim-tree/nvim-web-devicons" } },
