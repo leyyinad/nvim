@@ -7,6 +7,7 @@ vim.g["fern_git_status#disable_ignored"] = 1
 vim.g["fern_git_status#disable_untracked"] = 1
 vim.g["fern_git_status#disable_submodules"] = 1
 vim.g["fern_git_status#disable_directories"] = 1
+
 -- vim.g["fern#disable_default_mappings"] = 1
 
 -- local myGlyphPaletteGroup = vim.api.nvim_create_augroup("my-glyph-palette", { clear = true })
