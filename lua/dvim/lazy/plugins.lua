@@ -184,6 +184,11 @@ return {
   { "habamax/vim-godot" },
   { "Teatek/gdscript-extended-lsp.nvim" },
   { "mfussenegger/nvim-ansible" },
+  {
+    "pmizio/typescript-tools.nvim",
+    dependencies = { "nvim-lua/plenary.nvim", "neovim/nvim-lspconfig" },
+    opts = {},
+  },
 
   ------------------------
   --- Completion
@@ -223,7 +228,10 @@ return {
 
   { "lambdalisue/vim-fern" },
   { "lambdalisue/vim-glyph-palette" },
-  { "lambdalisue/vim-fern-renderer-nerdfont",       dependencies = { "ryanoasis/vim-devicons", "lambdalisue/vim-nerdfont" } },
+  {
+    "lambdalisue/vim-fern-renderer-nerdfont",
+    dependencies = { "ryanoasis/vim-devicons", "lambdalisue/vim-nerdfont" },
+  },
   { "lambdalisue/vim-fern-hijack" },
   { "lambdalisue/vim-fern-git-status" },
   { "yuki-yano/fern-preview.vim" },
@@ -233,7 +241,7 @@ return {
 
   { "Myzel394/jsonfly.nvim" },
 
-  { "folke/trouble.nvim",                           dependencies = { "nvim-tree/nvim-web-devicons" } },
+  { "folke/trouble.nvim",             dependencies = { "nvim-tree/nvim-web-devicons" } },
   { "folke/which-key.nvim" },
 
   {

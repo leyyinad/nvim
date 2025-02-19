@@ -1,14 +1,16 @@
 local lspconfig = require("lspconfig")
 local yamlCompanion = require("yaml-companion")
-local schemastore = require('schemastore')
-
+local schemastore = require("schemastore")
 
 local cfg = yamlCompanion.setup({
   -- Add any options here, or leave empty to use the default settings
   -- lspconfig = {
   --   cmd = {"yaml-language-server"}
   -- },
+  schemas = schemastore.yaml.schemas(),
 })
+
+require("telescope").load_extension("yaml_schema")
 
 lspconfig.yamlls.setup(cfg)
 
