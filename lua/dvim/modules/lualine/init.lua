@@ -5,7 +5,15 @@ end
 
 local navic = require("nvim-navic")
 
-lualine.setup {
+local function get_schema()
+  local schema = require("yaml-companion").get_buf_schema(0)
+  if schema.result[1].name == "none" then
+    return ""
+  end
+  return schema.result[1].name
+end
+
+lualine.setup({
   options = {
     section_separators = { left = "", right = "" },
     component_separators = { left = "", right = "" },
@@ -19,8 +27,9 @@ lualine.setup {
         end,
         cond = function()
           return navic.is_available()
-        end
+        end,
       },
-    }
+    },
+    lualine_x = { "encoding", "fileformat", "filetype", get_schema },
   },
-}
+})
