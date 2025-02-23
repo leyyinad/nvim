@@ -5,4 +5,7 @@ vim.filetype.add({
   filename = {
     [".prettierrc"] = "json",
   },
+  pattern = {
+    [".*%.yaml%.tpl"] =  "yaml",
+  }
 })
