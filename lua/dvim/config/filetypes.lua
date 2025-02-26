@@ -9,5 +9,6 @@ vim.filetype.add({
   pattern = {
     [".*%.yaml%.tpl"] = "yaml",
     [".*/.kube/config"] = "yaml",
+    [".*%.tf%.example"] = "terraform",
   },
 })
