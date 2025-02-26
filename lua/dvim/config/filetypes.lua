@@ -4,8 +4,10 @@ vim.filetype.add({
   },
   filename = {
     [".prettierrc"] = "json",
+    [".pg_service.conf"] = "dosini",
   },
   pattern = {
-    [".*%.yaml%.tpl"] =  "yaml",
-  }
+    [".*%.yaml%.tpl"] = "yaml",
+    [".*/.kube/config"] = "yaml",
+  },
 })
