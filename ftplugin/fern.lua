@@ -8,6 +8,9 @@ vim.keymap.set("n", "C-d", "<Plug>(fern-action-preview:scroll:down:half)", { sil
 vim.keymap.set("n", "-", "<Plug>(fern-action-leave)", { silent = true, buffer = true })
 vim.keymap.set("n", "<Space>", "<Plug>(fern-action-mark)", { silent = true, buffer = true })
 
+
+
+
 -- function! s:fern_settings() abort
 --   nmap <silent> <buffer> p     <Plug>(fern-action-preview:toggle)
 --   nmap <silent> <buffer> <C-p> <Plug>(fern-action-preview:auto:toggle)
