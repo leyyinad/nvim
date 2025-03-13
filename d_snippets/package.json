@@ -1,0 +1,13 @@
+{
+  "name": "d-snippets",
+  "contributes": {
+    "snippets": [
+      {
+        "language": [
+          "php"
+        ],
+        "path": "./snippets/php.json"
+      }
+    ]
+  }
+}
