@@ -245,3 +245,5 @@ require("textcase").setup()
 require("nvim-highlight-colors").setup({})
 
 require("typescript-tools").setup({})
+
+require("conform").setup({})

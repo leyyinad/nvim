@@ -173,6 +173,9 @@ return {
 
   { "b0o/schemastore.nvim" },
 
+  { "mfussenegger/nvim-lint" },
+  { "stevearc/conform.nvim" },
+
   {
     "someone-stole-my-name/yaml-companion.nvim",
     dependencies = { { "neovim/nvim-lspconfig", "nvim-lua/plenary.nvim", "nvim-telescope/telescope.nvim" } },
@@ -196,7 +199,6 @@ return {
 
   { "L3MON4D3/LuaSnip",                             build = "make install_jsregexp" },
   { "molleweide/LuaSnip-snippets.nvim" },
-  -- { "mireq/luasnip-snippets" },
   { "rafamadriz/friendly-snippets" },
 
   ------------------------
@@ -232,22 +234,30 @@ return {
   { "nvim-telescope/telescope-file-browser.nvim" },
   { "nvim-telescope/telescope-frecency.nvim" },
   { "smartpde/telescope-recent-files" },
+  { "elianiva/telescope-npm.nvim" },
 
-  { "lambdalisue/vim-fern" },
-  { "lambdalisue/vim-fern-bookmark" },
-  { "lambdalisue/vim-fern-git-status" },
-  -- { "lambdalisue/vim-fern-git" },
-  { "lambdalisue/vim-fern-hijack" },
-  { "lambdalisue/vim-fern-mapping-git" },
-  { "lambdalisue/vim-fern-renderer-nerdfont" },
-  { "lambdalisue/vim-glyph-palette" },
-  { "yuki-yano/fern-preview.vim" },
-  { "lambdalisue/vim-nerdfont" },
-  { "lambdalisue/vim-fern-ssh" },
+  {
+    "lambdalisue/vim-fern",
+    dependencies = {
+      "lambdalisue/vim-fern-hijack",
+      "lambdalisue/vim-fern-git-status",
+      "lambdalisue/vim-fern-mapping-git",
+      "lambdalisue/vim-fern-bookmark",
+      "andykog/fern-highlight.vim",
+      "yuki-yano/fern-preview.vim",
+      {
+        "lambdalisue/vim-fern-renderer-nerdfont",
+        dependencies = {
+          "lambdalisue/vim-glyph-palette",
+          "lambdalisue/vim-nerdfont",
+        },
+      },
+    },
+  },
 
   { "Myzel394/jsonfly.nvim" },
 
-  { "folke/trouble.nvim",                           dependencies = { "nvim-tree/nvim-web-devicons" } },
+  { "folke/trouble.nvim",   dependencies = { "nvim-tree/nvim-web-devicons" } },
   { "folke/which-key.nvim" },
 
   {

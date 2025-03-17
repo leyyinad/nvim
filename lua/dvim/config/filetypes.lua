@@ -6,6 +6,7 @@ vim.filetype.add({
     [".prettierrc"] = "json",
     [".runner"] = "json",
     [".pg_service.conf"] = "dosini",
+    [".releaserc"] = "json",
     ["_js.php"] = "javascript",
   },
   pattern = {

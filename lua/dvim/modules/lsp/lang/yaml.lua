@@ -124,11 +124,14 @@ local cfg = yamlCompanion.setup({
 
     settings = {
       yaml = {
+        hover = true,
+        completion = true,
         validate = true,
         schemaStore = {
           enable = false,
           url = "",
         },
+        keyOrdering = false,
         schemas = schemastore.yaml.schemas({
           -- ["https://raw.githubusercontent.com/yannh/kubernetes-json-schema/refs/heads/master/v1.32.1-standalone-strict/all.json"] =
           -- "/*.yaml",

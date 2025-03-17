@@ -55,6 +55,7 @@ telescope.load_extension("yaml_schema")
 telescope.load_extension("jsonfly")
 telescope.load_extension("frecency")
 telescope.load_extension("recent_files")
+telescope.load_extension("npm")
 
 -- vim.keymap.set(
 --   "", "-",

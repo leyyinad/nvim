@@ -13,6 +13,7 @@ require("dvim.modules.notify")
 require("dvim.modules.noice")
 
 require("dvim.modules.lsp")
+require("dvim.modules.lint")
 require("dvim.modules.dap")
 require("dvim.modules.neotest")
 require("dvim.modules.gitsigns")
