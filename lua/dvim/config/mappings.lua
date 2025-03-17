@@ -6,11 +6,13 @@ vim.keymap.set("v", ">", ">gv", { noremap = true, desc = "Indent last selection"
 
 vim.keymap.del("", "Y")
 
-vim.keymap.set("", "ö", "[", { remap = true });
-vim.keymap.set("", "ä", "]", { remap = true });
+vim.keymap.set("", "ö", "[", { remap = true })
+vim.keymap.set("", "ä", "]", { remap = true })
 
 vim.keymap.set("", "<C-_><C-_>", "gcc", { remap = true })
 
 vim.keymap.set("n", "-", function()
-  MiniFiles.open(vim.fn.expand('%'))
+  MiniFiles.open(vim.fn.expand("%"))
 end)
+
+vim.keymap.set("n", "<ESC><ESC>", "<Cmd>nohlsearch|diffupdate|normal!<CR>")
