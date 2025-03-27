@@ -19,6 +19,7 @@ telescope.setup({
         i = {
           ["<C-k>"] = lga_actions.quote_prompt(),
           ["<C-i>"] = lga_actions.quote_prompt({ postfix = " --iglob " }),
+          ["<C-space>"] = lga_actions.to_fuzzy_refine,
         },
       },
       -- ... also accepts theme settings, for example:
@@ -56,6 +57,7 @@ telescope.load_extension("jsonfly")
 telescope.load_extension("frecency")
 telescope.load_extension("recent_files")
 telescope.load_extension("npm")
+telescope.load_extension("textcase")
 
 -- vim.keymap.set(
 --   "", "-",
@@ -128,7 +130,7 @@ vim.keymap.set("n", "<leader>fu", telescope.extensions.undo.undo, {
   desc = "Search undo tree",
 })
 
-vim.keymap.set("n", "<leader>j", [[<cmd>Telescope jsonfly<CR>]], {
+vim.keymap.set("n", "<leader>j", [[<CMD>Telescope jsonfly<CR>]], {
   noremap = true,
   desc = "jsonfly",
 })
@@ -136,4 +138,14 @@ vim.keymap.set("n", "<leader>j", [[<cmd>Telescope jsonfly<CR>]], {
 vim.keymap.set("n", "<leader>fw", telescope.extensions.recent_files.pick, {
   noremap = true,
   desc = "recent files",
+})
+
+vim.keymap.set("n", "<leader>,n", [[<CMD>Telescope npm scripts<CR>]], {
+  noremap = true,
+  desc = "Run npm script",
+})
+
+vim.keymap.set("n", "<leader>,p", [[<CMD>Telescope npm packages<CR>]], {
+  noremap = true,
+  desc = "List npm packages",
 })
