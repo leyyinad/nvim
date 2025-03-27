@@ -192,7 +192,7 @@ require("mini.indentscope").setup({
 require("mini.jump").setup()
 require("mini.jump2d").setup({
   view = {
-    n_steps_ahead = 1,
+    -- n_steps_ahead = 1,
   },
   mapping = {
     start_jumping = "",
