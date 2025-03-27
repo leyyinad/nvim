@@ -239,7 +239,7 @@ require("trouble").setup()
 ---@diagnostic disable-next-line: missing-parameter
 require("hurl").setup()
 
-require("gdscript_extended").setup()
+--require("gdscript_extended").setup()
 require("textcase").setup()
 
 require("nvim-highlight-colors").setup({})
