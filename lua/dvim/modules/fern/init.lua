@@ -1,15 +1,17 @@
 vim.g.loaded_netrwPlugin = 1
-vim.g["fern#default_hidden"] = 1
+
+vim.g["fern#default_hidden"] = 0
 vim.g["fern#renderer"] = "nerdfont"
 vim.g["fern#renderer#nerdfont#indent_makers"] = 1
-
-vim.keymap.set("n", "-", "<CMD>Fern %:h<CR>", { desc = "Open file tree" })
-vim.keymap.set("n", "<Space>-", "<CMD>Fern . -reveal=% -drawer -toggle<CR>", { desc = "Open file tree in drawer" })
 
 vim.g["fern_git_status#disable_ignored"] = 1
 vim.g["fern_git_status#disable_untracked"] = 1
 vim.g["fern_git_status#disable_submodules"] = 1
 vim.g["fern_git_status#disable_directories"] = 1
+
+vim.keymap.set("n", "-", "<CMD>Fern %:h<CR>", { desc = "Open file tree" })
+vim.keymap.set("n", "<Space>-", "<CMD>Fern . -reveal=% -drawer -toggle<CR>", { desc = "Open file tree in drawer" })
+
 
 -- vim.g["fern#disable_default_mappings"] = 1
 
