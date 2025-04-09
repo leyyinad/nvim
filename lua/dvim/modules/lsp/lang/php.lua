@@ -40,6 +40,7 @@ lspconfig.intelephense.setup {
         "PDO",
         "pdo_mysql",
         "Phar",
+        "random",
         "readline",
         "recode",
         "Reflection",
