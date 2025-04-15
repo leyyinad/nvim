@@ -247,3 +247,7 @@ require("nvim-highlight-colors").setup({})
 require("typescript-tools").setup({})
 
 require("conform").setup({})
+
+-- require("yazi").setup({
+--   open_for_directories = true,
+-- })

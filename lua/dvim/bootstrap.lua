@@ -20,7 +20,7 @@ require("dvim.modules.gitsigns")
 
 require("dvim.modules.snippets")
 
-require("dvim.modules.fern")
+-- require("dvim.modules.fern")
 -- require("dvim.modules.netrw")
 
 require("dvim.modules.telescope")

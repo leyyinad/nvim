@@ -248,23 +248,69 @@ return {
   { "smartpde/telescope-recent-files" },
   { "elianiva/telescope-npm.nvim" },
 
+  -- {
+  --   "lambdalisue/vim-fern",
+  --   dependencies = {
+  --     "lambdalisue/vim-fern-hijack",
+  --     "lambdalisue/vim-fern-git-status",
+  --     "lambdalisue/vim-fern-mapping-git",
+  --     "lambdalisue/vim-fern-bookmark",
+  --     "andykog/fern-highlight.vim",
+  --     "yuki-yano/fern-preview.vim",
+  --     {
+  --       "lambdalisue/vim-fern-renderer-nerdfont",
+  --       dependencies = {
+  --         "lambdalisue/vim-glyph-palette",
+  --         "lambdalisue/vim-nerdfont",
+  --       },
+  --     },
+  --   },
+  -- },
+
+  ---@type LazySpec
   {
-    "lambdalisue/vim-fern",
+    "mikavilpas/yazi.nvim",
+    event = "VeryLazy",
     dependencies = {
-      "lambdalisue/vim-fern-hijack",
-      "lambdalisue/vim-fern-git-status",
-      "lambdalisue/vim-fern-mapping-git",
-      "lambdalisue/vim-fern-bookmark",
-      "andykog/fern-highlight.vim",
-      "yuki-yano/fern-preview.vim",
+      "folke/snacks.nvim",
+    },
+    keys = {
+      -- 👇 in this section, choose your own keymappings!
       {
-        "lambdalisue/vim-fern-renderer-nerdfont",
-        dependencies = {
-          "lambdalisue/vim-glyph-palette",
-          "lambdalisue/vim-nerdfont",
-        },
+        -- "<leader>-",
+        "-",
+        mode = { "n", "v" },
+        "<cmd>Yazi<cr>",
+        desc = "Open yazi at the current file",
+      },
+      {
+        -- Open in the current working directory
+        "<leader>cw",
+        "<cmd>Yazi cwd<cr>",
+        desc = "Open the file manager in nvim's working directory",
+      },
+      {
+        "<c-up>",
+        "<cmd>Yazi toggle<cr>",
+        desc = "Resume the last yazi session",
       },
     },
+    ---@type YaziConfig | {}
+    opts = {
+      -- open_for_directories = true,
+      open_for_directories = false,
+      keymaps = {
+        show_help = "<f1>",
+      },
+      -- floating_window_scaling_factor = 1,
+      -- yazi_floating_window_border = "shadow",
+    },
+    -- 👇 if you use `open_for_directories=true`, this is recommended
+    init = function()
+      -- More details: https://github.com/mikavilpas/yazi.nvim/issues/802
+      -- vim.g.loaded_netrw = 1
+      vim.g.loaded_netrwPlugin = 1
+    end,
   },
 
   { "Myzel394/jsonfly.nvim" },
