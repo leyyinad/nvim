@@ -12,8 +12,6 @@ else
   end
 end
 
-print(bg_color)
-
 vim.cmd(string.format([[
   highlight DimLineNr guifg=#%x
   LineNumberIntervalEnable
