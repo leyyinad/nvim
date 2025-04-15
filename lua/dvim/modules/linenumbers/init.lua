@@ -1,6 +1,6 @@
 vim.g.line_number_interval = 10
 
-local bg_color = vim.api.nvim_get_hl(0, { name = "Normal" }).bg or "#000000"
+local bg_color = vim.api.nvim_get_hl(0, { name = "Normal" }).bg or 0
 
 local color_sign_column = vim.api.nvim_get_hl(0, { name = "SignColumn" })
 if color_sign_column and color_sign_column.bg then
@@ -11,6 +11,8 @@ else
     bg_color = color_normal_nc.bg
   end
 end
+
+print(bg_color)
 
 vim.cmd(string.format([[
   highlight DimLineNr guifg=#%x
