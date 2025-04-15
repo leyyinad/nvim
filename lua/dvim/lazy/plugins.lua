@@ -43,6 +43,7 @@ return {
       quickfile = { enabled = true },
       statuscolumn = { enabled = true },
       words = { enabled = true },
+      image = { enabled = true },
     },
     keys = {
       {
@@ -145,16 +146,22 @@ return {
   { "nvim-treesitter/nvim-treesitter",      build = ":TSUpdate" },
   { "nvim-treesitter/completion-treesitter" },
 
+  -- {
+  --   "neovim/nvim-lspconfig",
+  --   dependencies = { "saghen/blink.cmp" },
+  --   config = function(_, opts)
+  --     local lspconfig = require("lspconfig")
+  --     for server, config in pairs(opts.servers) do
+  --       config.capabilities = require("blink.cmp").get_lsp_capabilities(config.capabilities)
+  --       lspconfig[server].setup(config)
+  --     end
+  --   end,
+  -- }, -- blink.cmp
+
   {
     "neovim/nvim-lspconfig",
     dependencies = { "hrsh7th/cmp-nvim-lsp" },
 
-    -- example using `opts` for defining servers
-    -- opts = {
-    --   servers = {
-    --     lua_ls = {},
-    --   },
-    -- },
     config = function(_, opts)
       local lspconfig = require("lspconfig")
       local lsp_capabilities = require("cmp-vim-lsp").default_capabilities()
@@ -205,6 +212,12 @@ return {
   --- Completion
   --
 
+  -- {
+  --   "saghen/blink.cmp",
+  --   -- dependencies = { "rafamadriz/friendly-snippets" },
+  --   -- version = "1.*",
+  -- },
+
   { "hrsh7th/cmp-nvim-lsp" },
   { "hrsh7th/cmp-buffer" },
   { "hrsh7th/cmp-path" },
@@ -213,7 +226,6 @@ return {
   { "onsails/lspkind.nvim" },
   { "petertriho/cmp-git" },
   { "saadparwaiz1/cmp_luasnip" },
-  -- { "hrsh7th/cmp-vsnip" },
 
   ------------------------
   --- Navigation
@@ -359,4 +371,15 @@ return {
   { "embark-theme/vim" },
   { "sainnhe/gruvbox-material" },
   { "navarasu/onedark.nvim" },
+  {
+    "srt0/everblush.nvim",
+    lazy = false,
+    priority = 1000,
+    config = function()
+      require("everblush").setup({
+        transparent = false,
+      })
+      vim.cmd.colorscheme("everblush")
+    end,
+  },
 }
