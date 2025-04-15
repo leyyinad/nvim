@@ -3,7 +3,7 @@ if not noice_status_ok then
   return
 end
 
-noice.setup {
+noice.setup({
   cmdline = {
     enabled = true,
     view = "cmdline_popup",
@@ -23,8 +23,8 @@ noice.setup {
     -- enabled = false,
     -- view = "notify", -- "mini"
     view = "mini",
-    view_error = "notify", -- "mini"
-    view_warn = "notify", -- "mini"
+    view_error = "notify",     -- "mini"
+    view_warn = "notify",      -- "mini"
     view_history = "messages", -- "split"
     view_search = "virtualtext", -- false
   },
@@ -85,11 +85,25 @@ noice.setup {
     override = {
       ["vim.lsp.util.convert_input_to_markdown_lines"] = true,
       ["vim.lsp.util.stylize_markdown"] = true,
-      -- ["cmp.entry.get_documentation"] = true, -- requires hrsh7th/nvim-cmp
+      ["cmp.entry.get_documentation"] = true, -- requires hrsh7th/nvim-cmp
     },
     hover = {
+      view = "popup",
+      relative = "cursor",
       enabled = true,
-      view = nil,
+      slient = false,
+      -- view = nil,
+      -- border = {
+      --   style = "rounded",
+      -- },
+      anchor = "auto",
+      size = {
+        width = "auto",
+        height = "auto",
+        max_height = 20,
+        max_width = 120,
+      },
+      ---@type NoiceViewOptions
       opts = {},
     },
     signature = {
@@ -100,16 +114,22 @@ noice.setup {
         luasnip = true,
         throttle = 50,
       },
-      view = nil,
-      opts = {},
+      -- view = nil,
+      view = "hover",
+      ---@type NoiceViewOptions
+      -- opts = {
+      --   border = "rounded",
+      -- },
     },
     message = {
       enabled = true,
       view = "notify",
+      ---@type NoiceViewOptions
       opts = {},
     },
     documentation = {
       view = "hover",
+      ---@type NoiceViewOptions
       opts = {
         lang = "markdown",
         replace = true,
@@ -141,15 +161,16 @@ noice.setup {
     excluded_filetypes = { "cmp_menu", "cmp_docs", "notify" },
   },
   -- you can enable a preset for easier configuration
+  ---@type NoicePresets
   presets = {
-    bottom_search = false,         -- use a classic bottom cmdline for search
-    command_palette = false,       -- position the cmdline and popupmenu together
+    bottom_search = false,       -- use a classic bottom cmdline for search
+    command_palette = false,     -- position the cmdline and popupmenu together
     -- long_message_to_split = true, -- long messages will be sent to a split
     long_message_to_split = false, -- long messages will be sent to a split
     -- inc_rename = true,            -- enables an input dialog for inc-rename.nvim
-    inc_rename = false,            -- enables an input dialog for inc-rename.nvim
-    -- lsp_doc_border = true,         -- add a border to hover docs and signature help
-    lsp_doc_border = false,         -- add a border to hover docs and signature help
+    inc_rename = false,          -- enables an input dialog for inc-rename.nvim
+    lsp_doc_border = true,       -- add a border to hover docs and signature help
+    -- lsp_doc_border = false,         -- add a border to hover docs and signature help
   },
   -- throttle
   views = {
@@ -211,9 +232,9 @@ noice.setup {
         keys = { "q" },
       },
       enter = true,
-      border = {
-        style = "rounded",
-      },
+      -- border = {
+      --   style = "rounded",
+      -- },
       position = "50%",
       size = {
         width = "120",
@@ -252,9 +273,9 @@ noice.setup {
         height = "auto",
         width = "100%",
       },
-      border = {
-        style = "none",
-      },
+      -- border = {
+      --   style = "none",
+      -- },
       win_options = {
         winhighlight = {
           Normal = "NoiceBody",
@@ -275,9 +296,9 @@ noice.setup {
         col = "100%",
       },
       size = "auto",
-      border = {
-        style = { " ", " ", " ", " ", " ", " ", " ", " " },
-      },
+      -- border = {
+      --   style = { " ", " ", " ", " ", " ", " ", " ", " " },
+      -- },
       zindex = 60,
       win_options = {
         winblend = 0,
@@ -304,10 +325,10 @@ noice.setup {
         width = "auto",
         height = "auto",
       },
-      border = {
-        style = { " ", " ", " ", " ", " ", " ", " ", " " },
-        padding = { 0, 1 },
-      },
+      -- border = {
+      --   style = { " ", " ", " ", " ", " ", " ", " ", " " },
+      --   padding = { 0, 1 },
+      -- },
       win_options = {
         winhighlight = {
           Normal = "NoiceBody",
@@ -332,7 +353,7 @@ noice.setup {
       },
       size = "auto",
       border = {
-        style = { " ", " ", " ", " ", " ", " ", " ", " " },
+        -- style = { " ", " ", " ", " ", " ", " ", " ", " " },
         padding = { 0, 1, 0, 1 },
         text = {
           top = " CONFIRM: ",
@@ -409,9 +430,9 @@ noice.setup {
     {
       filter = {
         event = "notify",
-        min_height = 15
+        min_height = 15,
       },
-      view = 'split'
+      view = "split",
     },
     -- {
     --   view = "mini",
@@ -439,4 +460,4 @@ noice.setup {
   },
   -- status
   -- format
-}
+})
