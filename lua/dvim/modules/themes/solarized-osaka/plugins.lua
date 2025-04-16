@@ -1,3 +1,6 @@
 return {
-  { "craftzdog/solarized-osaka.nvim" },
+  {
+    "craftzdog/solarized-osaka.nvim",
+    priority = 1000,
+  },
 }

@@ -1,3 +1,6 @@
 return {
-  { "kaicataldo/material.vim" },
+  {
+    "kaicataldo/material.vim",
+    priority = 1000,
+  },
 }

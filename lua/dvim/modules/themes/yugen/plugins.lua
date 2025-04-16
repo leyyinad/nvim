@@ -1,3 +1,6 @@
 return {
-  { "bettervim/yugen.nvim" },
+  {
+    "bettervim/yugen.nvim",
+    priority = 1000,
+  },
 }

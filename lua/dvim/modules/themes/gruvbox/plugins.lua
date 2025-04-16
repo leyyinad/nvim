@@ -1,3 +1,6 @@
 return {
-  { "sainnhe/gruvbox-material" },
+  {
+    "sainnhe/gruvbox-material",
+    priority = 1000,
+  },
 }

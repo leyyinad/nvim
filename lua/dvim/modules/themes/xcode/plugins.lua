@@ -1,3 +1,6 @@
 return {
-  { "arzg/vim-colors-xcode" },
+  {
+    "arzg/vim-colors-xcode",
+    priority = 1000,
+  },
 }

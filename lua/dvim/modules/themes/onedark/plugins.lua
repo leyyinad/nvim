@@ -1,3 +1,6 @@
 return {
-  { "navarasu/onedark.nvim" },
+  {
+    "navarasu/onedark.nvim",
+    priority = 1000,
+  },
 }

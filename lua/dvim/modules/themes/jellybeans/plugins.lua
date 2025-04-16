@@ -1,3 +1,6 @@
 return {
-  { "nanotech/jellybeans.vim" }
+  {
+    "nanotech/jellybeans.vim",
+    priority = 1000,
+  },
 }

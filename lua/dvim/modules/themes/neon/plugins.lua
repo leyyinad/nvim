@@ -1,3 +1,6 @@
 return {
-  { "Zeioth/neon.nvim" },
+  {
+    "Zeioth/neon.nvim",
+    priority = 1000,
+  },
 }

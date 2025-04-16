@@ -1,3 +1,6 @@
 return {
-  { "nyoom-engineering/oxocarbon.nvim" },
+  {
+    "nyoom-engineering/oxocarbon.nvim",
+    priority = 1000,
+  },
 }

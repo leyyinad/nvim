@@ -1,3 +1,6 @@
 return {
-  { "EdenEast/nightfox.nvim" },
+  {
+    "EdenEast/nightfox.nvim",
+    priority = 1000,
+  },
 }

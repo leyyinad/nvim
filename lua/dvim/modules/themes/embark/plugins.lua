@@ -1,3 +1,6 @@
 return {
-  { "embark-theme/vim" },
+  {
+    "embark-theme/vim",
+    priority = 1000,
+  },
 }
