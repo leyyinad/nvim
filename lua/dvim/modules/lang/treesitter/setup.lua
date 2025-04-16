@@ -1,6 +1,7 @@
 require('nvim-treesitter.configs').setup {
   ensure_installed = {
     "bash",
+    "c",
     "css",
     "html",
     "ini",
@@ -10,6 +11,7 @@ require('nvim-treesitter.configs').setup {
     "markdown_inline",
     "php",
     "python",
+    "query",
     "regex",
     "ruby",
     "rust",
