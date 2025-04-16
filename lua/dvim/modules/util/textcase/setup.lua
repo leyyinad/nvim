@@ -1,0 +1,2 @@
+require("textcase").setup()
+

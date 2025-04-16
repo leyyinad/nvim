@@ -1,0 +1,3 @@
+return {
+  { "pfeiferj/nvim-hurl" }
+}
