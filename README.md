@@ -1,8 +1,4 @@
-# NeoVim Configuration
+# Neovim Configuration
 
-## TODOs
+Clone to `$HOME/.config/nvim`.
 
-- display code coverage
-- list breakpoints (dap)
-- finetune "Trouble"
-- resolve conflicting mappings (:checkhealth which-key)
