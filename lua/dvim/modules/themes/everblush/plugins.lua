@@ -7,7 +7,6 @@ return {
     --   require("everblush").setup({
     --     transparent = false,
     --   })
-    --   -- vim.cmd.colorscheme("everblush")
     -- end,
-  }
+  },
 }
