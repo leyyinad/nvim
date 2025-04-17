@@ -4,13 +4,7 @@ local lga_actions = require("telescope-live-grep-args.actions")
 -- local fb_actions = require("telescope").extensions.file_browser.actions
 
 telescope.setup({
-  defaults = {
-    layout_config = {
-      height = 0.95,
-      -- width = 0.95,
-      width = 0.75,
-    },
-  },
+  defaults = require("telescope.themes").get_dropdown({}),
   extensions = {
     live_grep_args = {
       auto_quoting = true, -- enable/disable auto-quoting
@@ -149,4 +143,3 @@ vim.keymap.set("n", "<leader>,p", [[<CMD>Telescope npm packages<CR>]], {
   noremap = true,
   desc = "List npm packages",
 })
-
