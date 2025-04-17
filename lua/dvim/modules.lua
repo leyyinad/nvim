@@ -60,11 +60,11 @@ return {
   -- "girishji/devdocs.vim"?
 
   -- UI
+  "ui.alpha",
   "ui.notify",
   "ui.noice",
   "ui.line-number-interval",
   "ui.lualine",
-  "ui.tabline",
 
   -- Utilities
   "util.textcase",
@@ -74,9 +74,6 @@ return {
 
   -- File managers
   "fs.yazi",
-
-  -- UI Tools
-  "ui.alpha",
 
   -- Themes
   "themes.tokyonight",
