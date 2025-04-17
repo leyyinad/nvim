@@ -1,3 +1,6 @@
 return {
-  { "IMOKURI/line-number-interval.nvim" }
+  {
+    "IMOKURI/line-number-interval.nvim",
+    priority = 1500,
+  },
 }

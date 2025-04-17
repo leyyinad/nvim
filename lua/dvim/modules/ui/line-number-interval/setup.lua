@@ -1,4 +1,5 @@
-function init_line_number_interval()
+local function line_number_interval_init()
+  vim.cmd("LineNumberIntervalDisable")
   vim.g.line_number_interval = 10
 
   local bg_color = vim.api.nvim_get_hl(0, { name = "Normal" }).bg or 0
@@ -15,11 +16,17 @@ function init_line_number_interval()
 
   vim.cmd(string.format(
     [[
-  highlight DimLineNr guifg=#%x
-  LineNumberIntervalEnable
-]],
+      highlight DimLineNr guifg=#%x
+      LineNumberIntervalEnable
+    ]],
     bg_color
   ))
 end
 
-init_line_number_interval()
+line_number_interval_init()
+
+vim.api.nvim_create_autocmd("ColorScheme", {
+  callback = function(args)
+    line_number_interval_init()
+  end,
+})
