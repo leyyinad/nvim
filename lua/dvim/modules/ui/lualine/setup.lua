@@ -33,15 +33,8 @@ lualine.setup({
     component_separators = { left = "", right = "" },
     globalstatus = true,
     disabled_filetypes = {
-      statusline = {
-        "alpha",
-      },
-      winbar = {
-        "alpha",
-      },
-      tabline = {
-        "alpha",
-      },
+      "alpha",
+      "man"
     },
   },
   tabline = {
