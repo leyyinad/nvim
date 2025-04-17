@@ -1,24 +1,13 @@
 local navbuddy = require("nvim-navbuddy")
 
-require("nvim-navic").setup {
+navbuddy.setup({
   lsp = {
-    auto_attach = true
-  }
-}
-
-navbuddy.setup {
-  lsp = {
-    auto_attach = true
-  }
-}
+    auto_attach = true,
+  },
+})
 
 -- navbuddy.open()
-vim.keymap.set(
-  { "n", "v" }, "<leader>s",
-  navbuddy.open,
-  {
-    noremap = true,
-    desc = "Navbuddy",
-  }
-)
-
+vim.keymap.set({ "n", "v" }, "<leader>s", navbuddy.open, {
+  noremap = true,
+  desc = "Navbuddy",
+})
