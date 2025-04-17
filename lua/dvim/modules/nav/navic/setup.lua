@@ -3,6 +3,7 @@ require("nvim-navic").setup({
     auto_attach = true,
   },
   highlight = true,
+  separator = "  ",
   depth_limit_indicator = "…",
   click = true,
 })
