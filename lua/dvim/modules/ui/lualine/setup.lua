@@ -105,7 +105,7 @@ lualine.setup({
         end,
       },
     },
-    lualine_x = { "encoding", "fileformat", "filetype", get_schema },
+    lualine_x = { "encoding", get_schema },
   },
   inactive_sections = {
     lualine_c = {
