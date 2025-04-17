@@ -68,7 +68,6 @@ return {
 
   -- Utilities
   "util.textcase",
-  "util.bigfile",
   "util.hurl",
   "util.highlight-colors",
 
