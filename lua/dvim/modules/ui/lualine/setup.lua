@@ -32,6 +32,17 @@ lualine.setup({
     section_separators = { left = "", right = "" },
     component_separators = { left = "", right = "" },
     globalstatus = true,
+    disabled_filetypes = {
+      statusline = {
+        "alpha",
+      },
+      winbar = {
+        "alpha",
+      },
+      tabline = {
+        "alpha",
+      },
+    },
   },
   tabline = {
     lualine_a = {
@@ -56,12 +67,12 @@ lualine.setup({
       {
         "filename",
         path = 0,
-      },
-    },
-    lualine_b = {
-      {
-        "filetype",
-        colored = true,
+        symbols = {
+          modified = "",
+          readonly = "󰌾",
+          unnamed = "󰇘",
+          newfile = "",
+        },
       },
     },
     lualine_c = {
@@ -72,6 +83,12 @@ lualine.setup({
         cond = function()
           return navic_ok and navic.is_available() or false
         end,
+      },
+    },
+    lualine_z = {
+      {
+        "filetype",
+        colored = true,
       },
     },
   },
