@@ -1,6 +1,6 @@
 return {
   {
-    "srt0/everblush.nvim",
+    "srt0/codescope.nvim",
     lazy = false,
     priority = 1000,
   },

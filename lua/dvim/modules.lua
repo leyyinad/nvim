@@ -89,5 +89,5 @@ return {
   "themes.embark",
   "themes.gruvbox",
   "themes.onedark",
-  "themes.everblush",
+  "themes.codescope",
 }
