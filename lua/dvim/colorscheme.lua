@@ -1,1 +1,1 @@
-vim.cmd.colorscheme("codescope")
+vim.cmd.colorscheme("neon-cyberpunk-night")
