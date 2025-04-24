@@ -28,13 +28,13 @@ lualine.setup({
   options = {
     highlight = true,
     icons_enabled = true,
-    color_correction = "static",
+    -- color_correction = "static",
     section_separators = { left = "", right = "" },
     component_separators = { left = "", right = "" },
     globalstatus = true,
     disabled_filetypes = {
       "alpha",
-      "man"
+      "man",
     },
   },
   tabline = {
@@ -42,6 +42,10 @@ lualine.setup({
       {
         "buffers",
         hide_filename_extension = true,
+        buffers_color = {
+          active = "lualine_a_normal",
+          inactive = "lualine_b_inactive",
+        },
         symbols = {
           modified = " ",
           alternate_file = " ",
@@ -53,7 +57,14 @@ lualine.setup({
     lualine_c = {},
     lualine_x = { "diagnostics" },
     lualine_y = { "branch" },
-    lualine_z = { "tabs" },
+    lualine_z = {
+      "tabs",
+      -- mode = 0,
+      -- tabs_color = {
+      --   active = "lualine_z_normal",
+      --   inactive = "lualine_y_inactive",
+      -- },
+    },
   },
   winbar = {
     lualine_a = {
