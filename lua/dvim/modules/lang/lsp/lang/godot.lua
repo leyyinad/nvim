@@ -13,10 +13,11 @@ local gdformat_source = {
   filetypes = { "gd", "gdscript", "gdscript3" },
   generator = null_ls_helpers.formatter_factory({
     command = vim.fs.joinpath(vim.fn.stdpath("data"), "mason/bin/gdformat"),
-    args = { "$FILENAME" },
+    args = {"-s", "4", "$FILENAME" },
+    -- args = { "$FILENAME" },
     to_temp_file = true,
     from_temp_file = true,
-    use_cache = true,
+    -- use_cache = true,
   }),
 }
 
@@ -24,7 +25,7 @@ null_ls.setup {
   sources = {
     gdformat_source,
     null_ls.builtins.formatting.stylua,
-    -- null_ls.builtins.formatting.prettier,
+    null_ls.builtins.formatting.prettier,
   }
 }
 
