@@ -37,9 +37,10 @@ vim.api.nvim_create_user_command("GodotTest", function()
         notify("Tests failed", "error")
 
         local buf = vim.api.nvim_create_buf(false, true)
-        local chan = vim.api.nvim_open_term(buf)
+        local chan = vim.api.nvim_open_term(buf, {})
+
         vim.api.nvim_chan_send(chan, res.stdout)
-        vim.api.nvim_win_set_buf(0, buf)
+        vim.api.nvim_open_win(buf, true, { split = "below" })
       end
     end)
   end)
