@@ -29,8 +29,8 @@ return {
     },
     ---@type YaziConfig | {}
     opts = {
-      -- open_for_directories = true,
-      open_for_directories = false,
+      open_for_directories = true,
+      -- open_for_directories = false,
       keymaps = {
         show_help = "<f1>",
       },
