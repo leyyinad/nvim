@@ -1,5 +1,6 @@
 -- vim.cmd.colorscheme("neon-cyberpunk-night")
--- vim.cmd.colorscheme("ayu-night")
+-- vim.cmd.colorscheme("jellybeans")
+vim.cmd.colorscheme("ayu-dark")
 -- vim.cmd.colorscheme("tokyonight-night")
 -- vim.cmd.colorscheme("codescope")
-vim.cmd.colorscheme("oxocarbon")
+-- vim.cmd.colorscheme("oxocarbon")
