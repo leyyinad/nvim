@@ -31,6 +31,7 @@ return {
   "lang.typescript",
   "lang.ansible",
   "lang.godot",
+  "lang.emmet",
 
   -- Snippets
   "snippets.luasnip",
@@ -55,9 +56,6 @@ return {
 
   -- Testing
   "testing.neotest",
-
-  -- Documentation
-  -- "girishji/devdocs.vim"?
 
   -- UI
   "ui.alpha",
