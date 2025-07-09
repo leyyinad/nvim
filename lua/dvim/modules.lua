@@ -72,6 +72,9 @@ return {
   -- File managers
   "fs.yazi",
 
+  -- Admin
+  "admin.kubectl",
+
   -- Themes
   "themes.tokyonight",
   "themes.jellybeans",
