@@ -11,10 +11,12 @@ vim.filetype.add({
   },
   pattern = {
     [".*%.yaml%.tpl"] = "yaml",
-    [".*/.kube/config"] = "yaml",
+    [".*/%.kube/config"] = "yaml",
     [".*%.tf%.example"] = "terraform",
     ["Dockerfile%..*"] = "dockerfile",
-    [".*%.js.php"] = "javascript",
-    [".*%.css.php"] = "css",
+    [".*%.js%.php"] = "javascript",
+    [".*%.css%.php"] = "css",
+    [".*%.vhost%.conf"] = "apache",
+    [".*%apache%.conf"] = "apache",
   },
 })
