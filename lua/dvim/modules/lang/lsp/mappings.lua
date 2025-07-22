@@ -1,19 +1,4 @@
 vim.keymap.set(
-  "n", "<space>e", vim.diagnostic.open_float, {
-    desc = "Show diagnostics"
-  })
-
-vim.keymap.set(
-  "n", "[d", vim.diagnostic.goto_prev, {
-    desc = "Move to prev. diagnostics"
-  })
-
-vim.keymap.set(
-  "n", "]d", vim.diagnostic.goto_next, {
-    desc = "Move to next diagnostics"
-  })
-
-vim.keymap.set(
   "n", "<space>q", vim.diagnostic.setloclist, {
     desc = "Add buffer diagnostics to loc. list"
   })
