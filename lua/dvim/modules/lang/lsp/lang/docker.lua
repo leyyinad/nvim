@@ -1,3 +1,2 @@
-local lspconfig = require("lspconfig")
-
-lspconfig.dockerls.setup {}
+vim.lsp.enable("docker")
+vim.lsp.enable("dockerfile")

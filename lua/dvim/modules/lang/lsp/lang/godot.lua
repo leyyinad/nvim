@@ -4,8 +4,9 @@ local null_ls_helpers = require("null-ls.helpers")
 
 vim.g.godot_executable = '/Applications/Godot.app/Contents/MacOS/Godot';
 
-lspconfig.gdscript.setup {}
-lspconfig.gdshader_lsp.setup {}
+vim.lsp.enable("gdscript")
+vim.lsp.enable("gdshader_lsp")
+vim.lsp.enable("gdshaderinc")
 
 -- https://github.com/nvimtools/none-ls.nvim/blob/main/doc/HELPERS.md
 local gdformat_source = {
@@ -13,7 +14,7 @@ local gdformat_source = {
   filetypes = { "gd", "gdscript", "gdscript3" },
   generator = null_ls_helpers.formatter_factory({
     command = vim.fs.joinpath(vim.fn.stdpath("data"), "mason/bin/gdformat"),
-    args = {"-s", "4", "$FILENAME" },
+    args = { "$FILENAME" },
     -- args = { "$FILENAME" },
     to_temp_file = true,
     from_temp_file = true,

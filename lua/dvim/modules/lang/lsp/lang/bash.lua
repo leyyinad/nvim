@@ -1,6 +1,4 @@
-local lspconfig = require("lspconfig")
-
-lspconfig.bashls.setup {}
+vim.lsp.enable("bashls")
 
 vim.api.nvim_create_autocmd({ 'BufRead', 'BufNewFile' }, {
   pattern = ".env.*",

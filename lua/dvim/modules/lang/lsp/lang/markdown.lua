@@ -1,3 +1,9 @@
-local lspconfig = require("lspconfig")
-
-lspconfig.marksman.setup {}
+-- vim.lsp.config("harper_ls", {
+-- 	settings = {
+-- 		["harper-ls"] = {
+-- 			linters = {
+-- 				SpellCheck = false,
+-- 			},
+-- 		},
+-- 	},
+-- })

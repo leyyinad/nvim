@@ -1,4 +1,2 @@
-local lspconfig = require("lspconfig")
-
-lspconfig.ansiblels.setup {}
+vim.lsp.enable('ansiblels')
 
