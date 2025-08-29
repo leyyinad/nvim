@@ -1,6 +1,7 @@
 return {
-  {
-    "nyoom-engineering/oxocarbon.nvim",
-    priority = 1000,
-  },
+	---@type LazySpec
+	{
+		"nyoom-engineering/oxocarbon.nvim",
+		priority = 1000,
+	},
 }
