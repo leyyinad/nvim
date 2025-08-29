@@ -1,4 +1,5 @@
 return {
+	---@type LazySpec
   {
     "nvim-lualine/lualine.nvim",
     dependencies = {
