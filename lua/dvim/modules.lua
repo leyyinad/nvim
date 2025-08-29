@@ -37,7 +37,9 @@ return {
   "snippets.luasnip",
 
   -- Completion
-  "completion.cmp",
+  -- "completion.cmp",
+  "completion.blink",
+  -- "completion.autopairs",
 
   -- Navigation
   "nav.navic",
@@ -62,6 +64,7 @@ return {
   "ui.notify",
   "ui.noice",
   "ui.line-number-interval",
+  "ui.dropbar",
   "ui.lualine",
 
   -- Utilities
@@ -71,9 +74,6 @@ return {
 
   -- File managers
   "fs.yazi",
-
-  -- Admin
-  "admin.kubectl",
 
   -- Themes
   "themes.tokyonight",
@@ -91,4 +91,5 @@ return {
   "themes.gruvbox",
   "themes.onedark",
   "themes.codescope",
+  "themes.techbase",
 }
