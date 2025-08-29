@@ -3,6 +3,7 @@ local telescope = require("telescope")
 local lga_actions = require("telescope-live-grep-args.actions")
 
 telescope.setup({
+	defaults = require("telescope.themes").get_dropdown({}),
 	extensions = {
 		live_grep_args = {
 			auto_quoting = true, -- enable/disable auto-quoting
