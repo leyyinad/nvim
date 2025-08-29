@@ -1,4 +1,5 @@
 return {
+	---@type LazySpec
   {
     "folke/tokyonight.nvim",
     priority = 1000,

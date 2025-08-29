@@ -1,4 +1,5 @@
 return {
+	---@type LazySpec
   {
     "catppuccin/nvim",
     name = "catppuccin",

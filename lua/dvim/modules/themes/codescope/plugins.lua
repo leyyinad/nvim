@@ -1,4 +1,5 @@
 return {
+	---@type LazySpec
   {
     "srt0/codescope.nvim",
     lazy = false,
