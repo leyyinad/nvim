@@ -66,6 +66,8 @@ return {
   "ui.line-number-interval",
   "ui.dropbar",
   "ui.lualine",
+  "ui.tabby",
+  "ui.origami",
 
   -- Utilities
   "util.textcase",
