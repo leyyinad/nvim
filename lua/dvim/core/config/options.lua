@@ -17,6 +17,7 @@ vim.opt.fillchars = {
 vim.opt.foldclose = "all"
 vim.opt.foldlevel = 100
 vim.opt.foldmethod = "indent"
+vim.opt.formatexpr = "v:lua.require'conform'.formatexpr()"
 vim.opt.mousescroll = "ver:1,hor:6"
 vim.opt.number = false -- true
 vim.opt.scrolloff = 8
