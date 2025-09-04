@@ -80,6 +80,9 @@ return {
 	-- File managers
 	"fs.yazi",
 
+	-- Documentation
+	"doc.devdocs",
+
 	-- Themes
 	"themes.tokyonight",
 	"themes.jellybeans",
