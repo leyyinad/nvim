@@ -113,3 +113,8 @@ vim.keymap.set("n", "<leader>,p", [[<CMD>Telescope npm packages<CR>]], {
 	noremap = true,
 	desc = "List npm packages",
 })
+
+vim.keymap.set("n", "<leader>ls", [[<CMD>Telescope session-lens<CR>]], {
+	noremap = true,
+	desc = "List sessions",
+})

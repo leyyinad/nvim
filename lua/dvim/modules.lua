@@ -74,6 +74,9 @@ return {
 	"util.hurl",
 	"util.highlight-colors",
 
+	-- Sessions
+	"sessions.auto-session",
+
 	-- File managers
 	"fs.yazi",
 
