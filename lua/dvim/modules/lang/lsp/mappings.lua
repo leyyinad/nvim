@@ -64,13 +64,5 @@ vim.api.nvim_create_autocmd("LspAttach", {
 			buffer = ev.buf,
 			desc = "List all references",
 		})
-
-		vim.keymap.set("n", "<space>f", function()
-			conform.format()
-			-- vim.lsp.buf.format({ async = true })
-		end, {
-			buffer = ev.buf,
-			desc = "Format buffer",
-		})
 	end,
 })

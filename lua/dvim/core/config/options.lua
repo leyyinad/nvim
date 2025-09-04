@@ -23,6 +23,7 @@ vim.opt.number = false -- true
 vim.opt.scrolloff = 8
 vim.opt.shiftwidth = 2
 vim.opt.showtabline = 2
+vim.opt.sessionoptions = "curdir,folds,globals,help,tabpages,terminal,winsize"
 vim.opt.softtabstop = 2
 vim.opt.splitright = true
 vim.opt.tabstop = 2
