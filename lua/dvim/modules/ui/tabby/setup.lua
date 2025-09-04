@@ -9,6 +9,23 @@ local theme = {
 	tail = "TabLine",
 }
 
+local function lsp_diag()
+	local icons = {
+		error = "%#DiagnosticVirtualTextError#",
+		warn = "%#DiagnosticVirtualTextWarn#",
+		info = "%#DiagnosticVirtualTextInfo#",
+		hint = "%#DiagnosticVirtualTextHint#󰋗",
+	}
+	local label = {}
+	for severity, icon in pairs(icons) do
+		local n = #vim.diagnostic.get(0, { severity = vim.diagnostic.severity[string.upper(severity)] })
+		if n > 0 then
+			table.insert(label, { icon .. " " .. n .. " %##" })
+		end
+	end
+	return label
+end
+
 tabby.setup({
 	line = function(line)
 		return {
@@ -37,6 +54,8 @@ tabby.setup({
 					margin = " ",
 				}
 			end),
+			line.spacer(),
+			lsp_diag(),
 		}
 	end,
 	option = {},

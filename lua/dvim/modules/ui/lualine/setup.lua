@@ -110,10 +110,10 @@ lualine.setup({
 		},
 		lualine_z = {
 			"location",
-			{
-				"diagnostics",
-				always_visible = false,
-			},
+			-- {
+			-- 	"diagnostics",
+			-- 	always_visible = false,
+			-- },
 		},
 	},
 	inactive_sections = {
