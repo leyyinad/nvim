@@ -5,6 +5,7 @@ require("dvim.modules.lang.lsp.lang.markdown")
 require("dvim.modules.lang.lsp.lang.godot")
 require("dvim.modules.lang.lsp.lang.php")
 require("dvim.modules.lang.lsp.lang.python")
+require("dvim.modules.lang.lsp.lang.lua")
 
 vim.lsp.enable("harper_ls", false)
 vim.lsp.enable("terraformls", true)
