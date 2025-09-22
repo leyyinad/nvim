@@ -1,5 +1,7 @@
 -- default settings
-require("origami").setup {
+local origami = require("origami")
+
+origami.setup({
 	useLspFoldsWithTreesitterFallback = true,
 	pauseFoldsOnSearch = true,
 	foldtext = {
@@ -20,4 +22,14 @@ require("origami").setup {
 		setup = true, -- modifies `h`, `l`, and `$`
 		hOnlyOpensOnFirstColumn = false,
 	},
-}
+})
+
+vim.keymap.set("n", "<Left>", function()
+	origami.h()
+end)
+vim.keymap.set("n", "<Right>", function()
+	origami.l()
+end)
+vim.keymap.set("n", "<End>", function()
+	origami.dollar()
+end)
