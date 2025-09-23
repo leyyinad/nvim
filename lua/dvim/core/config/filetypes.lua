@@ -18,5 +18,6 @@ vim.filetype.add({
     [".*%.css%.php"] = "css",
     [".*%.vhost%.conf"] = "apache",
     [".*%apache%.conf"] = "apache",
+    [".*%.godot"] = "gdresource",
   },
 })
