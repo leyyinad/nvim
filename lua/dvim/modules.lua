@@ -43,7 +43,6 @@ return {
 
 	-- Navigation
 	"nav.navic",
-	"nav.navbuddy",
 	"nav.telescope",
 	"nav.trouble",
 	"nav.which-key",

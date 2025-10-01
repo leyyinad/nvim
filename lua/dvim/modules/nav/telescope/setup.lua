@@ -71,7 +71,14 @@ vim.keymap.set("n", "<leader>fr", builtin.lsp_references, {
 
 vim.keymap.set("n", "<leader>fs", builtin.lsp_dynamic_workspace_symbols, {
 	noremap = true,
-	desc = "List LSP for all workspace symbols",
+	desc = "List workspace symbols",
+	-- icon = "search",
+})
+
+vim.keymap.set("n", "<leader>s", builtin.lsp_document_symbols, {
+	noremap = true,
+	desc = "List document symbols",
+	-- icon = "search",
 })
 
 vim.keymap.set("n", "<leader>ft", function()
