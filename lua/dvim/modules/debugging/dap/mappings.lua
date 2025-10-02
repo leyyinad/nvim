@@ -1,33 +1,35 @@
+local telescope = require("telescope")
+
 vim.keymap.set("n", "<leader>du", function()
-  require("dapui").toggle()
+	require("dapui").toggle()
 end, {
-  noremap = true,
-  desc = "Toggle DAP UI",
+	noremap = true,
+	desc = "Toggle DAP UI",
 })
 
 vim.keymap.set("n", "<leader>dc", function()
-  require("dap").continue()
+	require("dap").continue()
 end, {
-  noremap = true,
-  desc = "Start or resume debugging",
+	noremap = true,
+	desc = "Start or resume debugging",
 })
 
 vim.keymap.set("n", "<leader>dt", function()
-  require("dap").terminate()
+	require("dap").terminate()
 end, {
-  noremap = true,
-  desc = "Terminate debugging",
+	noremap = true,
+	desc = "Terminate debugging",
 })
 
 vim.keymap.set("n", "<leader>dl", function()
-  require("dap").run_last()
+	require("dap").run_last()
 end, {
-  noremap = true,
-  desc = "Run last",
+	noremap = true,
+	desc = "Run last",
 })
 
 vim.keymap.set("n", "<leader>dr", function()
-  require("dap").repl.open()
+	require("dap").repl.open()
 end, { noremap = true, desc = "REPL" })
 
 -- debug_maps.d.b = {
@@ -40,82 +42,88 @@ end, { noremap = true, desc = "REPL" })
 -- }
 
 vim.keymap.set("n", "<leader>b", function()
-  require("dap").toggle_breakpoint()
+	require("dap").toggle_breakpoint()
 end, {
-  noremap = true,
-  desc = "Toggle breakpoint",
+	noremap = true,
+	desc = "Toggle breakpoint",
 })
 
---   c = { ':lua require("dap").set_breakpoint(vim.fn.input("Breakpoint condition: "))<CR>', "Set conditional" },
-vim.keymap.set("n", "<leader>B", function()
-  require("dap").set_breakpoint(vim.ui.input("Breakpoint condition: "))
+vim.keymap.set("n", "<Leader>lb", function()
+	telescope.extensions.dap.list_breakpoints()
 end, {
-  noremap = true,
-  desc = "Set conditional breakpoint",
+	noremap = true,
+	desc = "List breakpoints",
+})
+
+vim.keymap.set("n", "<leader>B", function()
+	require("dap").set_breakpoint(vim.ui.input("Breakpoint condition: "))
+end, {
+	noremap = true,
+	desc = "Set conditional breakpoint",
 })
 
 vim.keymap.set("n", "<Leader>lp", function()
-  require("dap").set_breakpoint(nil, nil, vim.ui.input("Log point message: "))
+	require("dap").set_breakpoint(nil, nil, vim.ui.input("Log point message: "))
 end, {
-  noremap = true,
-  desc = "Set log breakpoint",
+	noremap = true,
+	desc = "Set log breakpoint",
 })
 
 vim.keymap.set({ "n", "v" }, "<leader>dh", function()
-  require("dap.ui.widgets").hover()
+	require("dap.ui.widgets").hover()
 end, {
-  noremap = true,
-  desc = "Hover",
+	noremap = true,
+	desc = "Hover",
 })
 
 vim.keymap.set({ "n", "v" }, "<leader>dp", function()
-  require("dap.ui.widgets").preview()
+	require("dap.ui.widgets").preview()
 end, {
-  noremap = true,
-  desc = "Hover",
+	noremap = true,
+	desc = "Hover",
 })
 
 vim.keymap.set("n", "<leader>dd", function()
-  require("dap").focus_frame()
+	require("dap").focus_frame()
 end, {
-  noremap = true,
-  desc = "Jump to current frame",
+	noremap = true,
+	desc = "Jump to current frame",
 })
 
 vim.keymap.set("n", "<leader>df", function()
-  local widgets = require("dap.ui.widgets")
-  widgets.centered_float(widgets.frames).open()
-  -- widgets.sidebar(widgets.frames).open()
+	local widgets = require("dap.ui.widgets")
+	widgets.centered_float(widgets.frames).open()
+	-- widgets.sidebar(widgets.frames).open()
 end, {
-  noremap = true,
-  desc = "Show frames",
+	noremap = true,
+	desc = "Show frames",
 })
 
 vim.keymap.set("n", "<leader>ds", function()
-  local widgets = require("dap.ui.widgets")
-  -- widgets.centered_float(widgets.scopes).open()
-  widgets.sidebar(widgets.scopes).open()
+	local widgets = require("dap.ui.widgets")
+	-- widgets.centered_float(widgets.scopes).open()
+	widgets.sidebar(widgets.scopes).open()
 end, {
-  noremap = true,
-  desc = "Show Scopes",
+	noremap = true,
+	desc = "Show Scopes",
 })
 
 vim.keymap.set("n", "<Space>l", function()
-  require("dap").step_over()
+	require("dap").step_over()
 end, { noremap = true, desc = "Step over" })
 
 vim.keymap.set("n", "<Space>k", function()
-  require("dap").step_out()
+	require("dap").step_out()
 end, { noremap = true, desc = "Step out" })
 
 vim.keymap.set("n", "<Space>j", function()
-  require("dap").step_into()
+	require("dap").step_into()
 end, { noremap = true, desc = "Step into" })
 
 vim.keymap.set("n", "<Space>h", function()
-  require("dap").step_back()
+	require("dap").step_back()
 end, { noremap = true, desc = "Step back" })
 
 vim.keymap.set("n", "<Space>_", function()
-  require("dap").run_to_cursor()
+	require("dap").run_to_cursor()
 end, { noremap = true, desc = "Run to cursor" })
