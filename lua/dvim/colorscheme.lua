@@ -7,3 +7,6 @@
 vim.cmd.colorscheme("oxocarbon")
 -- vim.cmd.colorscheme("techbase")
 -- vim.cmd.colorscheme("ayu-dark")
+
+-- Colorscheme overrides
+vim.api.nvim_set_hl(0, "WinBar", { bold = false })
