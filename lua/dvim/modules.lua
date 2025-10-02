@@ -42,7 +42,6 @@ return {
 	-- "completion.autopairs",
 
 	-- Navigation
-	"nav.navic",
 	"nav.telescope",
 	"nav.trouble",
 	"nav.which-key",
