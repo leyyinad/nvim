@@ -3,9 +3,11 @@ local tabby = require("tabby")
 local theme = {
   fill = "TabLineFill",
   head = "TabLine",
-  current_tab = "StatusInsert",
+  current_tab = "TabLineSel",
   tab = "TabLine",
   win = "StatusNormal",
+  -- win = "TabLine",
+  -- win = "Normal",
   tail = "TabLine",
 }
 
@@ -48,17 +50,23 @@ tabby.setup({
         }
       end),
       line.spacer(),
-      #current_tab_wins.wins > 1 and current_tab_wins.foreach(function(win)
+      #current_tab_wins.wins > 1
+      and current_tab_wins.foreach(function(win)
+        local hl = win.is_current() and theme.win or theme.tab
+
         return {
-          win.is_current() and line.sep("", theme.win, theme.fill) or " ",
+          -- win.is_current() and line.sep("", theme.win, theme.fill) or " ",
+          win.is_current() and line.sep("", hl, theme.fill) or " ",
           win.file_icon(),
           win.buf_name(),
           win.buf().is_changed() and "" or "",
-          win.is_current() and line.sep("", theme.win, theme.fill) or " ",
-          hl = win.is_current() and theme.win or theme.tab,
+          win.is_current() and line.sep("", hl, theme.fill) or " ",
+          -- hl = win.is_current() and theme.win or theme.tab,
+          hl = hl,
           margin = " ",
         }
-      end) or "",
+      end)
+      or "",
       lsp_diag(),
     }
   end,
