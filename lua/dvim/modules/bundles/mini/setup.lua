@@ -37,9 +37,10 @@ hipatterns.setup({
   },
 })
 
-require("mini.indentscope").setup({
-  symbol = "▏",
-})
+-- require("mini.indentscope").setup({
+--   symbol = "▏",
+-- })
+
 require("mini.jump").setup()
 require("mini.jump2d").setup({
   view = {
