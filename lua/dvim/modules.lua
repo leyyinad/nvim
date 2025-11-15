@@ -16,6 +16,12 @@ return {
   "bundles.mini",
   "bundles.snacks",
 
+  -- Navigation
+  "nav.trouble",
+  "nav.which-key",
+  "nav.tmux-navigator",
+  "nav.jump-tag",
+
   -- Development
   "dev.lazydev",
 
@@ -37,16 +43,9 @@ return {
   "snippets.luasnip",
 
   -- Completion
-  -- "completion.cmp",
+  "completion.cmp",
   "completion.blink",
-  -- "completion.autopairs",
-
-  -- Navigation
-  "nav.telescope",
-  "nav.trouble",
-  "nav.which-key",
-  "nav.tmux-navigator",
-  "nav.jump-tag",
+  "completion.autopairs",
 
   -- SCM
   "scm.fugitive",
@@ -59,7 +58,6 @@ return {
   "testing.neotest",
 
   -- UI
-  "ui.alpha",
   "ui.notify",
   "ui.noice",
   "ui.line-number-interval",

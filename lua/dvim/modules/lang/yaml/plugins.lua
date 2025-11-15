@@ -5,7 +5,7 @@ return {
       {
         "neovim/nvim-lspconfig",
         "nvim-lua/plenary.nvim",
-        "nvim-telescope/telescope.nvim",
+        -- "nvim-telescope/telescope.nvim",
       },
     },
   },

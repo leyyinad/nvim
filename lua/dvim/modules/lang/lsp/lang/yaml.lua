@@ -148,4 +148,4 @@ local cfg = yamlCompanion.setup({
 })
 
 lspconfig.yamlls.setup(cfg)
-require("telescope").load_extension("yaml_schema")
+-- require("telescope").load_extension("yaml_schema")
