@@ -158,10 +158,9 @@ vim.keymap.set("n", "<leader><leader>n",
 
 vim.keymap.set("n", "<Leader>lb",
   function()
-    -- TODO: Snacks.picker…
-    -- telescope.extensions.dap.list_breakpoints()
     dap_util.show_breakpoint_picker()
-  end, {
+  end,
+  {
     noremap = true,
     desc = "List breakpoints",
   })
