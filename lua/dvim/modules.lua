@@ -46,6 +46,7 @@ return {
   "completion.cmp",
   "completion.blink",
   "completion.autopairs",
+  "completion.bullets",
 
   -- SCM
   "scm.fugitive",
@@ -60,7 +61,7 @@ return {
   -- UI
   "ui.notify",
   "ui.noice",
-  "ui.line-number-interval",
+  -- "ui.line-number-interval",
   "ui.dropbar",
   "ui.lualine",
   "ui.tabby",

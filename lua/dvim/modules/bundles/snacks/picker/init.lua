@@ -1,4 +1,5 @@
 local npm_util = require('dvim.modules.bundles.snacks.picker.npm')
+local dap_util = require('dvim.modules.bundles.snacks.picker.dap')
 
 vim.keymap.set("n", "<Leader><Leader>d",
   function()
@@ -28,7 +29,7 @@ vim.keymap.set("n", "<C-p>",
   end,
   {
     noremap = true,
-    desc = "All Pickers"
+    desc = "Git files"
   })
 
 vim.keymap.set("n", "<leader>ff",
@@ -37,7 +38,7 @@ vim.keymap.set("n", "<leader>ff",
   end,
   {
     noremap = true,
-    desc = "All Pickers"
+    desc = "Files"
   })
 
 vim.keymap.set("n", "<leader>fg",
@@ -83,7 +84,6 @@ vim.keymap.set("n", "<leader>fs",
   {
     noremap = true,
     desc = "List workspace symbols",
-    -- icon = "search",
   })
 
 vim.keymap.set("n", "<leader>s",
@@ -93,7 +93,6 @@ vim.keymap.set("n", "<leader>s",
   {
     noremap = true,
     desc = "List document symbols",
-    -- icon = "search",
   })
 
 vim.keymap.set("n", "<leader>ft",
@@ -141,22 +140,7 @@ vim.keymap.set("n", "<leader>fu",
     desc = "Search undo tree",
   })
 
--- TODO: jsonpath
--- vim.keymap.set("n", "<leader>j",
--- [[<CMD>Telescope jsonfly<CR>]]
---
--- "Myzel394/jsonfly.nvim",
--- "phelipetls/jsonpath.nvim",
--- function ()
---  Snacks.picker.js
--- end
--- , {
--- 	noremap = true,
--- 	desc = "jsonfly",
--- })
-
 vim.keymap.set("n", "<leader><leader>r",
-  -- vim.keymap.set("n", "<leader>fw",
   function()
     Snacks.picker.recent()
   end, {
@@ -170,4 +154,14 @@ vim.keymap.set("n", "<leader><leader>n",
   end, {
     noremap = true,
     desc = "Run npm script",
+  })
+
+vim.keymap.set("n", "<Leader>lb",
+  function()
+    -- TODO: Snacks.picker…
+    -- telescope.extensions.dap.list_breakpoints()
+    dap_util.show_breakpoint_picker()
+  end, {
+    noremap = true,
+    desc = "List breakpoints",
   })

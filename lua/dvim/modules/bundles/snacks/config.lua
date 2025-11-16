@@ -9,11 +9,14 @@ require("snacks").setup({
   picker = {
     enabled = true,
     layout = {
-      -- cycle = true,
+      cycle = true,
       preset = "dropdown",
       layout = {
         width = 0.9,
       },
+    },
+    matcher = {
+      frecency = true,
     },
   },
   quickfile = { enabled = true },

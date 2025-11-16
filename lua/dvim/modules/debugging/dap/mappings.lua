@@ -46,13 +46,13 @@ end, {
   desc = "Toggle breakpoint",
 })
 
-vim.keymap.set("n", "<Leader>lb", function()
-  -- TODO: Snacks.picker…
-  -- telescope.extensions.dap.list_breakpoints()
-end, {
-  noremap = true,
-  desc = "List breakpoints",
-})
+-- vim.keymap.set("n", "<Leader>lb", function()
+--   -- TODO: Snacks.picker…
+--   -- telescope.extensions.dap.list_breakpoints()
+-- end, {
+--   noremap = true,
+--   desc = "List breakpoints",
+-- })
 
 vim.keymap.set("n", "<leader>B", function()
   require("dap").set_breakpoint(vim.ui.input("Breakpoint condition: "))
