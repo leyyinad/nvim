@@ -12,9 +12,11 @@ return {
             win = {
               input = {
                 keys = {
-                  ["<c-t>"] = {
+                  -- ["<c-t>"] = {
+                  ["<leader><leader>t"] = {
                     "trouble_open",
                     mode = { "n", "i" },
+                    desc = "Trouble",
                   },
                 },
               },
