@@ -43,7 +43,7 @@ return {
   "snippets.luasnip",
 
   -- Completion
-  "completion.cmp",
+  -- "completion.cmp",
   "completion.blink",
   "completion.autopairs",
   "completion.bullets",
