@@ -2,48 +2,73 @@ local dap_breakpoints = require('dap.breakpoints')
 
 local M = {}
 
-M.show_breakpoint_picker = function()
-  local breakpoints = dap_breakpoints.get()
-
+local function collect_breakpoints(_, _)
   local items = {}
-  local cwd = vim.fn.getcwd()
-  Snacks.picker.qflist()
-
-  for bufnr, bps in pairs(breakpoints) do
-    for _, bp in pairs(bps) do
-      local file = vim.api.nvim_buf_get_name(bufnr)
-      local fn_short = string.sub(file, #cwd + 2, -1)
-      local row = bp.line
-      local col = 1
-
+  for buf, breakpoints in pairs(dap_breakpoints.get()) do
+    local file = vim.api.nvim_buf_get_name(buf)
+    for _, breakpoint in pairs(breakpoints) do
       table.insert(items, {
-        bufnr = bufnr,
-        name = file,
-        buf = bufnr,
         file = file,
-        text = fn_short,
-        row = row,
-        pos = { row, col },
+        buf = buf,
+        pos = { breakpoint.line, 1 }
       })
     end
   end
+  return items
+end
 
+local function format(item, ctx)
+  local file = vim.api.nvim_buf_get_name(item.buf)
+  local cwd = ctx:cwd()
+  local filename = string.sub(file, #cwd + 2, -1)
+
+  return {
+    { filename,           "SnacksPickerLabel" },
+    { ":" .. item.pos[1], "SnacksPickerComment" }
+  }
+end
+
+local function remove_breakpoint(picker)
+  local items = picker:selected({ fallback = true })
+  for _, item in ipairs(items) do
+    dap_breakpoints.remove(item.buf, item.pos[1])
+  end
+  picker:refresh()
+end
+
+local function toggle_breakpoint(picker)
+  local items = picker:selected({ fallback = true })
+  for _, item in ipairs(items) do
+    dap_breakpoints.toggle({}, item.buf, item.pos[1])
+  end
+end
+
+M.show_breakpoint_picker = function()
   Snacks.picker({
     title = "DAP Breakpoints",
-    items = items,
+    finder = collect_breakpoints,
     preview = "file",
-    format = function(item, _)
-      return {
-        { item.text,       "SnacksPickerLabel" },
-        { ":" .. item.row, "SnacksPickerComment" }
-      }
-    end,
-    confirm = function(picker, item)
-      picker:close()
-      vim.notify(item.buffer)
-      vim.api.nvim_set_current_buf(item.bufnr)
-      vim.api.nvim_win_set_cursor(0, { item.row, 1 })
-    end,
+    format = format,
+    actions = {
+      remove_breakpoint = remove_breakpoint,
+      toggle_breakpoint = toggle_breakpoint,
+    },
+    win = {
+      input = {
+        keys = {
+          ["<C-x>"] = {
+            "remove_breakpoint",
+            mode = { "n", "i" },
+            desc = "Remove breakpoint"
+          },
+          ["<C-d>"] = {
+            "toggle_breakpoint",
+            mode = { "n", "i" },
+            desc = "Toggle breakpoint"
+          },
+        }
+      },
+    },
   })
 end
 

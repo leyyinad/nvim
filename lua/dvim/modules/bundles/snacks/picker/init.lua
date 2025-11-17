@@ -140,7 +140,7 @@ vim.keymap.set("n", "<leader>fu",
     desc = "Search undo tree",
   })
 
-vim.keymap.set("n", "<leader><leader>r",
+vim.keymap.set("n", "<leader>r",
   function()
     Snacks.picker.recent()
   end, {
