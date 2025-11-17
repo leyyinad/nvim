@@ -1,30 +1,9 @@
 return {
+  ---@type LazySpec
   {
     "folke/trouble.nvim",
+    opts = {},
     cmd = "Trouble",
-    optional = true,
-    specs = {
-      "folke/snacks.nvim",
-      opts = function(_, opts)
-        return vim.tbl_deep_extend("force", opts or {}, {
-          picker = {
-            actions = require("trouble.sources.snacks").actions,
-            win = {
-              input = {
-                keys = {
-                  -- ["<c-t>"] = {
-                  ["<leader><leader>t"] = {
-                    "trouble_open",
-                    mode = { "n", "i" },
-                    desc = "Trouble",
-                  },
-                },
-              },
-            },
-          },
-        })
-      end,
-    },
     keys = {
       {
         "<leader>xx",
@@ -41,7 +20,6 @@ return {
         "<cmd>Trouble symbols toggle focus=false<cr>",
         desc = "Symbols (Trouble)",
       },
-      dependencies = { "nvim-tree/nvim-web-devicons" },
       {
         "<leader>cl",
         "<cmd>Trouble lsp toggle focus=false win.position=right<cr>",
