@@ -1,4 +1,5 @@
 return {
+  ---@type LazySpec
   { "mfussenegger/nvim-dap" },
   {
     "rcarriga/nvim-dap-ui",
