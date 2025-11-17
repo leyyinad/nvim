@@ -1,4 +1,5 @@
 return {
+  ---@type LazySpec
   {
     "christoomey/vim-tmux-navigator",
     cmd = {
