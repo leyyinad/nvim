@@ -66,11 +66,11 @@ return {
   "ui.lualine",
   "ui.tabby",
   "ui.origami",
+  "ui.highlight-colors",
 
   -- Utilities
   "util.textcase",
   "util.hurl",
-  "util.highlight-colors",
 
   -- Sessions
   "sessions.auto-session",
