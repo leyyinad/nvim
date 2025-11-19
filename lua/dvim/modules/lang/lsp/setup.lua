@@ -11,12 +11,11 @@ vim.lsp.enable("harper_ls", false)
 vim.lsp.enable("terraformls", true)
 vim.lsp.enable("sqlls", true)
 
-vim.lsp.enable("taplo", true)
-vim.lsp.enable("tombi", true)
-
 vim.lsp.enable("cssls")
 vim.lsp.enable("cssmodules_ls")
 vim.lsp.enable("tailwindcss", false)
+vim.lsp.enable("taplo", true)
+-- vim.lsp.enable("tombi", true)
 
 -- require("dvim.modules.lang.lsp.lang.ansible")
 -- require("dvim.modules.lang.lsp.lang.awk")
