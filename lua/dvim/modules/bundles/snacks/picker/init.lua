@@ -25,7 +25,10 @@ vim.keymap.set("n", "<leader>p",
 
 vim.keymap.set("n", "<C-p>",
   function()
-    Snacks.picker.git_files()
+    Snacks.picker.git_files({
+      untracked = true,
+      submodules = true,
+    })
   end,
   {
     noremap = true,
@@ -51,6 +54,76 @@ vim.keymap.set("n", "<leader>fg",
   }
 )
 
+vim.keymap.set("n", "<leader>gf",
+  function()
+    Snacks.picker.git_files()
+  end,
+  {
+    noremap = true,
+    desc = "Git files",
+  }
+)
+
+vim.keymap.set("n", "<leader>gb",
+  function()
+    Snacks.picker.git_branches()
+  end,
+  {
+    noremap = true,
+    desc = "Git branches",
+  }
+)
+
+vim.keymap.set("n", "<leader>gll",
+  function()
+    Snacks.picker.git_log()
+  end,
+  {
+    noremap = true,
+    desc = "Git log",
+  }
+)
+
+vim.keymap.set("n", "<leader>glf",
+  function()
+    Snacks.picker.git_log_file()
+  end,
+  {
+    noremap = true,
+    desc = "Git log file",
+  }
+)
+
+vim.keymap.set("n", "<leader>glb",
+  function()
+    Snacks.picker.git_log_file()
+  end,
+  {
+    noremap = true,
+    desc = "Git log line",
+  }
+)
+
+vim.keymap.set("n", "<leader>gs",
+  function()
+    Snacks.picker.git_status()
+  end,
+  {
+    noremap = true,
+    desc = "Git status",
+  }
+)
+
+vim.keymap.set("n", "<leader>gt",
+  function()
+    Snacks.picker.git_stash()
+  end,
+  {
+    noremap = true,
+    desc = "Git stash",
+  }
+)
+
 vim.keymap.set("n", "<leader>fb",
   function()
     Snacks.picker.buffers()
@@ -58,7 +131,8 @@ vim.keymap.set("n", "<leader>fb",
   {
     noremap = true,
     desc = "Find buffers",
-  })
+  }
+)
 
 vim.keymap.set("n", "<leader>fh",
   function()
@@ -140,13 +214,33 @@ vim.keymap.set("n", "<leader>fu",
     desc = "Search undo tree",
   })
 
-vim.keymap.set("n", "<leader>r",
+vim.keymap.set("n", "<leader>rf",
   function()
     Snacks.picker.recent()
   end, {
     noremap = true,
     desc = "recent files",
   })
+
+vim.keymap.set("n", "<leader>rr",
+  function()
+    Snacks.picker.registers()
+  end,
+  {
+    noremap = true,
+    desc = "Registers",
+  }
+)
+
+vim.keymap.set("n", "<leader>cc",
+  function()
+    Snacks.picker.cliphist()
+  end,
+  {
+    noremap = true,
+    desc = "Clipboard history",
+  }
+)
 
 vim.keymap.set("n", "<leader><leader>n",
   function()
