@@ -15,3 +15,4 @@ vim.keymap.set("", "ä", "]", { remap = true })
 vim.keymap.set("", "<C-_><C-_>", "gcc", { remap = true })
 
 vim.keymap.set("n", "<ESC><ESC>", "<Cmd>nohlsearch|diffupdate|normal!<CR>")
+vim.keymap.set("n", "zS", vim.show_pos)
