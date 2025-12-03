@@ -70,7 +70,8 @@ return {
 
   -- Utilities
   "util.textcase",
-  "util.hurl",
+  -- "util.hurl",
+  -- "util.code-companion",
 
   -- Sessions
   "sessions.auto-session",
@@ -79,7 +80,7 @@ return {
   "fs.yazi",
 
   -- Documentation
-  "doc.devdocs",
+  -- "doc.devdocs",
 
   -- Themes
   "themes.tokyonight",
