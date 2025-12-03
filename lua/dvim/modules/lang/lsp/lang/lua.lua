@@ -1,4 +1,5 @@
-vim.lsp.config("lua_ls", {
+vim.lsp.config("emmylua_ls", {
+	cmd = { "emmylua_ls" },
 	settings = {
 		Lua = {
 			workspace = {
@@ -8,13 +9,10 @@ vim.lsp.config("lua_ls", {
 				diagnostics = {
 					gloabls = { "vim" },
 				},
-				library = {
-					vim.env.VIMRUNTIME,
-					vim.env.LAZY or vim.fn.stdpath("data") .. "/lazy",
-				},
+				library = vim.api.nvim_get_runtime_file("", true),
 			},
 		},
 	},
 })
 
-vim.lsp.enable("lua_ls")
+vim.lsp.enable("emmylua_ls")
