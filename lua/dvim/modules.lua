@@ -71,7 +71,6 @@ return {
   -- Utilities
   "util.textcase",
   -- "util.hurl",
-  -- "util.code-companion",
 
   -- Sessions
   "sessions.auto-session",
