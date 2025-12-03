@@ -10,3 +10,5 @@ vim.cmd.colorscheme("oxocarbon")
 
 -- Colorscheme overrides
 vim.api.nvim_set_hl(0, "WinBar", { bold = false })
+
+vim.api.nvim_set_hl(0, "FloatBorder", { link = "SnacksPickerBorder" })
