@@ -20,84 +20,91 @@ noice.setup({
   },
   messages = {
     enabled = true,
+    -- view = "notify", -- default view for messages
+    -- view_error = "notify", -- view for errors
+    -- view_warn = "notify", -- view for warnings
+    -- view_history = "messages", -- view for :messages
+    -- view_search = "virtualtext", -- view for search count messages. Set to `false` to disable
   },
   popupmenu = {
     enabled = true,
     backend = "nui",
     kind_icons = {},
   },
-  -- redirect = {},
-  commands = {
-    history = {
-      view = "split",
-      opts = { enter = true, format = "details" },
-      filter = {
-        any = {
-          { event = "notify" },
-          { error = true },
-          { warning = true },
-          { event = "msg_show", kind = { "" } },
-          { event = "lsp",      kind = "message" },
-        },
-      },
-    },
-    last = {
-      view = "popup",
-      opts = { enter = true, format = "details" },
-      filter = {
-        any = {
-          { event = "notify" },
-          { error = true },
-          { warning = true },
-          { event = "msg_show", kind = { "" } },
-          { event = "lsp",      kind = "message" },
-        },
-      },
-      filter_opts = { count = 1 },
-    },
-    errors = {
-      view = "popup",
-      opts = { enter = true, format = "details" },
-      filter = { error = true },
-      filter_opts = { reverse = true },
-    },
+  redirect = {
+    view = "popup",
+    filter = { event = "msg_show" },
   },
-  notify = {
-    enabled = true,
-    view = "notify",
-    -- view = "snacks.notifier",
-  },
+  -- commands = {
+  --   history = {
+  --     view = "split",
+  --     opts = { enter = true, format = "details" },
+  --     filter = {
+  --       any = {
+  --         { event = "notify" },
+  --         { error = true },
+  --         { warning = true },
+  --         { event = "msg_show", kind = { "" } },
+  --         { event = "lsp",      kind = "message" },
+  --       },
+  --      },
+  --   },
+  --   last = {
+  --     view = "popup",
+  --     opts = { enter = true, format = "details" },
+  --     filter = {
+  --       any = {
+  --         { event = "notify" },
+  --         { error = true },
+  --         { warning = true },
+  --         { event = "msg_show", kind = { "" } },
+  --         { event = "lsp",      kind = "message" },
+  --       },
+  --     },
+  --     filter_opts = { count = 1 },
+  --   },
+  --   errors = {
+  --     view = "popup",
+  --     opts = { enter = true, format = "details" },
+  --     filter = { error = true },
+  --     filter_opts = { reverse = true },
+  --   },
+  --   },
+  --   notify = {
+  --     enabled = true,
+  --     view = "notify",
+  --   },
   lsp = {
-    progress = {
-      enabled = true,
-      format = "lsp_progress",
-      format_done = "lsp_progress_done",
-      throttle = 1000 / 30,
-      view = "mini",
-    },
+    -- progress = {
+    --   enabled = true,
+    --   format = "lsp_progress",
+    --   format_done = "lsp_progress_done",
+    --   throttle = 1000 / 30,
+    --   view = "mini",
+    -- },
     -- override markdown rendering so that **cmp** and other plugins use **Treesitter**
     override = {
       ["vim.lsp.util.convert_input_to_markdown_lines"] = true,
       ["vim.lsp.util.stylize_markdown"] = true,
-      ["cmp.entry.get_documentation"] = true, -- requires hrsh7th/nvim-cmp
+      -- ["cmp.entry.get_documentation"] = true, -- requires hrsh7th/nvim-cmp
     },
-    hover = {
-      enabled = true,
-      slient = true,
-      view = nil,
-      ---@type NoiceViewOptions
-      opts = {},
-    },
-    signature = {
-      enabled = true,
-      auto_open = {
-        enabled = true,
-        trigger = true,
-        luasnip = true,
-        throttle = 50,
-      },
-      view = "hover",
-    },
+    -- hover = {
+    --   enabled = true,
+    --   slient = false,
+    --   -- view = "hover",
+    --   ---@type NoiceViewOptions
+    --   opts = {},
+    -- },
+    -- signature = {
+    --   enabled = true,
+    --   auto_open = {
+    --     enabled = true,
+    --     trigger = true,
+    --     luasnip = true,
+    --     throttle = 50,
+    --   },
+    --   view = "hover",
+    -- },
     message = {
       enabled = true,
       view = "notify",
@@ -114,7 +121,10 @@ noice.setup({
         replace = true,
         render = "plain",
         format = { "{message}" },
-        win_options = { concealcursor = "n", conceallevel = 3 },
+        win_options = {
+          concealcursor = "n",
+          conceallevel = 3,
+        },
       },
     },
   },
@@ -143,14 +153,10 @@ noice.setup({
   ---@type NoicePresets
   presets = {
     bottom_search = false,        -- use a classic bottom cmdline for search
-    -- command_palette = false, -- position the cmdline and popupmenu together
     command_palette = true,       -- position the cmdline and popupmenu together
-    -- long_message_to_split = true, -- long messages will be sent to a split
     long_message_to_split = true, -- long messages will be sent to a split
-    -- inc_rename = true,            -- enables an input dialog for inc-rename.nvim
     inc_rename = false,           -- enables an input dialog for inc-rename.nvim
-    -- lsp_doc_border = true, -- add a border to hover docs and signature help
-    lsp_doc_border = false,       -- add a border to hover docs and signature help
+    lsp_doc_border = true,        -- add a border to hover docs and signature help
   },
   -- throttle
   views = {
@@ -160,22 +166,24 @@ noice.setup({
       size = {
         width = "auto",
       },
-      win_options = {
-        winhighlight = {
-          Normal = "NoiceBody",
-          FloatBorder = "NoiceBorder",
-          CursorLine = "PmenuSel",
-          PmenuMatch = "Special",
-        },
-      },
+      -- win_options = {
+      -- winhighlight = {
+      -- Normal = "NoiceBody",
+      -- FloatBorder = "NoiceBorder",
+      -- CursorLine = "PmenuSel",
+      -- PmenuMatch = "Special",
+      -- },
+      -- },
       border = {
         padding = { 0, 1 },
       },
     },
     notify = {
-      backend = "snacks",
-      replace = true,
+      backend = { "snacks", "notify" },
+      fallback = "mini",
       format = "notify",
+      replace = false,
+      merge = false,
     },
     split = {
       backend = "split",
@@ -187,7 +195,7 @@ noice.setup({
         keys = { "q", "<ESC>" },
       },
       win_options = {
-        winhighlight = { Normal = "NoiceBody", FloatBorder = "NoiceBorder" },
+        -- winhighlight = { Normal = "NoiceBody", FloatBorder = "NoiceBorder" },
         wrap = true,
       },
     },
@@ -200,9 +208,9 @@ noice.setup({
       close = {
         keys = { "q", "<ESC>" },
       },
-      win_options = {
-        winhighlight = { Normal = "NoiceBody", FloatBorder = "NoiceBorder" },
-      },
+      -- win_options = {
+      -- winhighlight = { Normal = "NoiceBody", FloatBorder = "NoiceBorder" },
+      -- },
     },
     popup = {
       backend = "popup",
@@ -222,9 +230,12 @@ noice.setup({
         max_height = 20,
         max_width = 80,
       },
-      win_options = {
-        winhighlight = { Normal = "NoiceBody", FloatBorder = "NoiceBorder" },
-      },
+      -- win_options = {
+      --   winhighlight = {
+      -- Normal = "NoiceBody",
+      -- FloatBorder = "NoiceBorder" ,
+      --   },
+      -- },
     },
     hover = {
       view = "popup",
@@ -260,7 +271,7 @@ noice.setup({
       backend = "mini",
       relative = "editor",
       align = "message-right",
-      timeout = 2000,
+      -- timeout = 2000,
       reverse = false,
       position = {
         row = -2,
@@ -270,12 +281,12 @@ noice.setup({
       zindex = 60,
       win_options = {
         winblend = 0,
-        winhighlight = {
-          Normal = "NoiceBody",
-          IncSearch = "IncSearch",
-          Search = "Search",
-          FloatBorder = "NoiceBody",
-        },
+        -- winhighlight = {
+        --   Normal = "NoiceBody",
+        --   IncSearch = "IncSearch",
+        --   Search = "Search",
+        --   FloatBorder = "NoiceBody",
+        -- },
       },
     },
     cmdline_popup = {
@@ -294,12 +305,12 @@ noice.setup({
         height = "auto",
       },
       win_options = {
-        winhighlight = {
-          Normal = "NoiceBody",
-          FloatBorder = "NoiceBorder",
-          IncSearch = "IncSearch",
-          Search = "Search",
-        },
+        -- winhighlight = {
+        -- Normal = "NoiceBody",
+        -- FloatBorder = "NoiceBorder",
+        -- IncSearch = "IncSearch",
+        -- Search = "Search",
+        -- },
         cursorline = false,
       },
     },
@@ -322,96 +333,129 @@ noice.setup({
           top = " CONFIRM: ",
         },
       },
-      win_options = {
-        winhighlight = {
-          Normal = "NoiceBody",
-          FloatBorder = "NoiceBorder",
-        },
-      },
+      -- win_options = {
+      --   winhighlight = {
+      -- Normal = "NoiceBody",
+      -- FloatBorder = "NoiceBorder",
+      --   },
+      -- },
     },
   },
-  routes = {
-    {
-      view = "cmdline",
-      filter = {
-        event = "cmdline",
-        find = "^%s*[/?]",
-      },
-    },
-    {
-      view = "confirm",
-      filter = {
-        any = {
-          { event = "msg_show", kind = "confirm" },
-          { event = "msg_show", kind = "confirm_sub" },
-        },
-      },
-    },
-    {
-      view = "split",
-      filter = {
-        any = {
-          { event = "msg_history_show" },
-        },
-      },
-    },
-    {
-      view = "mini",
-      filter = {
-        event = "msg_show",
-        kind = "",
-        find = "written",
-      },
-      opts = { skip = true },
-    },
-    {
-      view = "mini",
-      filter = {
-        event = "msg_show",
-        kind = { "", "echo", "echomsg" },
-      },
-      opts = {
-        replace = false,
-        merge = false,
-        title = "LVIM IDE",
-      },
-    },
-    {
-      view = "mini",
-      filter = { error = true },
-      opts = {
-        skip = true,
-      },
-    },
-    {
-      view = "mini",
-      filter = { warning = true },
-      opts = {
-        skip = true,
-      },
-    },
-    {
-      filter = {
-        event = "notify",
-        min_height = 15,
-      },
-      view = "split",
-    },
-    {
-      view = "notify",
-      filter = {
-        event = "noice",
-        kind = { "stats", "debug" },
-      },
-      opts = {
-        buf_options = { filetype = "lua" },
-        replace = false,
-        title = "LVIM IDE",
-      },
-    },
-    {
-      view = "mini",
-      filter = { event = "lsp", kind = "progress" },
-    },
-  },
+  -- routes = {
+  --   {
+  --     view = "cmdline",
+  --     filter = {
+  --       event = "cmdline",
+  --       find = "^%s*[/?]",
+  --     },
+  --   },
+  --   {
+  --     view = "confirm",
+  --     filter = {
+  --       any = {
+  --         { event = "msg_show", kind = "confirm" },
+  --         { event = "msg_show", kind = "confirm_sub" },
+  --         { event = "msg_show", kind = "number_prompt" },
+  --       },
+  --     },
+  --   },
+  --   {
+  --     -- view = "split",
+  --     view = "messages",
+  --     filter = {
+  --       any = {
+  --         {
+  --           event = "msg_history_show",
+  --           -- { min_height = 20 },
+  --         },
+  --       },
+  --     },
+  --   },
+  --   {
+  --     view = "virtualtext",
+  --     filter = {
+  --       event = "msg_show",
+  --       kind = "search_count",
+  --     },
+  --   },
+  --   {
+  --     filter = {
+  --       any = {
+  --         { event = { "msg_showmode", "msg_showcmd", "msg_ruler" } },
+  --         { event = "msg_show",                                    kind = "search_count" },
+  --       },
+  --     },
+  --     opts = { skip = true },
+  --   },
+  --   {
+  --     view = "mini",
+  --     filter = {
+  --       event = "msg_show",
+  --       kind = "",
+  --       find = "written",
+  --     },
+  --     opts = { skip = true },
+  --   },
+  --   {
+  --     view = "notify",
+  --     filter = {
+  --       event = "msg_show",
+  --       kind = {
+  --         "",
+  --         "echo",
+  --         "echomsg",
+  --         "lua_print",
+  --         "list_cmd"
+  --       },
+  --     },
+  --     opts = {
+  --       replace = true,
+  --       merge = true,
+  --       title = "Messages",
+  --       wrap = true,
+  --     },
+  --   },
+  --   {
+  --     view = "notify",
+  --     filter = { error = true },
+  --     opts = {
+  --       skip = true,
+  --     },
+  --   },
+  --   {
+  --     view = "notify",
+  --     filter = { warning = true },
+  --     opts = {
+  --       skip = true,
+  --     },
+  --   },
+  --   {
+  --     view = "split",
+  --     filter = {
+  --       event = "notify",
+  --       min_height = 10,
+  --     },
+  --   },
+  --   {
+  --     view = "notify",
+  --     filter = {
+  --       event = "noice",
+  --       kind = { "stats", "debug" },
+  --     },
+  --     opts = {
+  --       lang = "lua",
+  --       buf_options = { filetype = "lua" },
+  --       replace = true,
+  --       title = "Noice",
+  --     },
+  --   },
+  --   {
+  --     view = "mini",
+  --     opts = {},
+  --     filter = {
+  --       event = "lsp",
+  --       kind = "progress"
+  --     },
+  --   },
+  -- },
 })
