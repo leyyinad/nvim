@@ -1,15 +1,27 @@
 local tabby = require("tabby")
 
+local function get_color(group, attr)
+  local fn = vim.fn
+  return fn.synIDattr(fn.synIDtrans(fn.hlID(group)), attr)
+end
+
 local theme = {
-  fill = "TabLineFill",
-  head = "TabLine",
+  fill        = "TabLineFill",
+  -- head = "Tabline",
   current_tab = "TabLineSel",
-  tab = "TabLine",
-  win = "StatusNormal",
-  -- win = "TabLine",
-  -- win = "Normal",
-  tail = "TabLine",
+  tab         = "TabLine",
+  -- current_win = "TabLineSel",
+  -- win         = "TabLine",
+  tail        = "TabLine",
+  --
+  head        = {
+    fg = get_color("DiagnosticInfo", "fg"),
+    bg = "#000000",
+  },
+  current_win = "Tabline",
+  win         = "StatusNormal",
 }
+
 
 local function lsp_diag()
   local icons = {
@@ -31,20 +43,19 @@ end
 tabby.setup({
   line = function(line)
     local current_tab_wins = line.wins_in_tab(line.api.get_current_tab())
+
     return {
-      {
-        { "  ", hl = "DiagnosticInfo" },
-        line.sep("", theme.head, theme.fill),
-      },
+      { "   ", hl = theme.head },
+      line.sep("", theme.head, theme.fill),
       line.tabs().foreach(function(tab)
         local hl = tab.is_current() and theme.current_tab or theme.tab
         local win = tab.current_win()
         return {
-          line.sep("", hl, theme.fill),
+          line.sep("", theme.fill, hl),
           win.file_icon(),
           win.buf_name(),
           win.buf().is_changed() and "" or "",
-          line.sep("", hl, theme.fill),
+          line.sep("", theme.fill, hl),
           hl = hl,
           margin = " ",
         }
@@ -52,16 +63,14 @@ tabby.setup({
       line.spacer(),
       #current_tab_wins.wins > 1
       and current_tab_wins.foreach(function(win)
-        local hl = win.is_current() and theme.win or theme.tab
+        local hl = win.is_current() and theme.current_win or theme.win
 
         return {
-          -- win.is_current() and line.sep("", theme.win, theme.fill) or " ",
-          win.is_current() and line.sep("", hl, theme.fill) or " ",
+          line.sep("", theme.fill, hl),
           win.file_icon(),
           win.buf_name(),
           win.buf().is_changed() and "" or "",
-          win.is_current() and line.sep("", hl, theme.fill) or " ",
-          -- hl = win.is_current() and theme.win or theme.tab,
+          line.sep("", theme.fill, hl),
           hl = hl,
           margin = " ",
         }
@@ -70,7 +79,7 @@ tabby.setup({
       lsp_diag(),
     }
   end,
-  option = {},
+  -- option = {},
 })
 
 vim.api.nvim_set_keymap("n", "<leader>ta", ":$tabnew<CR>", {
