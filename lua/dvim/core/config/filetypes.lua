@@ -14,6 +14,7 @@ vim.filetype.add({
     [".*%.yaml%.tpl"] = "yaml",
     [".*/%.kube/config"] = "yaml",
     [".*%.neon"] = "yaml",
+    [".*%.import"] = "dosini",
     [".*%.tf%.example"] = "terraform",
     ["Dockerfile%..*"] = "dockerfile",
     [".*%.js%.php"] = "javascript",
