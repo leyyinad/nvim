@@ -4,10 +4,10 @@
 -- vim.cmd.colorscheme("ayu-dark")
 -- vim.cmd.colorscheme("tokyonight-night")
 -- vim.cmd.colorscheme("techbase")
-vim.cmd.colorscheme("codescope")
+-- vim.cmd.colorscheme("codescope")
 -- vim.cmd.colorscheme("oxocarbon")
 -- vim.cmd.colorscheme("techbase")
--- vim.cmd.colorscheme("ayu-dark")
+vim.cmd.colorscheme("ayu-dark")
 -- vim.cmd.colorscheme("yugen")
 
 -- Colorscheme overrides
