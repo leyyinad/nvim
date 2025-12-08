@@ -3,12 +3,13 @@
 -- vim.cmd.colorscheme("jellybeans")
 -- vim.cmd.colorscheme("ayu-dark")
 -- vim.cmd.colorscheme("tokyonight-night")
--- vim.cmd.colorscheme("codescope")
-vim.cmd.colorscheme("oxocarbon")
+-- vim.cmd.colorscheme("techbase")
+vim.cmd.colorscheme("codescope")
+-- vim.cmd.colorscheme("oxocarbon")
 -- vim.cmd.colorscheme("techbase")
 -- vim.cmd.colorscheme("ayu-dark")
+-- vim.cmd.colorscheme("yugen")
 
 -- Colorscheme overrides
 vim.api.nvim_set_hl(0, "WinBar", { bold = false })
-
 vim.api.nvim_set_hl(0, "FloatBorder", { link = "SnacksPickerBorder" })
