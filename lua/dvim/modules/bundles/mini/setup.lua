@@ -4,23 +4,10 @@ require("mini.animate").setup()
 require("mini.basics").setup({
   extra_ui = true,
 })
-
 require("mini.bufremove").setup()
 require("mini.bracketed").setup()
 require("mini.icons").setup()
--- require("mini.cursorword").setup()
 require("mini.extra").setup()
-
--- require("mini.files").setup({
--- 	windows = {
--- 		max_number = math.huge,
--- 		preview = true,
--- 		width_focus = 32,
--- 		width_nofocus = 16,
--- 		width_preview = 80,
--- 	},
--- })
-
 require("mini.fuzzy").setup()
 
 local hipatterns = require("mini.hipatterns")
