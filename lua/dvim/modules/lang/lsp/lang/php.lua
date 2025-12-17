@@ -92,6 +92,10 @@ vim.lsp.config("intelephense", {
       },
     },
   },
+  root_markers = {
+    "composer.json",
+    ".git",
+  },
 })
 
 vim.lsp.enable("intelephense")
