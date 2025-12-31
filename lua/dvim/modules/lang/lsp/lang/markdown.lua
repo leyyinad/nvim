@@ -6,4 +6,6 @@
 -- 			},
 -- 		},
 -- 	},
--- })
+-- }
+
+vim.lsp.enable("marksman")
