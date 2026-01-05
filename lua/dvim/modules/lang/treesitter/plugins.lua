@@ -1,4 +1,13 @@
 return {
-  { "nvim-treesitter/nvim-treesitter",      build = ":TSUpdate" },
-  { "nvim-treesitter/completion-treesitter" },
+  ---@type LazySpec
+  {
+    "nvim-treesitter/nvim-treesitter",
+    branch = 'main',
+    lazy = false,
+    build = ":TSUpdate"
+  },
+  {
+    "MeanderingProgrammer/treesitter-modules.nvim",
+    dependencies = { "nvim-treesitter/nvim-treesitter" }
+  },
 }
