@@ -1,5 +1,6 @@
 require("dapui").setup()
 require("nvim-dap-virtual-text").setup()
+require("nvim-dap-repl-highlights").setup()
 
 vim.fn.sign_define("DapBreakpoint", {
   text = "● ",

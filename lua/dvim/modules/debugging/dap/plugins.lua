@@ -14,4 +14,5 @@ return {
       "mfussenegger/nvim-dap",
     },
   },
+  { "LiadOz/nvim-dap-repl-highlights" },
 }
