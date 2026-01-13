@@ -39,6 +39,9 @@ return {
   "lang.godot",
   "lang.emmet",
 
+  -- Apps
+  -- "apps.blender",
+
   -- Snippets
   "snippets.luasnip",
 
