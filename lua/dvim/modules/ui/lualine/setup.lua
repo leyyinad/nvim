@@ -116,6 +116,10 @@ lualine.setup({
       {
         quickfix_status,
         color = 'lualine_x_insert'
+      },
+      {
+        "filetype",
+        colored = true
       }
     },
     lualine_y = {
