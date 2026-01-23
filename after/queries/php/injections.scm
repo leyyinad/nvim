@@ -11,8 +11,8 @@
   (heredoc_body)
   (nowdoc_body)
  ] @injection.content
- (#match? @injection.content
-  "^\[\s\r\n\]\*SELECT|select|RELACE|replace|INSERT|insert|UPDATE|update|DELETE|delete|CREATE|create|ALTER|alter|DROP|drop|EXPLAIN|explain|TRUNCATE|truncate|BEGIN|begin")
+ (#any-match? @injection.content
+  "^[ \n\r\t\s]\*SELECT|select|RELACE|replace|INSERT|insert|UPDATE|update|DELETE|delete|CREATE|create|ALTER|alter|DROP|drop|EXPLAIN|explain|TRUNCATE|truncate|BEGIN|begin")
  (#set! injection.language "sql")
  (#set! injection.include-children))
 
