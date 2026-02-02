@@ -101,4 +101,5 @@ return {
   "themes.onedark",
   "themes.codescope",
   "themes.techbase",
+  "themes.koda",
 }

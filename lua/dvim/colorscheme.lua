@@ -1,14 +1,15 @@
 -- vim.cmd.colorscheme("neon-cyberpunk-night")
-vim.cmd.colorscheme("neon-cherrykiss-night")
+-- vim.cmd.colorscheme("neon-cherrykiss-night")
 -- vim.cmd.colorscheme("jellybeans")
 -- vim.cmd.colorscheme("ayu-dark")
 -- vim.cmd.colorscheme("tokyonight-night")
 -- vim.cmd.colorscheme("techbase")
--- vim.cmd.colorscheme("codescope")
+vim.cmd.colorscheme("codescope")
 -- vim.cmd.colorscheme("oxocarbon")
 -- vim.cmd.colorscheme("techbase")
--- vim.cmd.colorscheme("ayu-dark")
 -- vim.cmd.colorscheme("yugen")
+-- vim.cmd.colorscheme("carbonfox")
+-- vim.cmd.colorscheme("koda")
 
 -- Colorscheme overrides
 vim.api.nvim_set_hl(0, "WinBar", { bold = false })
