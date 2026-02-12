@@ -54,9 +54,22 @@ vim.keymap.set("n", "<leader>fg",
   }
 )
 
-vim.keymap.set("n", "<leader>gf",
+vim.keymap.set("n", "<leader>fg",
   function()
-    Snacks.picker.git_files()
+    Snacks.picker.git_grep({
+      untracked = true,
+      submodules = true,
+    })
+  end,
+  {
+    noremap = true,
+    desc = "Live grep",
+  }
+)
+
+vim.keymap.set("n", "<leader>gg",
+  function()
+    Snacks.picker.grep()
   end,
   {
     noremap = true,
