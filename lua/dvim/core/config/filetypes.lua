@@ -23,5 +23,6 @@ vim.filetype.add({
     [".*%apache%.conf"] = "apache",
     [".*%.godot"] = "gdresource",
     [".*/%.config/bat/config"] = "dosini",
+    [".*/%.config/rclone/.*%.conf"] = "dosini",
   },
 })
