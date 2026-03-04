@@ -9,6 +9,9 @@ vim.filetype.add({
     [".releaserc"] = "json",
     [".ncurc"] = "json",
     ["_js.php"] = "javascript",
+    ["isyncrc"] = "apachestyle",
+    ["mbsyncrc"] = "apachestyle",
+    ["mbsyncrc.sample"] = "apachestyle",
   },
   pattern = {
     [".*%.yaml%.tpl"] = "yaml",
