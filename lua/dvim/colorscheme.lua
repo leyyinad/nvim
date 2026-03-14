@@ -5,11 +5,13 @@
 -- vim.cmd.colorscheme("tokyonight-night")
 -- vim.cmd.colorscheme("techbase")
 -- vim.cmd.colorscheme("codescope")
-vim.cmd.colorscheme("oxocarbon")
+-- vim.cmd.colorscheme("oxocarbon")
 -- vim.cmd.colorscheme("techbase")
 -- vim.cmd.colorscheme("yugen")
 -- vim.cmd.colorscheme("carbonfox")
 -- vim.cmd.colorscheme("koda")
+-- vim.cmd.colorscheme("catppuccin-mocha")
+vim.cmd.colorscheme("oc-2")
 
 -- Colorscheme overrides
 vim.api.nvim_set_hl(0, "WinBar", { bold = false })

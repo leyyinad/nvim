@@ -102,4 +102,5 @@ return {
   "themes.codescope",
   "themes.techbase",
   "themes.koda",
+  "themes.oc-2",
 }
