@@ -80,6 +80,7 @@ return {
 
   -- File managers
   "fs.yazi",
+  "fs.vifm",
 
   -- Documentation
   -- "doc.devdocs",
