@@ -2,9 +2,10 @@
   "hdb": {
     "prefix": "hdb",
     "body": [
+      "ob_end_clean();",
       "header('Content-type: text/plain');",
-      "var_dump($1);",
-      "exit();",
+      "print_r($1);",
+      "exit;",
       "$0"
     ],
     "description": "Dump variable"
