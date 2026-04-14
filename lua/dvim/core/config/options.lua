@@ -1,5 +1,6 @@
 vim.opt.autoindent = true
 vim.opt.clipboard:append({ "unnamed", "unnamedplus" })
+vim.opt.completeopt = "menu,menuone,noselect,popup"
 vim.opt.cursorline = true
 vim.opt.diffopt = {
   "internal",

@@ -12,6 +12,12 @@ vim.keymap.del("", "Y")
 vim.keymap.set("", "ö", "[", { remap = true })
 vim.keymap.set("", "ä", "]", { remap = true })
 
+vim.keymap.set("", "öö", "[[", { remap = true })
+vim.keymap.set("", "ää", "]]", { remap = true })
+
+vim.keymap.set("", "öä", "[]", { remap = true })
+vim.keymap.set("", "äö", "][", { remap = true })
+
 vim.keymap.set("", "<C-_><C-_>", "gcc", { remap = true })
 
 vim.keymap.set("n", "<ESC><ESC>", "<Cmd>nohlsearch|diffupdate|normal!<CR>")

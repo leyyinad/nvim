@@ -31,4 +31,3 @@ neotest.setup {
     unknown = ""
   }
 }
-

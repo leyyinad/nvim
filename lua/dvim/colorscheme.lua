@@ -11,7 +11,8 @@
 -- vim.cmd.colorscheme("carbonfox")
 -- vim.cmd.colorscheme("koda")
 -- vim.cmd.colorscheme("catppuccin-mocha")
-vim.cmd.colorscheme("oc-2")
+-- vim.cmd.colorscheme("oc-2")
+-- vim.cmd.colorscheme("nord")
 
 -- Colorscheme overrides
 vim.api.nvim_set_hl(0, "WinBar", { bold = false })

@@ -21,6 +21,8 @@ return {
     {
       section = "terminal",
       cmd = "chafa " .. logo_file .. " --format symbols --symbols all --size 32x8 --align center ; sleep .1",
+      ttl = 5 * 60,
+      height = 8,
     },
     {
       section = "keys",
