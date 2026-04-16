@@ -164,7 +164,7 @@ vim.keymap.set("n", "<leader>fr",
     desc = "Find LSP references for word under cursor",
   })
 
-vim.keymap.set("n", "<leader>fs",
+vim.keymap.set("n", "<leader>ws",
   function()
     Snacks.picker.lsp_workspace_symbols()
   end,
