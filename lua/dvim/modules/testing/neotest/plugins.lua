@@ -1,4 +1,5 @@
 return {
+  ---@type LazySpec
   {
     "nvim-neotest/neotest",
     dependencies = {
