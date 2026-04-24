@@ -36,7 +36,7 @@ end, {
 })
 
 vim.keymap.set("n", "<leader>tL", function()
-  neotest.run.run_last({ strategy = "dap " })
+  neotest.run.run_last({ strategy = "dap" })
 end, {
   noremap = true,
   desc = "Debug last test",
