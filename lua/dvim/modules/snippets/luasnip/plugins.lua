@@ -1,5 +1,10 @@
 return {
-  { "L3MON4D3/LuaSnip",                             build = "make install_jsregexp" },
-  { "molleweide/LuaSnip-snippets.nvim" },
-  { "rafamadriz/friendly-snippets" },
+  {
+    "L3MON4D3/LuaSnip",
+    dependencies = {
+      "rafamadriz/friendly-snippets",
+      "molleweide/LuaSnip-snippets.nvim"
+    },
+    build = "make install_jsregexp"
+  }
 }
