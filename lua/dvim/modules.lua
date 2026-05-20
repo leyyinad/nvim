@@ -22,7 +22,7 @@ return {
   "nav.tmux-navigator",
   "nav.jump-tag",
 
-  -- Development
+  -- Neovim Development
   "dev.lazydev",
 
   -- Languages
@@ -74,6 +74,9 @@ return {
   -- Utilities
   "util.textcase",
   -- "util.hurl",
+
+  -- AI
+  "ai.codecompanion",
 
   -- Sessions
   "sessions.auto-session",

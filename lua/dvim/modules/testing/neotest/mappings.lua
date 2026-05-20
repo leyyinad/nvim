@@ -41,3 +41,10 @@ end, {
   noremap = true,
   desc = "Debug last test",
 })
+
+vim.keymap.set("n", "<leader>tO", function()
+  neotest.output_panel.open({ enter = true })
+end, {
+  noremap = true,
+  desc = "Show test output",
+})

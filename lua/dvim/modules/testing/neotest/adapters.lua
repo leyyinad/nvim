@@ -9,6 +9,17 @@ return {
       "node_modules",
       ".git",
     },
+    root_ignore_files = { ".gitignore" },
+    phpunit_cmd = function()
+      local file = vim.api.nvim_buf_get_name(0)
+      local root = vim.fs.root(file, { "composer.json", "phpunit.xml" })
+
+      if root then
+        return root .. "/vendor/bin/phpunit"
+      end
+
+      return "phpunit"
+    end,
     env = {
       XDEBUG_MODE = "develop",
       -- XDEBUG_MODE = "develop,coverage",
