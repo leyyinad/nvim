@@ -7,6 +7,17 @@
           "php"
         ],
         "path": "./snippets/php.json"
+      },
+      {
+        "language": [
+          "javascript",
+          "javascriptreact",
+          "vue",
+          "svelte",
+          "typescript",
+          "typescriptreact"
+        ],
+        "path": "./snippets/js.json"
       }
     ]
   }
