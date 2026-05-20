@@ -1,8 +1,9 @@
 local npm_util = require('dvim.modules.bundles.snacks.picker.npm')
 local dap_util = require('dvim.modules.bundles.snacks.picker.dap')
 
-vim.keymap.set("n", "<Leader><Leader>d",
-  function()
+vim.keymap.set(
+  "n", "<Leader><Leader>d",
+  function ()
     if Snacks.dim.enabled then
       Snacks.dim.disable()
     else
@@ -12,262 +13,308 @@ vim.keymap.set("n", "<Leader><Leader>d",
   {
     noremap = true,
     desc = "Dim"
-  })
+  }
+)
 
-vim.keymap.set("n", "<leader>p",
-  function()
+vim.keymap.set(
+  "n", "<leader>p",
+  function ()
     Snacks.picker()
   end,
   {
     noremap = true,
     desc = "All Pickers"
-  })
+  }
+)
 
-vim.keymap.set("n", "<C-p>",
-  function()
+vim.keymap.set(
+  "n", "<C-p>",
+  function ()
     Snacks.picker.git_files({
       untracked = true,
-      submodules = true,
+      submodules = true
     })
   end,
   {
     noremap = true,
     desc = "Git files"
-  })
+  }
+)
 
-vim.keymap.set("n", "<leader>ff",
-  function()
+vim.keymap.set(
+  "n", "<leader>ff",
+  function ()
     Snacks.picker.files()
   end,
   {
     noremap = true,
     desc = "Files"
-  })
+  }
+)
 
-vim.keymap.set("n", "<leader>fg",
-  function()
+vim.keymap.set(
+  "n", "<leader>fg",
+  function ()
     Snacks.picker.git_grep()
   end,
   {
     noremap = true,
-    desc = "Live grep",
+    desc = "Live grep"
   }
 )
 
-vim.keymap.set("n", "<leader>fg",
-  function()
+vim.keymap.set(
+  "n", "<leader>fg",
+  function ()
     Snacks.picker.git_grep({
       untracked = true,
-      submodules = true,
+      submodules = true
     })
   end,
   {
     noremap = true,
-    desc = "Live grep",
+    desc = "Live grep"
   }
 )
 
-vim.keymap.set("n", "<leader>gg",
-  function()
+vim.keymap.set(
+  "n", "<leader>gg",
+  function ()
     Snacks.picker.grep()
   end,
   {
     noremap = true,
-    desc = "Git files",
+    desc = "Git files"
   }
 )
 
-vim.keymap.set("n", "<leader>gb",
-  function()
+vim.keymap.set(
+  "n", "<leader>gb",
+  function ()
     Snacks.picker.git_branches()
   end,
   {
     noremap = true,
-    desc = "Git branches",
+    desc = "Git branches"
   }
 )
 
-vim.keymap.set("n", "<leader>gll",
-  function()
+vim.keymap.set(
+  "n", "<leader>gll",
+  function ()
     Snacks.picker.git_log()
   end,
   {
     noremap = true,
-    desc = "Git log",
+    desc = "Git log"
   }
 )
 
-vim.keymap.set("n", "<leader>glf",
-  function()
+vim.keymap.set(
+  "n", "<leader>glf",
+  function ()
     Snacks.picker.git_log_file()
   end,
   {
     noremap = true,
-    desc = "Git log file",
+    desc = "Git log file"
   }
 )
 
-vim.keymap.set("n", "<leader>glb",
-  function()
+vim.keymap.set(
+  "n", "<leader>glb",
+  function ()
     Snacks.picker.git_log_file()
   end,
   {
     noremap = true,
-    desc = "Git log line",
+    desc = "Git log line"
   }
 )
 
-vim.keymap.set("n", "<leader>gs",
-  function()
+vim.keymap.set(
+  "n", "<leader>gs",
+  function ()
     Snacks.picker.git_status()
   end,
   {
     noremap = true,
-    desc = "Git status",
+    desc = "Git status"
   }
 )
 
-vim.keymap.set("n", "<leader>gt",
-  function()
+vim.keymap.set(
+  "n", "<leader>gt",
+  function ()
     Snacks.picker.git_stash()
   end,
   {
     noremap = true,
-    desc = "Git stash",
+    desc = "Git stash"
   }
 )
 
-vim.keymap.set("n", "<leader>fb",
-  function()
+vim.keymap.set(
+  "n", "<leader>fb",
+  function ()
     Snacks.picker.buffers()
   end,
   {
     noremap = true,
-    desc = "Find buffers",
+    desc = "Find buffers"
   }
 )
 
-vim.keymap.set("n", "<leader>fh",
-  function()
+vim.keymap.set(
+  "n", "<leader>fh",
+  function ()
     Snacks.picker.help()
-  end, {
+  end,
+  {
     noremap = true,
-    desc = "Find help tags",
-  })
+    desc = "Find help tags"
+  }
+)
 
-vim.keymap.set("n", "<leader>fr",
-  function()
+vim.keymap.set(
+  "n", "<leader>fr",
+  function ()
     Snacks.picker.lsp_references()
   end,
   {
     noremap = true,
-    desc = "Find LSP references for word under cursor",
-  })
+    desc = "Find LSP references for word under cursor"
+  }
+)
 
-vim.keymap.set("n", "<leader>ws",
-  function()
+vim.keymap.set(
+  "n", "<leader><leader>s",
+  function ()
     Snacks.picker.lsp_workspace_symbols()
   end,
   {
     noremap = true,
-    desc = "List workspace symbols",
-  })
+    desc = "List workspace symbols"
+  }
+)
 
-vim.keymap.set("n", "<leader>s",
-  function()
+vim.keymap.set(
+  "n", "<leader>s",
+  function ()
     Snacks.picker.lsp_symbols()
   end,
   {
     noremap = true,
-    desc = "List document symbols",
-  })
+    desc = "List document symbols"
+  }
+)
 
-vim.keymap.set("n", "<leader>ft",
-  function()
+vim.keymap.set(
+  "n", "<leader>ft",
+  function ()
     Snacks.picker.colorschemes()
   end,
   {
     noremap = true,
-    desc = "Find, preview and select vim colorscheme",
-  })
+    desc = "Find, preview and select vim colorscheme"
+  }
+)
 
-vim.keymap.set("n", "<leader>fd",
-  function()
+vim.keymap.set(
+  "n", "<leader>fd",
+  function ()
     Snacks.picker.diagnostics()
   end,
   {
     noremap = true,
-    desc = "Find diagnostics",
-  })
+    desc = "Find diagnostics"
+  }
+)
 
-vim.keymap.set("n", "<leader>fn",
-  function()
+vim.keymap.set(
+  "n", "<leader>fn",
+  function ()
     Snacks.picker.notifications()
   end,
   {
     noremap = true,
-    desc = "Find notification",
-  })
+    desc = "Find notification"
+  }
+)
 
-vim.keymap.set("n", "<leader><leader>h",
-  function()
+vim.keymap.set(
+  "n", "<leader><leader>h",
+  function ()
     Snacks.picker.highlights()
   end,
   {
     noremap = true,
-    desc = "Find highlights",
-  })
+    desc = "Find highlights"
+  }
+)
 
-vim.keymap.set("n", "<leader>fu",
-  function()
+vim.keymap.set(
+  "n", "<leader>fu",
+  function ()
     Snacks.picker.undo()
   end,
   {
     noremap = true,
-    desc = "Search undo tree",
-  })
+    desc = "Search undo tree"
+  }
+)
 
-vim.keymap.set("n", "<leader>rf",
-  function()
+vim.keymap.set(
+  "n", "<leader>rf",
+  function ()
     Snacks.picker.recent()
-  end, {
+  end,
+  {
     noremap = true,
-    desc = "recent files",
-  })
+    desc = "recent files"
+  }
+)
 
-vim.keymap.set("n", "<leader>rr",
-  function()
+vim.keymap.set(
+  "n", "<leader>rr",
+  function ()
     Snacks.picker.registers()
   end,
   {
     noremap = true,
-    desc = "Registers",
+    desc = "Registers"
   }
 )
 
-vim.keymap.set("n", "<leader>cc",
-  function()
+vim.keymap.set(
+  "n", "<leader>cc",
+  function ()
     Snacks.picker.cliphist()
   end,
   {
     noremap = true,
-    desc = "Clipboard history",
+    desc = "Clipboard history"
   }
 )
 
-vim.keymap.set("n", "<leader><leader>n",
-  function()
+vim.keymap.set(
+  "n", "<leader><leader>n",
+  function ()
     npm_util.show_script_picker()
-  end, {
+  end,
+  {
     noremap = true,
-    desc = "Run npm script",
-  })
+    desc = "Run npm script"
+  }
+)
 
-vim.keymap.set("n", "<Leader>lb",
-  function()
+vim.keymap.set(
+  "n", "<Leader>lb",
+  function ()
     dap_util.show_breakpoint_picker()
   end,
   {
     noremap = true,
-    desc = "List breakpoints",
-  })
+    desc = "List breakpoints"
+  }
+)
