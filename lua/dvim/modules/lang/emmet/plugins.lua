@@ -1,3 +1,4 @@
 return {
-	{ "olrtg/nvim-emmet" },
+  ---@type LazySpec
+  { "olrtg/nvim-emmet" },
 }

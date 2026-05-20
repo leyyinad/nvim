@@ -1,13 +1,13 @@
 local lspconfig = require("lspconfig")
 
 -- lspconfig.phpactor.setup({
---   init_options = {
---     ["language_server_phpstan.enabled"] = true,
---     ["language_server_psalm.enabled"] = true,
---     ["language_server_php_cs_fixer.enabled"] = true,
---     ["php_code_sniffer.enabled"] = true,
---     ["phpunit.enabled"] = true,
---   },
+-- init_options = {
+--["language_server_phpstan.enabled"] = true,
+--["language_server_psalm.enabled"] = true,
+--["language_server_php_cs_fixer.enabled"] = true,
+--["php_code_sniffer.enabled"] = true,
+--["phpunit.enabled"] = true,
+-- },
 -- })
 
 vim.lsp.enable("phpactor", false)
@@ -17,15 +17,14 @@ vim.lsp.config("intelephense", {
     -- storagePath = …, -- Optional absolute path to storage dir. Defaults to os.tmpdir().
     -- licenceKey = …, -- Optional licence key or absolute path to a text file containing the licence key.
     -- clearCache = …, -- Optional flag to clear server state. State can also be cleared by deleting {storagePath}/intelephense
-
     -- Optional absolute path to a global storage dir. Defaults to os.homedir().
-    globalStoragePath = os.getenv("HOME") .. "/.local/share/intelephense",
+    globalStoragePath = os.getenv("HOME") .. "/.local/share/intelephense"
   },
   settings = {
     intelephense = {
       files = {
         -- See https://github.com/bmewburn/intelephense-docs
-        maxSize = 1000000,
+        maxSize = 1000000
       },
       stubs = {
         "bcmath",
@@ -88,14 +87,14 @@ vim.lsp.config("intelephense", {
         "wordpress-globals",
         "wp-cli",
         "genesis",
-        "polylang",
-      },
-    },
+        "polylang"
+      }
+    }
   },
   root_markers = {
     "composer.json",
-    ".git",
-  },
+    ".git"
+  }
 })
 
 vim.lsp.enable("intelephense")
@@ -104,7 +103,7 @@ vim.lsp.enable("intelephense")
 
 vim.api.nvim_create_autocmd("BufWritePre", {
   pattern = { "*.php" },
-  callback = function()
+  callback = function ()
     vim.lsp.buf.format({})
-  end,
+  end
 })

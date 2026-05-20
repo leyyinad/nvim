@@ -1,3 +1,8 @@
 return {
-  { "JoosepAlviste/nvim-ts-context-commentstring" }, -- CHECKME: still needed?
+  ---@type LazySpec
+  {
+    "folke/ts-comments.nvim",
+    opts = {},
+    event = "VeryLazy",
+  }
 }
