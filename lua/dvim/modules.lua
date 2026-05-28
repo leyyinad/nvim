@@ -60,7 +60,8 @@ return {
   "util.textcase",
   -- "util.hurl",
   -- AI
-  "ai.codecompanion",
+  "ai.avante",
+  -- "ai.codecompanion",
   -- "ai.opencode",
   -- Sessions
   "sessions.auto-session",
