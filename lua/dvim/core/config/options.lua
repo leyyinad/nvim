@@ -3,18 +3,10 @@ vim.opt.clipboard:append({ "unnamed", "unnamedplus" })
 vim.opt.completeopt = "menu,menuone,noselect,popup"
 vim.opt.cursorline = true
 vim.opt.diffopt = {
-  "internal",
-  "filler",
-  "closeoff",
-  "context:12",
-  "algorithm:histogram",
-  "linematch:200",
-  "indent-heuristic",
+  "internal", "filler", "closeoff", "context:12", "algorithm:histogram", "linematch:200", "indent-heuristic", "vertical"
 }
 vim.opt.expandtab = true
-vim.opt.fillchars = {
-  diff = "",
-}
+vim.opt.fillchars = { diff = "" }
 vim.opt.foldclose = "all"
 vim.opt.foldlevel = 99
 vim.opt.foldlevelstart = 99
