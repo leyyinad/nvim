@@ -20,7 +20,6 @@ return {
       "nvim-lua/plenary.nvim",
       "MunifTanjim/nui.nvim",
       "nvim-tree/nvim-web-devicons",
-      "saghen/blink.cmp",
       "stevearc/dressing.nvim",
       {
         "MeanderingProgrammer/render-markdown.nvim",
