@@ -90,9 +90,6 @@ return {
   -- Documentation
 	-- "doc.devdocs",
 
-  -- Learning
-  "learning.hardtime",
-
   -- Themes
 	--- "colorschemes.tokyonight",
 	-- "colorschemes.jellybeans",
