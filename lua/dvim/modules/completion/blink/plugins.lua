@@ -36,7 +36,8 @@ return {
 			--
 			-- See :h blink-cmp-config-keymap for defining your own keymap
 			-- keymap = { preset = "default" },
-			keymap = { preset = "enter" },
+			-- keymap = { preset = "enter" },
+			keymap = { preset = "super-tab" },
 			appearance = {
 				-- 'mono' (default) for 'Nerd Font Mono' or 'normal' for 'Nerd Font'
 				-- Adjusts spacing to ensure icons are aligned
@@ -109,6 +110,11 @@ return {
 				ghost_text = {
 					enabled = true,
 				},
+				-- list = {
+				-- 	selection = {
+				-- 		preselect = false,
+				-- 	},
+				-- },
 			},
 			snippets = {
 				preset = "luasnip",
@@ -117,7 +123,6 @@ return {
 			-- elsewhere in your config, without redefining it, due to `opts_extend`
 			sources = {
 				default = {
-					-- "avante",
 					"lsp",
 					"path",
 					"snippets",
@@ -133,13 +138,6 @@ return {
 						name = "Dadbod",
 						module = "vim_dadbod_completion.blink",
 					},
-					-- avante = {
-					-- 	module = "blink-cmp-avante",
-					-- 	name = "Avante",
-					-- 	opts = {
-					-- 		-- options for blink-cmp-avante
-					-- 	},
-					-- },
 				},
 			},
 			-- (Default) Rust fuzzy matcher for typo resistance and significantly better performance
@@ -147,7 +145,9 @@ return {
 			-- when the Rust fuzzy matcher is not available, by using `implementation = "prefer_rust"`
 			--
 			-- See the fuzzy documentation for more information
-			fuzzy = { implementation = "prefer_rust_with_warning" },
+			fuzzy = {
+				implementation = "prefer_rust_with_warning",
+			},
 		},
 		-- config = function(_, opts)
 		-- 	local lspconfig = require("lspconfig")
