@@ -76,7 +76,7 @@ return {
   -- "util.hurl",
 
   -- AI
-  "ai.avante",
+  -- "ai.avante",
   -- "ai.codecompanion",
 	-- "ai.opencode",
 

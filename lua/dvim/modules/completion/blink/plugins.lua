@@ -8,6 +8,7 @@ return {
 			"L3MON4D3/LuaSnip",
 			"moyiz/blink-emoji.nvim",
 			"Kaiser-Yang/blink-cmp-dictionary",
+			-- "Kaiser-Yang/blink-cmp-avante",
 			"brenoprata10/nvim-highlight-colors",
 		},
 		-- use a release tag to download pre-built binaries
@@ -116,6 +117,7 @@ return {
 			-- elsewhere in your config, without redefining it, due to `opts_extend`
 			sources = {
 				default = {
+					-- "avante",
 					"lsp",
 					"path",
 					"snippets",
@@ -127,7 +129,17 @@ return {
 				},
 				-- add vim-dadbod-completion to your completion providers
 				providers = {
-					dadbod = { name = "Dadbod", module = "vim_dadbod_completion.blink" },
+					dadbod = {
+						name = "Dadbod",
+						module = "vim_dadbod_completion.blink",
+					},
+					-- avante = {
+					-- 	module = "blink-cmp-avante",
+					-- 	name = "Avante",
+					-- 	opts = {
+					-- 		-- options for blink-cmp-avante
+					-- 	},
+					-- },
 				},
 			},
 			-- (Default) Rust fuzzy matcher for typo resistance and significantly better performance
