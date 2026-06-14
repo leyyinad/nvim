@@ -1,50 +1,50 @@
-local neotest = require('neotest')
+local neotest = require("neotest")
 
 vim.keymap.set("n", "<leader>ts", function()
-  neotest.summary.open()
+	neotest.summary.open()
 end, {
-  noremap = true,
-  desc = "Show test summary",
+	noremap = true,
+	desc = "Show test summary",
 })
 
 vim.keymap.set("n", "<leader>tr", function()
-  neotest.run.run()
+	neotest.run.run()
 end, {
-  noremap = true,
-  desc = "Run test",
+	noremap = true,
+	desc = "Run test",
 })
 
 vim.keymap.set("n", "<leader>td", function()
-  neotest.run.run({ strategy = "dap" })
+	neotest.run.run({ strategy = "dap" })
 end, {
-  noremap = true,
-  desc = "Debug test",
+	noremap = true,
+	desc = "Debug test",
 })
 
 vim.keymap.set("n", "<leader>tt", function()
-  neotest.run.run(vim.fn.expand("%"))
+	neotest.run.run(vim.fn.expand("%"))
 end, {
-  noremap = true,
-  desc = "Run test file",
+	noremap = true,
+	desc = "Run test file",
 })
 
 vim.keymap.set("n", "<leader>tl", function()
-  neotest.run.run_last()
+	neotest.run.run_last()
 end, {
-  noremap = true,
-  desc = "Run last test",
+	noremap = true,
+	desc = "Run last test",
 })
 
 vim.keymap.set("n", "<leader>tL", function()
-  neotest.run.run_last({ strategy = "dap" })
+	neotest.run.run_last({ strategy = "dap" })
 end, {
-  noremap = true,
-  desc = "Debug last test",
+	noremap = true,
+	desc = "Debug last test",
 })
 
 vim.keymap.set("n", "<leader>tO", function()
-  neotest.output_panel.open({ enter = true })
+	neotest.output_panel.open({ enter = true })
 end, {
-  noremap = true,
-  desc = "Show test output",
+	noremap = true,
+	desc = "Show test output",
 })
