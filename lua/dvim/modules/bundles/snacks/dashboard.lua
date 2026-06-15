@@ -69,7 +69,7 @@ return {
         return Snacks.git.get_root() ~= nil
       end,
       cmd = 'TEXT="${PWD/$HOME/~}" ; printf " %.0s" {1..$(( ( $COLUMNS - $#TEXT ) / 2 ))} ; '
-        .. 'echo "\\e[2;34m${TEXT}"; sleep .1',
+        .. 'echo -n "\\e[2;34m${TEXT}"; sleep .1',
       align = "center",
       height = 1,
       ttl = 5 * 60
