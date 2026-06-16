@@ -1,4 +1,4 @@
 # TODOs
 
-- display code coverage
-- resolve conflicting mappings (:checkhealth which-key)
+- (neotest) display code coverage
+- (which-key) resolve conflicting mappings (:checkhealth which-key)
