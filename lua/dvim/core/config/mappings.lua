@@ -18,21 +18,26 @@ vim.keymap.set("", "ää", "]]", { remap = true })
 vim.keymap.set("", "öä", "[]", { remap = true })
 vim.keymap.set("", "äö", "][", { remap = true })
 
-vim.keymap.set("", "<C-_><C-_>", "gcc", {
-	remap = true,
-	desc = "Comment/uncomment current line",
+vim.keymap.set("n", "<C-_><C-_>", "gcc", {
+  remap = true,
+  desc = "Comment/uncomment current line"
+})
+
+vim.keymap.set("v", "<C-_><C-_>", "gc", {
+  remap = true,
+  desc = "Comment/uncomment current selection"
 })
 
 vim.keymap.set("n", "<ESC><ESC>", "<Cmd>nohlsearch|diffupdate|normal!<CR>", {
-	desc = "Reset highlights",
+  desc = "Reset highlights"
 })
 
 vim.keymap.set("n", "zS", vim.show_pos, {
-	noremap = true,
-	desc = "Show all the items at cursor position.",
+  noremap = true,
+  desc = "Show all the items at cursor position."
 })
 
 vim.keymap.set("n", "<leader>R", "<Cmd>restart<CR>", {
-	noremap = true,
-	desc = "Restart Neovim",
+  noremap = true,
+  desc = "Restart Neovim"
 })
