@@ -1,0 +1,12 @@
+Snacks.toggle.option("spell", { name = "Spelling" }):map("<leader>.s")
+Snacks.toggle.option("wrap", { name = "Wrap" }):map("<leader>.w")
+Snacks.toggle.option("relativenumber", { name = "Relative Number" }):map("<leader>.L")
+Snacks.toggle.diagnostics():map("<leader>.d")
+Snacks.toggle.line_number():map("<leader>.l")
+Snacks.toggle
+	.option("conceallevel", { off = 0, on = vim.o.conceallevel > 0 and vim.o.conceallevel or 2 })
+	:map("<leader>.c")
+Snacks.toggle.treesitter():map("<leader>.T")
+Snacks.toggle.inlay_hints():map("<leader>.h")
+Snacks.toggle.indent():map("<leader>.g")
+Snacks.toggle.dim():map("<leader>.D")
