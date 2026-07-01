@@ -1,15 +1,5 @@
 vim.lsp.enable("phpantom_lsp", true)
 
--- lspconfig.phpactor.setup({
--- init_options = {
--- ["language_server_phpstan.enabled"] = true,
--- ["language_server_psalm.enabled"] = true,
--- ["language_server_php_cs_fixer.enabled"] = true,
--- ["php_code_sniffer.enabled"] = true,
--- ["phpunit.enabled"] = true,
--- },
--- })
-
 vim.lsp.enable("phpactor", false)
 
 -- vim.lsp.config("intelephense", {
