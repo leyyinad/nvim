@@ -2,7 +2,7 @@ require("mini.ai").setup()
 require("mini.align").setup()
 require("mini.animate").setup()
 require("mini.basics").setup({
-  extra_ui = true,
+	extra_ui = true,
 })
 require("mini.bufremove").setup()
 require("mini.bracketed").setup()
@@ -12,16 +12,16 @@ require("mini.fuzzy").setup()
 
 local hipatterns = require("mini.hipatterns")
 hipatterns.setup({
-  highlighters = {
-    -- Highlight standalone 'FIXME', 'HACK', 'TODO', 'NOTE'
-    fixme = { pattern = "%f[%w]()FIXME()%f[%W]", group = "MiniHipatternsFixme" },
-    hack = { pattern = "%f[%w]()HACK()%f[%W]", group = "MiniHipatternsHack" },
-    todo = { pattern = "%f[%w]()TODO()%f[%W]", group = "MiniHipatternsTodo" },
-    note = { pattern = "%f[%w]()NOTE()%f[%W]", group = "MiniHipatternsNote" },
+	highlighters = {
+		-- Highlight standalone 'FIXME', 'HACK', 'TODO', 'NOTE'
+		fixme = { pattern = "%f[%w]()FIXME()%f[%W]", group = "MiniHipatternsFixme" },
+		hack = { pattern = "%f[%w]()HACK()%f[%W]", group = "MiniHipatternsHack" },
+		todo = { pattern = "%f[%w]()TODO()%f[%W]", group = "MiniHipatternsTodo" },
+		note = { pattern = "%f[%w]()NOTE()%f[%W]", group = "MiniHipatternsNote" },
 
-    -- Highlight hex color strings (`#rrggbb`) using that color
-    hex_color = hipatterns.gen_highlighter.hex_color(),
-  },
+		-- Highlight hex color strings (`#rrggbb`) using that color
+		hex_color = hipatterns.gen_highlighter.hex_color(),
+	},
 })
 
 -- require("mini.indentscope").setup({
@@ -29,30 +29,42 @@ hipatterns.setup({
 -- })
 
 require("mini.jump").setup()
+
 require("mini.jump2d").setup({
-  view = {
-    -- n_steps_ahead = 1,
-  },
-  mapping = {
-    start_jumping = "",
-  },
+	view = {
+		dim = true,
+		n_steps_ahead = 1,
+	},
+
+	allowed_lines = {
+		blank = true,
+		cursor_before = true,
+		cursor_at = true,
+		cursor_after = true,
+		fold = true,
+	},
+
+	allowed_windows = {
+		current = true,
+		not_current = false,
+	},
 })
 
 local MiniMap = require("mini.map")
 MiniMap.setup({
-  symbols = {
-    -- encode = nil,
-    -- encode = minimap.gen_encode_symbols.block('3x2'),
-    encode = MiniMap.gen_encode_symbols.dot("4x2"),
-    -- encode = minimap.gen_encode_symbols.shade('2x1'),
+	symbols = {
+		-- encode = nil,
+		-- encode = minimap.gen_encode_symbols.block('3x2'),
+		encode = MiniMap.gen_encode_symbols.dot("4x2"),
+		-- encode = minimap.gen_encode_symbols.shade('2x1'),
 
-    -- Scrollbar parts for view and line. Use empty string to disable any.
-    scroll_line = "█",
-    scroll_view = "┃",
-    -- - MiniMap.gen_encode_symbols.block()
-    -- - MiniMap.gen_encode_symbols.dot()
-    -- - MiniMap.gen_encode_symbols.shade()
-  },
+		-- Scrollbar parts for view and line. Use empty string to disable any.
+		scroll_line = "█",
+		scroll_view = "┃",
+		-- - MiniMap.gen_encode_symbols.block()
+		-- - MiniMap.gen_encode_symbols.dot()
+		-- - MiniMap.gen_encode_symbols.shade()
+	},
 })
 vim.keymap.set("n", "<Leader>mc", MiniMap.close)
 vim.keymap.set("n", "<Leader>mf", MiniMap.toggle_focus)
