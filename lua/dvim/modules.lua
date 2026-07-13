@@ -104,4 +104,5 @@ return {
 	-- "colorschemes.koda",
 	"colorschemes.oc-2",
 	-- "colorschemes.nord",
+	-- "colorschemes.flume",
 }
