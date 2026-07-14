@@ -21,6 +21,7 @@ return {
 	"nav.which-key",
 	"nav.tmux-navigator",
 	"nav.jump-tag",
+	"nav.flash",
 
 	-- Neovim Development
 	"dev.lazydev",
@@ -74,6 +75,7 @@ return {
 	"util.dotenv",
 	"util.textcase",
 	-- "util.hurl",
+	-- "util.orgmode",
 
 	-- Sessions
 	"sessions.auto-session",

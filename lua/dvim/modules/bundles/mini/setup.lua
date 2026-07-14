@@ -30,25 +30,25 @@ hipatterns.setup({
 
 require("mini.jump").setup()
 
-require("mini.jump2d").setup({
-	view = {
-		dim = true,
-		n_steps_ahead = 1,
-	},
-
-	allowed_lines = {
-		blank = true,
-		cursor_before = true,
-		cursor_at = true,
-		cursor_after = true,
-		fold = true,
-	},
-
-	allowed_windows = {
-		current = true,
-		not_current = false,
-	},
-})
+-- require("mini.jump2d").setup({
+-- 	view = {
+-- 		dim = true,
+-- 		n_steps_ahead = 1,
+-- 	},
+--
+-- 	allowed_lines = {
+-- 		blank = true,
+-- 		cursor_before = true,
+-- 		cursor_at = true,
+-- 		cursor_after = true,
+-- 		fold = true,
+-- 	},
+--
+-- 	allowed_windows = {
+-- 		current = true,
+-- 		not_current = false,
+-- 	},
+-- })
 
 local MiniMap = require("mini.map")
 MiniMap.setup({
