@@ -7,6 +7,9 @@ require("dvim.modules.lang.lsp.lang.php")
 require("dvim.modules.lang.lsp.lang.python")
 require("dvim.modules.lang.lsp.lang.lua")
 
+vim.lsp.enable("angularls", false)
+vim.lsp.enable("emmet_ls", false)
+
 vim.lsp.enable("cssls")
 vim.lsp.enable("cssmodules_ls")
 vim.lsp.enable("docker")
