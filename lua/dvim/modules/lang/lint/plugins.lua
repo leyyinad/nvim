@@ -1,5 +1,4 @@
 return {
-	---@type LazySpec
-  { "mfussenegger/nvim-lint" }
+  ---@type LazySpec
+  { "mfussenegger/nvim-lint" },
 }
-

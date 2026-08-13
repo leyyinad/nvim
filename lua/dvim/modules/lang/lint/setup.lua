@@ -1,10 +1,10 @@
-local lint = require('lint')
+local lint = require("lint")
 
 lint.linters_by_ft = {
   php = {
-    'php',
-    'phpcs',
-    'phpstan',
+    "php",
+    "phpcs",
+    "phpstan",
   },
 }
 

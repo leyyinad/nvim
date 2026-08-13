@@ -1,2 +1,1 @@
-vim.lsp.enable('ansiblels')
-
+vim.lsp.enable("ansiblels")

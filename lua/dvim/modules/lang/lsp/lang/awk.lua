@@ -1,1 +1,1 @@
-vim.lsp.enable('awk')
+vim.lsp.enable("awk")
