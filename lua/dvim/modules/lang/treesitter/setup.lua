@@ -1,4 +1,4 @@
-local ts = require('treesitter-modules')
+local ts = require("treesitter-modules")
 
 ts.setup({
   ensure_installed = {
@@ -45,7 +45,7 @@ ts.setup({
   },
 })
 
-vim.keymap.set('n', '<Leader>.', ts.init_selection, { desc = "Start selecting nodes", noremap = true })
-vim.keymap.set('x', '<Leader>.', ts.node_incremental, { desc = "Increment selection to node", noremap = true })
-vim.keymap.set('x', '<Leader>;', ts.scope_incremental, { desc = "Increment selection to scope", noremap = true })
-vim.keymap.set('x', '<Leader>-', ts.node_decremental, { desc = "Shrink selection", noremap = true })
+vim.keymap.set("n", "<Leader>.", ts.init_selection, { desc = "Start selecting nodes", noremap = true })
+vim.keymap.set("x", "<Leader>.", ts.node_incremental, { desc = "Increment selection to node", noremap = true })
+vim.keymap.set("x", "<Leader>;", ts.scope_incremental, { desc = "Increment selection to scope", noremap = true })
+vim.keymap.set("x", "<Leader>-", ts.node_decremental, { desc = "Shrink selection", noremap = true })

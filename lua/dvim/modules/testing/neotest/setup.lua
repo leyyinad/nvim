@@ -6,7 +6,7 @@ end
 require("dvim.modules.testing.neotest.mappings")
 local adapters = require("dvim.modules.testing.neotest.adapters")
 
-neotest.setup {
+neotest.setup({
   consumers = {
     overseer = require("neotest.consumers.overseer"),
   },
@@ -28,6 +28,6 @@ neotest.setup {
     passed = "",
     running = "",
     failed = "",
-    unknown = ""
-  }
-}
+    unknown = "",
+  },
+})

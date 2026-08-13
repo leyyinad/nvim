@@ -2,12 +2,12 @@ return {
   ---@type LazySpec
   {
     "nvim-treesitter/nvim-treesitter",
-    branch = 'main',
+    branch = "main",
     lazy = false,
-    build = ":TSUpdate"
+    build = ":TSUpdate",
   },
   {
     "MeanderingProgrammer/treesitter-modules.nvim",
-    dependencies = { "nvim-treesitter/nvim-treesitter" }
+    dependencies = { "nvim-treesitter/nvim-treesitter" },
   },
 }
