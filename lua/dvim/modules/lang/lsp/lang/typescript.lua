@@ -1,6 +1,6 @@
 local lspconfig = require("lspconfig")
 
-lspconfig.ts_ls.setup {}
+lspconfig.ts_ls.setup({})
 
 -- auto-remove unused imports when saving
 vim.api.nvim_create_autocmd("BufWritePre", {
@@ -22,6 +22,6 @@ vim.api.nvim_create_autocmd("BufWritePre", {
       },
     })
 
-    vim.lsp.buf.format {}
+    vim.lsp.buf.format({})
   end,
 })
