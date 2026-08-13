@@ -6,13 +6,11 @@ local adapter_path = mason_path .. "packages/php-debug-adapter/extension/out/php
 dap.adapters.php = {
   type = "executable",
   command = "node",
-  args = { adapter_path }
+  args = { adapter_path },
 }
 
 dap.adapters.godot = {
   type = "server",
-  host = '127.0.0.1',
+  host = "127.0.0.1",
   port = 6006,
 }
-
-

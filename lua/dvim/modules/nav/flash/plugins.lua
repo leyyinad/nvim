@@ -1,7 +1,7 @@
 return {
-	---@type LazySpec
-	{
-		"folke/flash.nvim",
-		event = "VeryLazy",
-	},
+  ---@type LazySpec
+  {
+    "folke/flash.nvim",
+    event = "VeryLazy",
+  },
 }

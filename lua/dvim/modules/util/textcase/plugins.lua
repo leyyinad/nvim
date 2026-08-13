@@ -1,4 +1,4 @@
 return {
-	---@type LazySpec
-	{ "johmsalas/text-case.nvim" },
+  ---@type LazySpec
+  { "johmsalas/text-case.nvim" },
 }

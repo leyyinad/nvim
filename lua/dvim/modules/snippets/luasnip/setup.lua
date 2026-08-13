@@ -5,5 +5,5 @@ luasnip.snippets = require("luasnip_snippets").load_snippets()
 
 luasnip_loaders_from_vscode.lazy_load()
 luasnip_loaders_from_vscode.lazy_load({
-  paths = "./d_snippets"
+  paths = "./d_snippets",
 })

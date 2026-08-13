@@ -1,7 +1,7 @@
 return {
-	---@type LazySpec
-	{
-		"nvim-orgmode/orgmode",
-		event = "VeryLazy",
-	},
+  ---@type LazySpec
+  {
+    "nvim-orgmode/orgmode",
+    event = "VeryLazy",
+  },
 }

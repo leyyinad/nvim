@@ -115,12 +115,12 @@ lualine.setup({
     lualine_x = {
       {
         quickfix_status,
-        color = 'lualine_x_insert'
+        color = "lualine_x_insert",
       },
       {
         "filetype",
-        colored = true
-      }
+        colored = true,
+      },
     },
     lualine_y = {
       "progress",
@@ -145,11 +145,11 @@ lualine.setup({
     lualine_x = {
       {
         quickfix_status,
-        color = 'lualine_x_inactive'
-      }
+        color = "lualine_x_inactive",
+      },
     },
     lualine_y = {
-      "location"
+      "location",
     },
   },
   tabline = {},

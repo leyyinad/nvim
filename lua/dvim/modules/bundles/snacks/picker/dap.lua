@@ -1,4 +1,4 @@
-local dap_breakpoints = require('dap.breakpoints')
+local dap_breakpoints = require("dap.breakpoints")
 
 local M = {}
 
@@ -10,7 +10,7 @@ local function collect_breakpoints(_, _)
       table.insert(items, {
         file = file,
         buf = buf,
-        pos = { breakpoint.line, 1 }
+        pos = { breakpoint.line, 1 },
       })
     end
   end
@@ -23,8 +23,8 @@ local function format(item, ctx)
   local filename = string.sub(file, #cwd + 2, -1)
 
   return {
-    { filename,           "SnacksPickerLabel" },
-    { ":" .. item.pos[1], "SnacksPickerComment" }
+    { filename, "SnacksPickerLabel" },
+    { ":" .. item.pos[1], "SnacksPickerComment" },
   }
 end
 
@@ -59,14 +59,14 @@ M.show_breakpoint_picker = function()
           ["<C-x>"] = {
             "remove_breakpoint",
             mode = { "n", "i" },
-            desc = "Remove breakpoint"
+            desc = "Remove breakpoint",
           },
           ["<C-d>"] = {
             "toggle_breakpoint",
             mode = { "n", "i" },
-            desc = "Toggle breakpoint"
+            desc = "Toggle breakpoint",
           },
-        }
+        },
       },
     },
   })

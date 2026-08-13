@@ -4,7 +4,7 @@ return {
     "bettervim/yugen.nvim",
     priority = 1000,
     config = function()
-      vim.cmd "colorscheme yugen"
+      vim.cmd("colorscheme yugen")
     end,
   },
 }

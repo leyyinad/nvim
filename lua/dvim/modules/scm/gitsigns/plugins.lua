@@ -1,4 +1,4 @@
 return {
-	---@type LazySpec
+  ---@type LazySpec
   { "lewis6991/gitsigns.nvim" },
 }

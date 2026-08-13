@@ -3,8 +3,8 @@ local M = {}
 local function find_package_json()
   return vim.fs.find("package.json", {
     upward = true,
-    type = 'file',
-    path = vim.fn.getcwd()
+    type = "file",
+    path = vim.fn.getcwd(),
   })[1]
 end
 
@@ -49,9 +49,9 @@ M.show_script_picker = function()
     preview = "preview",
     format = function(item, _)
       return {
-        { item.text,                        "SnacksPickerLabel" },
+        { item.text, "SnacksPickerLabel" },
         { string.rep(" ", 20 - #item.name), virtual = true },
-        { item.action,                      "SnacksPickerComment" }
+        { item.action, "SnacksPickerComment" },
       }
     end,
     confirm = function(picker, item)
@@ -74,7 +74,7 @@ M.show_script_picker = function()
       })
       task:start()
       vim.cmd("OverseerOpen")
-    end
+    end,
   })
 end
 

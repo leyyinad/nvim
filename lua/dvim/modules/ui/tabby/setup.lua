@@ -6,22 +6,21 @@ local function get_color(group, attr)
 end
 
 local theme = {
-  fill        = "TabLineFill",
+  fill = "TabLineFill",
   -- head = "Tabline",
   current_tab = "TabLineSel",
-  tab         = "TabLine",
+  tab = "TabLine",
   -- current_win = "TabLineSel",
   -- win         = "TabLine",
-  tail        = "TabLine",
+  tail = "TabLine",
   --
-  head        = {
+  head = {
     fg = get_color("DiagnosticInfo", "fg"),
     bg = "#000000",
   },
   current_win = "Tabline",
-  win         = "StatusNormal",
+  win = "StatusNormal",
 }
-
 
 local function lsp_diag()
   local icons = {
@@ -61,8 +60,7 @@ tabby.setup({
         }
       end),
       line.spacer(),
-      #current_tab_wins.wins > 1
-      and current_tab_wins.foreach(function(win)
+      #current_tab_wins.wins > 1 and current_tab_wins.foreach(function(win)
         local hl = win.is_current() and theme.current_win or theme.win
 
         return {
@@ -74,8 +72,7 @@ tabby.setup({
           hl = hl,
           margin = " ",
         }
-      end)
-      or "",
+      end) or "",
       lsp_diag(),
     }
   end,

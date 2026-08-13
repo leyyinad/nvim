@@ -1,4 +1,4 @@
 return {
   ---@type LazySpec
-  { "brenoprata10/nvim-highlight-colors" }
+  { "brenoprata10/nvim-highlight-colors" },
 }

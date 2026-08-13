@@ -1,4 +1,4 @@
 return {
   ---@type LazySpec
-  { "tpope/vim-dotenv" }
+  { "tpope/vim-dotenv" },
 }

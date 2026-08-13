@@ -5,20 +5,20 @@ local logo_file = current_dir .. "/dh-logo.svg"
 vim.api.nvim_create_autocmd("BufDelete", {
   group = vim.api.nvim_create_augroup("bufdelpost_autocmd", {}),
   desc = "BufDeletePost User autocmd",
-  callback = function ()
-    vim.schedule(function ()
+  callback = function()
+    vim.schedule(function()
       vim.api.nvim_exec_autocmds("User", {
-        pattern = "BufDeletePost"
+        pattern = "BufDeletePost",
       })
     end)
-  end
+  end,
 })
 
 vim.api.nvim_create_autocmd("User", {
   pattern = "BufDeletePost",
   group = vim.api.nvim_create_augroup("dashboard_delete_buffers", {}),
   desc = "Open Dashboard when no available buffers",
-  callback = function (ev)
+  callback = function(ev)
     local deleted_name = vim.api.nvim_buf_get_name(ev.buf)
     local deleted_ft = vim.api.nvim_get_option_value("filetype", { buf = ev.buf })
     local deleted_bt = vim.api.nvim_get_option_value("buftype", { buf = ev.buf })
@@ -28,7 +28,7 @@ vim.api.nvim_create_autocmd("User", {
       -- vim.cmd("Dashboard")
       Snacks.dashboard.open()
     end
-  end
+  end,
 })
 
 vim.api.nvim_clear_autocmds({ group = "nvim.terminal", event = "TermClose" })
@@ -45,40 +45,40 @@ return {
         icon = " ",
         key = "c",
         desc = "Config",
-        action = ":lua Snacks.dashboard.pick('files', {cwd = vim.fn.stdpath('config')})"
+        action = ":lua Snacks.dashboard.pick('files', {cwd = vim.fn.stdpath('config')})",
       },
       -- { icon = " ", key = "s", desc = "Restore Session", section = "session" },
       { icon = "󰒲 ", key = "L", desc = "Lazy", action = ":Lazy", enabled = package.loaded.lazy ~= nil },
       { icon = "󱁤 ", key = "m", desc = "Mason", action = ":Mason", enabled = package.loaded.mason ~= nil },
-      { icon = " ", key = "q", desc = "Quit", action = ":qa" }
-    }
+      { icon = " ", key = "q", desc = "Quit", action = ":qa" },
+    },
   },
   sections = {
     {
       section = "terminal",
       cmd = "chafa " .. logo_file .. " --format symbols --symbols all --size 32x8 --align center; sleep .1",
       ttl = 5 * 60,
-      height = 8
+      height = 8,
     },
     {
-      height = 1
+      height = 1,
     },
     {
       section = "terminal",
-      enabled = function ()
+      enabled = function()
         return Snacks.git.get_root() ~= nil
       end,
       cmd = 'TEXT="${PWD/$HOME/~}" ; printf " %.0s" {1..$(( ( $COLUMNS - $#TEXT ) / 2 ))} ; '
         .. 'echo -n "\\e[2;34m${TEXT}"; sleep .1',
       align = "center",
       height = 1,
-      ttl = 5 * 60
+      ttl = 5 * 60,
     },
     {
-      height = 1
+      height = 1,
     },
     {
-      section = "keys"
-    }
-  }
+      section = "keys",
+    },
+  },
 }

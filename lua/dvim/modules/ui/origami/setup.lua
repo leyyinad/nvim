@@ -1,12 +1,12 @@
 -- default settings
 local origami = require("origami")
 
-origami.setup {
+origami.setup({
   autoFold = {
     enabled = false,
     kinds = {}, ---@type lsp.FoldingRangeKind[]
   },
-}
+})
 
 vim.keymap.set("n", "<Left>", function()
   origami.h()
