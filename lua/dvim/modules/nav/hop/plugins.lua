@@ -1,7 +1,8 @@
 return {
   ---@type LazySpec
   {
-    "folke/flash.nvim",
+    "smoka7/hop.nvim",
+    version = "*",
     event = "VeryLazy",
   },
 }

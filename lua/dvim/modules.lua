@@ -21,7 +21,7 @@ return {
   "nav.which-key",
   "nav.tmux-navigator",
   "nav.jump-tag",
-  "nav.flash",
+  "nav.hop",
 
   -- Neovim Development
   "dev.lazydev",
