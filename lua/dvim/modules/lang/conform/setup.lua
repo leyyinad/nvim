@@ -8,6 +8,18 @@ conform.setup({
     end
     return { timeout_ms = 500, lsp_format = "fallback" }
   end,
+
+  formatters_by_ft = {
+    gdscript = { "gdscript_formatter" },
+  },
+
+  formatters = {
+    gdscript_formatter = {
+      command = "gdscript-formatter",
+      stdin = false,
+      args = { "--reorder-code", "$FILENAME" },
+    },
+  },
 })
 
 vim.api.nvim_create_user_command("FormatDisable", function(args)
