@@ -52,7 +52,7 @@
   "oc-2.nvim": { "branch": "main", "commit": "78367fe68f6ad6189f025d87fc68351dbb429f89" },
   "overseer.nvim": { "branch": "master", "commit": "2c23513a4fd3a3be0459b3b62996fb0732c2fd7e" },
   "plenary.nvim": { "branch": "master", "commit": "74b06c6c75e4eeb3108ec01852001636d85a932b" },
-  "schemastore.nvim": { "branch": "main", "commit": "2940d5e12f8797620cd47dca984d46119e1fa4b8" },
+  "schemastore.nvim": { "branch": "main", "commit": "d34c58439271f5e73ed79c2b8d1a09731c4525f1" },
   "snacks.nvim": { "branch": "main", "commit": "882c996cf28183f4d63640de0b4c02ec886d01f2" },
   "tabby.nvim": { "branch": "main", "commit": "3c130e1fcb598ce39a9c292847e32d7c3987cf11" },
   "text-case.nvim": { "branch": "main", "commit": "e898cfd46fa6cde0e83abb624a16e67d2ffc6457" },
@@ -72,5 +72,5 @@
   "vim-tmux-navigator": { "branch": "master", "commit": "e41c431a0c7b7388ae7ba341f01a0d217eb3a432" },
   "which-key.nvim": { "branch": "main", "commit": "3aab2147e74890957785941f0c1ad87d0a44c15a" },
   "yaml-companion.nvim": { "branch": "main", "commit": "131b0d67bd2e0f1a02e0daf2f3460482221ce3c0" },
-  "yazi.nvim": { "branch": "main", "commit": "8f4589be0c6d5aeb55d56bb9c48ef2e0fd54a3ef" }
+  "yazi.nvim": { "branch": "main", "commit": "3f91132889f4b76deae45191db76665bae247176" }
 }
