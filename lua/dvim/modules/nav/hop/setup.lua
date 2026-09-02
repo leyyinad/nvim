@@ -7,8 +7,9 @@ vim.api.nvim_create_autocmd("BufWinEnter", {
   group = vim.api.nvim_create_augroup("CustomBufferKeymaps", { clear = true }),
   callback = function(args)
     local buftype = vim.bo[args.buf].buftype
+    local cmdwintype = vim.fn.getcmdwintype()
 
-    if buftype ~= "" then
+    if buftype ~= "" or cmdwintype ~= "" then
       return
     end
 
