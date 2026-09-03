@@ -53,7 +53,9 @@ vim.api.nvim_create_autocmd("LspAttach", {
       desc = "Rename symbol",
     })
 
-    vim.keymap.set({ "n", "v" }, "<space>ca", vim.lsp.buf.code_action, {
+    vim.keymap.set({ "n", "v" }, "<space>ca", function()
+      vim.lsp.buf.code_action()
+    end, {
       buffer = ev.buf,
       desc = "Select code action",
     })
