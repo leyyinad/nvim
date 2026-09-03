@@ -29,6 +29,7 @@ return {
   -- Languages
   "lang.treesitter",
   "lang.lsp",
+  "lang.lightbulb",
   "lang.conform",
   "lang.schemas",
   "lang.yaml",
