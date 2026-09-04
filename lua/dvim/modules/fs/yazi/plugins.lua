@@ -2,14 +2,15 @@ return {
   ---@type LazySpec
   {
     "mikavilpas/yazi.nvim",
+    version = "*",
     event = "VeryLazy",
     dependencies = {
-      "folke/snacks.nvim",
+      { "nvim-lua/plenary.nvim", lazy = true },
+      { "folke/snacks.nvim" },
     },
     keys = {
       -- 👇 in this section, choose your own keymappings!
       {
-        -- "<leader>-",
         "-",
         mode = { "n", "v" },
         "<cmd>Yazi<cr>",
@@ -30,18 +31,16 @@ return {
     ---@type YaziConfig | {}
     opts = {
       open_for_directories = true,
-      -- open_for_directories = false,
       keymaps = {
         show_help = "<f1>",
       },
       floating_window_scaling_factor = 1,
       yazi_floating_window_border = "shadow",
-      -- yazi_floating_window_border = "rounded",
     },
     -- 👇 if you use `open_for_directories=true`, this is recommended
     init = function()
+      -- mark netrw as loaded so it's not loaded at all.
       -- More details: https://github.com/mikavilpas/yazi.nvim/issues/802
-      -- vim.g.loaded_netrw = 1
       vim.g.loaded_netrwPlugin = 1
     end,
   },
