@@ -27,6 +27,7 @@ return {
   "dev.lazydev",
 
   -- Languages
+  "lang.polyglot",
   "lang.treesitter",
   "lang.lsp",
   "lang.lightbulb",
