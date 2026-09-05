@@ -5,7 +5,13 @@ require("mini.basics").setup({
   extra_ui = true,
 })
 require("mini.bufremove").setup()
-require("mini.bracketed").setup()
+require("mini.bracketed").setup({
+  diagnostic = {
+    options = {
+      float = false,
+    },
+  },
+})
 require("mini.icons").setup()
 require("mini.extra").setup()
 require("mini.fuzzy").setup()
