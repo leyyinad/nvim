@@ -9,7 +9,6 @@ Snacks.toggle
 Snacks.toggle.treesitter():map("<leader>.T")
 Snacks.toggle.inlay_hints():map("<leader>.h")
 Snacks.toggle.indent():map("<leader>.g")
-Snacks.toggle.dim():map("<leader>.D")
 
 function Snacks.toggle.autoformat_buffer()
   return Snacks.toggle.new({
