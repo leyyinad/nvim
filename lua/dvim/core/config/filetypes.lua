@@ -27,5 +27,8 @@ vim.filetype.add({
     [".*%.godot"] = "gdresource",
     [".*/%.config/bat/config"] = "dosini",
     [".*/%.config/rclone/.*%.conf"] = "dosini",
+    [".*/%.config/ghostty/config"] = "ghostty",
   },
 })
+
+vim.treesitter.language.register("ini", "ghostty")

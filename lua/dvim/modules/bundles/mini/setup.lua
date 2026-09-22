@@ -12,6 +12,16 @@ require("mini.bracketed").setup({
     },
   },
 })
+require("mini.comment").setup({
+  options = {
+    custom_commentstring = function()
+      if vim.bo.filetype == "ghostty" then
+        return "# %s"
+      end
+      return nil
+    end,
+  },
+})
 require("mini.icons").setup()
 require("mini.extra").setup()
 require("mini.fuzzy").setup()
