@@ -83,7 +83,8 @@ return {
   -- Sessions
   "sessions.auto-session",
 
-  -- File managers
+  -- File system
+  "fs.pathfinder",
   "fs.yazi",
   "fs.vifm",
 
