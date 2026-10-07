@@ -41,7 +41,7 @@ return {
   "lang.glsl",
   "lang.godot",
   "lang.emmet",
-  "lang.touchup",
+  -- "lang.touchup",
 
   -- DB
   "db.dadbod",
