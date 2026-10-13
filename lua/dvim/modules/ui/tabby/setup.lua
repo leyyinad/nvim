@@ -8,9 +8,8 @@ end
 
 local theme = {
   fill = "TabLineFill",
-  -- head = "Tabline",
-  current_tab = "TabLineSel",
-  tab = "TabLine",
+  current_tab = "PmenuShadow",
+  tab = "Visual",
   current_win = "TabLineSel",
   win = "TabLine",
   tail = "TabLine",
