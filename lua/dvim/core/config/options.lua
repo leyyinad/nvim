@@ -1,6 +1,6 @@
 vim.opt.autoindent = true
 vim.opt.clipboard:append({ "unnamed", "unnamedplus" })
-vim.opt.completeopt = "menu,menuone,noselect,popup"
+vim.opt.completeopt = "menu,fuzzy,nearest,noinsert,menuone,noselect,popup,preview"
 vim.opt.cursorline = true
 vim.opt.diffopt = {
   "internal",
@@ -30,5 +30,7 @@ vim.opt.splitright = true
 vim.opt.tabstop = 2
 vim.opt.termguicolors = true
 vim.opt.timeoutlen = 200
+vim.opt.wildoptions = "pum,tagfile,fuzzy"
+vim.opt.wildmode = "noselect:lastused,full"
 vim.opt.winborder = "rounded"
 vim.opt.wrap = false
