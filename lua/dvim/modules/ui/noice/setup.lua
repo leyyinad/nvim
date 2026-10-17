@@ -8,7 +8,7 @@ noice.setup({
     enabled = true,
     view = "cmdline_popup",
     format = {
-      cmdline = { pattern = "^:", icon = "" },
+      cmdline = { pattern = "^:", icon = "", lang = "vim" },
       search_down = { kind = "search", pattern = "^/", icon = " ", lang = "regex" },
       search_up = { kind = "search", pattern = "^%?", icon = " ", lang = "regex" },
       filter = { pattern = "^:%s*!", icon = "$", lang = "bash" },
@@ -294,7 +294,7 @@ noice.setup({
       relative = "editor",
       focusable = false,
       enter = false,
-      zindex = 60,
+      zindex = 200, -- 60,
       position = {
         row = "90%",
         col = "50%",
@@ -311,6 +311,8 @@ noice.setup({
         -- IncSearch = "IncSearch",
         -- Search = "Search",
         -- },
+        winbar = "",
+        foldenable = false,
         cursorline = false,
       },
     },
