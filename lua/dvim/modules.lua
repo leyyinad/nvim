@@ -39,7 +39,8 @@ return {
   "lang.typescript",
   "lang.ansible",
   "lang.glsl",
-  "lang.godot",
+  -- "lang.godot",
+  "lang.godotdev",
   "lang.emmet",
   -- "lang.touchup",
 
