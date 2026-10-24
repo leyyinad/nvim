@@ -73,6 +73,7 @@ return {
   "ui.lualine",
   "ui.tabby",
   "ui.origami",
+  "ui.inline-diagnostic",
   "ui.highlight-colors",
 
   -- Utilities

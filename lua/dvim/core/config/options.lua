@@ -21,6 +21,7 @@ vim.opt.foldmethod = "indent"
 vim.opt.formatexpr = "v:lua.require'conform'.formatexpr()"
 vim.opt.mousescroll = "ver:1,hor:6"
 vim.opt.number = false
+vim.opt.relativenumber = false
 vim.opt.scrolloff = 8
 vim.opt.shiftwidth = 2
 vim.opt.showtabline = 2
