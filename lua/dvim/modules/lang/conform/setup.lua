@@ -11,6 +11,7 @@ conform.setup({
 
   formatters_by_ft = {
     gdscript = { "gdscript_formatter" },
+    dockerfile = { "dockerfmt" },
   },
 
   formatters = {
