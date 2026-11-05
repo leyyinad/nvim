@@ -6,7 +6,7 @@ require("dvim.modules.lang.lsp.lang.lua")
 require("dvim.modules.lang.lsp.lang.markdown")
 require("dvim.modules.lang.lsp.lang.php")
 require("dvim.modules.lang.lsp.lang.python")
-require("dvim.modules.lang.lsp.lang.rust")
+-- require("dvim.modules.lang.lsp.lang.rust")
 
 vim.lsp.enable("angularls", false)
 vim.lsp.enable("emmet_ls", false)

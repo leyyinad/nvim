@@ -43,6 +43,8 @@ return {
   "lang.godotdev",
   "lang.emmet",
   -- "lang.touchup",
+  "lang.rustaceanvim",
+  "lang.refactoring",
 
   -- DB
   "db.dadbod",
