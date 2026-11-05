@@ -34,4 +34,5 @@ vim.opt.timeoutlen = 200
 vim.opt.wildoptions = "pum,tagfile,fuzzy"
 vim.opt.wildmode = "noselect:lastused,full"
 vim.opt.winborder = "rounded"
+vim.opt.winminwidth = 5
 vim.opt.wrap = false
