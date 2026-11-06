@@ -11,20 +11,14 @@ local cmd = vim.lsp.rpc.connect(host, tonumber(port))
 
 vim.lsp.config("gdscript", {
   cmd = cmd,
-  filetypes = { "gd", "gdscript", "gdscript3" },
+  filetypes = { "gdscript" },
   root_markers = { "project.godot", ".git" },
 })
 
-vim.lsp.config("gdshader_lsp", {
-  filetypes = { "gsl", "gdshader", "gdshaderinc" },
-})
-
 vim.lsp.enable("gdscript")
-vim.lsp.enable("gdshader_lsp")
-vim.lsp.enable("gdshaderinc")
 
 vim.api.nvim_create_autocmd("FileType", {
-  pattern = { "*.gd", "*.gdscript", "*.gdscript3" },
+  pattern = { "*.gd" },
   callback = function()
     vim.opt_local.tabstop = 4
     vim.opt_local.softtabstop = 4
