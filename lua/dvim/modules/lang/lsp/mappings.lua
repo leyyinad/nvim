@@ -7,30 +7,11 @@ vim.api.nvim_create_autocmd("LspAttach", {
   callback = function(ev)
     vim.bo[ev.buf].omnifunc = "v:lua.vim.lsp.omnifunc"
 
-    vim.keymap.set("n", "gD", vim.lsp.buf.declaration, {
-      buffer = ev.buf,
-      desc = "Jump to declaration",
-    })
-    vim.keymap.set("n", "gd", vim.lsp.buf.definition, {
-      buffer = ev.buf,
-      desc = "Jump to definition",
-    })
-    vim.keymap.set("n", "K", vim.lsp.buf.hover, {
-      buffer = ev.buf,
-      desc = "Hover",
-    })
-    vim.keymap.set("n", "gi", vim.lsp.buf.implementation, {
-      buffer = ev.buf,
-      desc = "Jump to implementation",
-    })
-    vim.keymap.set("n", "<C-k>", vim.lsp.buf.signature_help, {
-      buffer = ev.buf,
-      desc = "Show signature help",
-    })
     vim.keymap.set("n", "<space>wa", vim.lsp.buf.add_workspace_folder, {
       buffer = ev.buf,
       desc = "Add workspace folder",
     })
+
     vim.keymap.set("n", "<space>wr", vim.lsp.buf.remove_workspace_folder, {
       buffer = ev.buf,
       desc = "Remove workspace folder",
@@ -42,15 +23,14 @@ vim.api.nvim_create_autocmd("LspAttach", {
       buffer = ev.buf,
       desc = "List workspace folders",
     })
-
-    vim.keymap.set("n", "<space>D", vim.lsp.buf.type_definition, {
-      buffer = ev.buf,
-      desc = "Jump to type definition",
-    })
-
-    vim.keymap.set("n", "<space>rn", vim.lsp.buf.rename, {
-      buffer = ev.buf,
-      desc = "Rename symbol",
-    })
   end,
 })
+
+vim.keymap.set({ "n", "v" }, "gra", vim.lsp.buf.code_action, { desc = "LSP Code Action" })
+vim.keymap.set("n", "gri", vim.lsp.buf.implementation, { desc = "LSP Go to Implementation" })
+vim.keymap.set("n", "grn", vim.lsp.buf.rename, { desc = "LSP Rename Symbol" })
+vim.keymap.set("n", "grr", vim.lsp.buf.references, { desc = "LSP Go to References" })
+vim.keymap.set("n", "grt", vim.lsp.buf.type_definition, { desc = "LSP Go to Type Definition" })
+vim.keymap.set("n", "grx", vim.lsp.codelens.run, { desc = "LSP Run Codelens" })
+vim.keymap.set("n", "gO", vim.lsp.buf.document_symbol, { desc = "LSP List document symbols" })
+vim.keymap.set("i", "<C-S>", vim.lsp.buf.signature_help, { desc = "LSP Signature help" })
