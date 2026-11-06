@@ -45,6 +45,7 @@ return {
   -- "lang.touchup",
   "lang.rustaceanvim",
   "lang.refactoring",
+  "lang.rust-doc",
 
   -- DB
   "db.dadbod",
