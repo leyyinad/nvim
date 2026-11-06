@@ -13,9 +13,16 @@ vim.lsp.enable("emmet_ls", false)
 
 vim.lsp.enable("cssls")
 vim.lsp.enable("cssmodules_ls")
+
+vim.lsp.config("docker", {})
 vim.lsp.enable("docker")
+
+vim.lsp.config("dockerfile", {})
 vim.lsp.enable("dockerfile")
+
+vim.lsp.config("elixir", {})
 vim.lsp.enable("elixir")
+
 vim.lsp.enable("glslls")
 vim.lsp.enable("harper_ls", false)
 vim.lsp.enable("sqlls")
