@@ -1,6 +1,7 @@
 local dap = require("dap")
 local neotest_phpunit = require("neotest-phpunit")
 local neotest_vitest = require("neotest-vitest")
+local neotest_rust = require("rustaceanvim.neotest")
 
 return {
   neotest_phpunit({
@@ -28,4 +29,5 @@ return {
     dap = dap.configurations.php[1],
   }),
   neotest_vitest({}),
+  neotest_rust,
 }
