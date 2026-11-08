@@ -1,7 +1,7 @@
 local npm_util = require("dvim.modules.bundles.snacks.picker.npm")
 local dap_util = require("dvim.modules.bundles.snacks.picker.dap")
 
-vim.keymap.set("n", "<Leader><Leader>d", function()
+vim.keymap.set("n", "<leader><leader>d", function()
   if Snacks.dim.enabled then
     Snacks.dim.disable()
   else
@@ -193,9 +193,16 @@ end, {
   desc = "Run npm script",
 })
 
-vim.keymap.set("n", "<Leader>lb", function()
+vim.keymap.set("n", "<leader>lb", function()
   dap_util.show_breakpoint_picker()
 end, {
   noremap = true,
   desc = "List breakpoints",
+})
+
+vim.keymap.set("n", "<leader><leader>t", function()
+  Snacks.picker.todo_comments()
+end, {
+  noremap = true,
+  desc = "List todo comments",
 })

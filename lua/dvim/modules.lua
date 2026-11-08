@@ -78,6 +78,7 @@ return {
   "ui.origami",
   "ui.inline-diagnostic",
   "ui.highlight-colors",
+  "ui.todo-comments",
 
   -- Utilities
   "util.dotenv",
