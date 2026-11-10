@@ -37,20 +37,20 @@ end, {
 })
 
 vim.keymap.set("n", "<leader>fg", function()
-  Snacks.picker.git_grep({
-    untracked = true,
-    submodules = true,
-  })
+  Snacks.picker.grep()
 end, {
   noremap = true,
   desc = "Live grep",
 })
 
 vim.keymap.set("n", "<leader>gg", function()
-  Snacks.picker.grep()
+  Snacks.picker.git_grep({
+    untracked = true,
+    submodules = true,
+  })
 end, {
   noremap = true,
-  desc = "Git files",
+  desc = "Git grep",
 })
 
 vim.keymap.set("n", "<leader>gb", function()
