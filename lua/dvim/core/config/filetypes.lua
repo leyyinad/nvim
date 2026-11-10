@@ -12,6 +12,7 @@ vim.filetype.add({
     ["isyncrc"] = "apachestyle",
     ["mbsyncrc"] = "apachestyle",
     ["mbsyncrc.sample"] = "apachestyle",
+    ["tmux.conf"] = "tmux",
   },
   pattern = {
     [".*%.yaml%.tpl"] = "yaml",
