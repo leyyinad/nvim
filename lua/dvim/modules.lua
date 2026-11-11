@@ -85,6 +85,7 @@ return {
   "util.textcase",
   -- "util.hurl",
   -- "util.orgmode",
+  "util.ansi",
 
   -- Sessions
   "sessions.auto-session",
