@@ -58,7 +58,7 @@
   "refactoring.nvim": { "branch": "master", "commit": "ea18f97c58276e213736c9f0193f7aa4c690693e" },
   "rust-doc.nvim": { "branch": "main", "commit": "154413ee58f93a7bb727950645df4c8ad25a14a6" },
   "rustaceanvim": { "branch": "main", "commit": "b7ca983c6ec88c94cf25e5deaad96df9a68b9a98" },
-  "schemastore.nvim": { "branch": "main", "commit": "92e7b3b2dbd1505fcbcb20f1fdd987b35e9cd34b" },
+  "schemastore.nvim": { "branch": "main", "commit": "13a365fa7a893891fe8724390ad7e608d1c1c59b" },
   "snacks.nvim": { "branch": "main", "commit": "882c996cf28183f4d63640de0b4c02ec886d01f2" },
   "tabby.nvim": { "branch": "main", "commit": "3c130e1fcb598ce39a9c292847e32d7c3987cf11" },
   "text-case.nvim": { "branch": "main", "commit": "e898cfd46fa6cde0e83abb624a16e67d2ffc6457" },
