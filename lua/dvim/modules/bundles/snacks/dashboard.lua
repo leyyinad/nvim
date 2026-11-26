@@ -56,7 +56,7 @@ return {
   sections = {
     {
       section = "terminal",
-      cmd = "chafa " .. logo_file .. " --format symbols --symbols all --size 32x8 --align center; sleep .1",
+      cmd = "chafa " .. logo_file .. " --size 32x8 --align center; sleep .1",
       ttl = 5 * 60,
       height = 8,
     },
@@ -69,7 +69,7 @@ return {
         return Snacks.git.get_root() ~= nil
       end,
       cmd = 'TEXT="${PWD/$HOME/~}" ; printf " %.0s" {1..$(( ( $COLUMNS - $#TEXT ) / 2 ))} ; '
-        .. 'echo -n "\\e[2;34m${TEXT}"; sleep .1',
+          .. 'echo -n "\\e[2;34m${TEXT}"; sleep .1',
       align = "center",
       height = 1,
       ttl = 5 * 60,
